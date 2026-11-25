@@ -54,6 +54,15 @@ def guide_date(slug):
     return DATES.get(slug, DATES["_default"])
 
 
+# guide-updated.json: date of the last content change of each guide (yyyy-mm-dd), shown under the title.
+# Edit the date of a guide here when its content changes. Guides not listed use "_default".
+UPDATED = json.load(open(Path(__file__).parent / "guide-updated.json"))
+
+
+def guide_updated(slug):
+    return UPDATED.get(slug, UPDATED["_default"])
+
+
 order = [g for c in CATS for g in guides if g["cat"] == c]
 by_slug = {g["slug"]: g for g in order}
 missing = {f.stem for f in (site / "guides").glob("*.html")} - set(by_slug)
@@ -244,6 +253,8 @@ for f in sorted((site / "guides").glob("*.html")):
     slug = f.stem
     g = by_slug[slug]
     title, desc, body = parts(f.read_text(encoding="utf-8"))
+    body = re.sub(r' <span class="updated">.*?</span>', "", body)
+    body = re.sub(r'(<p class="byline">.*?)(</p>)', lambda m: m.group(1) + f' <span class="updated">· Last updated <time datetime="{guide_updated(slug)}">{guide_updated(slug)}</time></span>' + m.group(2), body, count=1, flags=re.S)
     heads = []
     for m in re.finditer(r"<h([23])([^>]*)>(.*?)</h\1>", body, re.S):
         t = clean(m.group(3))
