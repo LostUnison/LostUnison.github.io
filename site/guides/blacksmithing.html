@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blacksmithing 1 to 450 (x3), Bonuses and Gold Making</title>
+<meta name="description" content="Socket bonus, materials, leveling route and what to craft for gold.">
+<link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{if(localStorage.getItem('lu-sb')==='mini')document.documentElement.classList.add('sb-mini')}catch(e){}</script>
+</head>
+<body data-root="../">
+<header class="site-header">
+  <div class="bar">
+    <div class="bar-start">
+      <button class="icon-btn" id="sb-toggle" type="button" aria-label="Guide menu" aria-controls="sidebar" aria-expanded="true"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../images/logo.svg" width="32" height="32" alt="">
+        <span class="brand-name">Lost Unison</span>
+      </a>
+    </div>
+    <form class="search" id="search-form" role="search" action="../search.html" method="get" autocomplete="off">
+      <button class="icon-btn search-back" id="search-back" type="button" aria-label="Close search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+      <div class="search-field">
+        <input id="q" name="q" type="text" placeholder="Search guides" aria-label="Search guides" enterkeyhint="search" role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list" spellcheck="false">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        <button class="search-clear" id="q-clear" type="button" aria-label="Clear search" hidden><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <button class="search-btn" type="submit" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <ul class="suggest" id="suggest" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+    <div class="bar-end">
+      <button class="icon-btn search-open" id="search-open" type="button" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <a class="bar-link" href="https://www.youtube.com/@lostunison">YouTube</a>
+      <a class="bar-link" href="https://discord.gg/md4a6BgUTs">Discord</a>
+    </div>
+  </div>
+</header>
+<div class="page">
+<aside class="sidenav" id="sidebar" aria-label="Guides">
+<nav class="sb-full" aria-label="All guides">
+<a class="sb-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<hr>
+<p class="sb-head">Leveling</p>
+<a class="sb-item" href="power-leveling.html" title="Power Leveling 1 to 80 (no boost)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Power Leveling 1 to 80 (no boost)</span></a>
+<a class="sb-item" href="paladin-leveling.html" title="Paladin Leveling 1 to 80"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Paladin Leveling 1 to 80</span></a>
+<hr>
+<p class="sb-head">Professions</p>
+<a class="sb-item" href="alchemy.html" title="Alchemy 1 to 450 (x3), Specializations and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Alchemy 1 to 450</span></a>
+<a class="sb-item" href="blacksmithing.html" title="Blacksmithing 1 to 450 (x3), Bonuses and Gold Making" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Blacksmithing 1 to 450</span></a>
+<a class="sb-item" href="engineering.html" title="Engineering 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Engineering 1 to 450</span></a>
+<a class="sb-item" href="enchanting.html" title="Enchanting 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Enchanting 1 to 450</span></a>
+<a class="sb-item" href="inscription.html" title="Inscription 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Inscription 1 to 450</span></a>
+<a class="sb-item" href="jewelcrafting.html" title="Jewelcrafting 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Jewelcrafting 1 to 450</span></a>
+<a class="sb-item" href="leatherworking.html" title="Leatherworking 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Leatherworking 1 to 450</span></a>
+<a class="sb-item" href="tailoring.html" title="Tailoring 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Tailoring 1 to 450</span></a>
+<a class="sb-item" href="skinning.html" title="Skinning 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Skinning 1 to 450</span></a>
+<a class="sb-item" href="mining.html" title="Mining 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Mining 1 to 450</span></a>
+<a class="sb-item" href="herbalism.html" title="Herbalism 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Herbalism 1 to 450</span></a>
+<a class="sb-item" href="cooking.html" title="Cooking 1 to 450"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Cooking 1 to 450</span></a>
+<a class="sb-item" href="fishing.html" title="Fishing 1 to 450, Find Fish, Sea Turtle and Heirloom Ring"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Fishing 1 to 450</span></a>
+<a class="sb-item" href="first-aid.html" title="First Aid 1 to 450 (x3)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>First Aid 1 to 450</span></a>
+<hr>
+<p class="sb-head">Addons</p>
+<a class="sb-item" href="tsm-part-1.html" title="TSM (TradeSkill Master) Part 1"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>TSM (TradeSkill Master) Part 1</span></a>
+<hr>
+<p class="sb-head">Gearing</p>
+<a class="sb-item" href="all-264-boe.html" title="All 264 Item Level BoE"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>All 264 Item Level BoE</span></a>
+<a class="sb-item" href="unlock-heroic-dungeons.html" title="Unlock Heroic Dungeons"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Unlock Heroic Dungeons</span></a>
+<hr>
+<p class="sb-head">Reputation</p>
+<a class="sb-item" href="thorium-brotherhood.html" title="Thorium Brotherhood Neutral to Revered"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Thorium Brotherhood Neutral to Revered</span></a>
+<a class="sb-item" href="ashen-verdict.html" title="Ashen Verdict Reputation Farm"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Ashen Verdict Reputation Farm</span></a>
+<hr>
+<p class="sb-head">Gold making</p>
+<a class="sb-item" href="gold-farming.html" title="Best Gold Farming (2,893 gold/h)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Best Gold Farming (2,893 gold/h)</span></a>
+<hr>
+<p class="sb-head">Game client</p>
+<a class="sb-item" href="windowed-mode.html" title="Windowed Mode"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Windowed Mode</span></a>
+<a class="sb-item" href="patch-y.html" title="Patch Y (Raid Visuals)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Patch Y (Raid Visuals)</span></a>
+<a class="sb-item" href="project-reforged-install.html" title="Project Reforged Install"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Project Reforged Install</span></a>
+<hr>
+</nav>
+<nav class="sb-rail" aria-label="Categories">
+<a class="mini-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<a class="mini-item" href="../index.html#leveling"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Leveling</span></a>
+<a class="mini-item" href="../index.html#professions" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Professions</span></a>
+<a class="mini-item" href="../index.html#addons"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>Addons</span></a>
+<a class="mini-item" href="../index.html#gearing"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Gearing</span></a>
+<a class="mini-item" href="../index.html#reputation"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Reputation</span></a>
+<a class="mini-item" href="../index.html#gold-making"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Gold</span></a>
+<a class="mini-item" href="../index.html#game-client"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Client</span></a>
+</nav>
+</aside>
+<div class="sb-scrim" id="sb-scrim"></div>
+<main class="guide">
+<!--nav--><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Guides</a><span aria-hidden="true">/</span><a href="../index.html#professions">Professions</a><span aria-hidden="true">/</span><span>Blacksmithing 1 to 450</span></nav><!--/nav-->
+<div class="prose">
+<h1>WotLK Warmane Icecrown - Blacksmithing 1 to 450 (x3), Bonuses and Gold Making</h1>
+<p class="byline">Guide by <strong>Lost Unison</strong></p>
+<p class="lede">Socket bonus, materials, leveling route and what to craft for gold.</p>
+</div>
+<div class="video-links"><a class="video-btn" href="https://www.youtube.com/watch?v=ltSB44-jh9U"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>Watch the video: Blacksmithing 1 to 450</a></div>
+<nav class="toc" aria-label="On this page"><span class="toc-title">On this page</span><ol><li><a href="#blacksmithing-bonus">Blacksmithing Bonus</a></li><li><a href="#leveling-blacksmithing-from-1-to-450">Leveling Blacksmithing from 1 to 450</a></li><li><a href="#how-to-make-gold-with-blacksmithing">How to make gold with Blacksmithing</a></li></ol></nav>
+<div class="doc">
+
+<h2 id="blacksmithing-bonus">Blacksmithing Bonus</h2>
+<p>At level <strong>400 Blacksmithing</strong>, you unlock
+<strong>Socket Bracer</strong> and <strong>Socket Gloves.</strong>
+Enabling to add 1 additional gem to your bracers and gloves.</p>
+<p>Keep in mind the bonus will become <strong>disabled</strong> if you
+unlearn <strong>Blacksmithing</strong>,</p>
+<p><img alt="" height="199" loading="lazy" src="../images/blacksmithing-01.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+<h2 id="leveling-blacksmithing-from-1-to-450">Leveling Blacksmithing from 1 to 450</h2>
+<h3>Required Materials</h3>
+<h4>Classic</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Bars</strong></th>
+<th><strong>Stone</strong></th>
+<th><strong>Misc</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td>40 Copper Bar</td>
+<td>114 Rough Stone</td>
+<td>11 Solid Grinding Stone</td>
+</tr><tr class="header">
+<td>30 Bronze Bar</td>
+<td>42 Coarse Stone</td>
+<td>11 Green Dye (Vendor)</td>
+</tr><tr class="odd">
+<td>2 Gold Bar</td>
+<td>78 Heavy Stone</td>
+<td>44 Mageweave Cloth</td>
+</tr><tr class="header">
+<td>72 Iron Bar</td>
+<td>40 Dense Stone</td>
+<td>7 Star Ruby</td>
+</tr><tr class="odd">
+<td>20 Steel Bar</td>
+<td rowspan="4"></td>
+<td rowspan="4"></td>
+</tr><tr class="header">
+<td>13 Truesilver Bar</td>
+</tr><tr class="odd">
+<td>96 Mithril Bar</td>
+</tr><tr class="header">
+<td>140 Thorium Bar</td>
+</tr><tr class="odd">
+<td colspan="3">TSM Shopping Strings</td>
+</tr><tr class="header">
+<td><p>Copper Bar/exact/x40</p>
+<p>Bronze Bar/exact/x30</p>
+<p>Gold Bar/exact/x2</p>
+<p>Iron Bar/exact/x72</p>
+<p>Steel Bar/exact/x20</p>
+<p>Truesilver Bar/exact/x13</p>
+<p>Mithril Bar/exact/x96</p>
+<p>Thorium Bar/exact/x140</p></td>
+<td><p>Rough Stone/exact/x114</p>
+<p>Coarse Stone/exact/x42</p>
+<p>Heavy Stone/exact/x78</p>
+<p>Dense Stone/exact/x40</p></td>
+<td><p>Solid Grinding Stone/exact/x11</p>
+<p>11 Green Dye (Vendor)</p>
+<p>Mageweave Cloth/exact/x44</p>
+<p>Star Ruby/exact/x7</p></td>
+</tr>
+</tbody>
+</table></div>
+
+<h4>TBC</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Bars</strong></th>
+<th><strong>Misc</strong></th>
+</tr>
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td>44 Fel Iron Bar</td>
+<td><p>Plans: Lesser Ward of Shielding</p>
+<p>(Sold by NPC in Outland or in AH)</p></td>
+</tr><tr class="header">
+<td>27 Adamantite Bar</td>
+<td></td>
+</tr><tr class="odd">
+<td colspan="2">TSM Shopping Strings</td>
+</tr><tr class="header">
+<td><p>Fel Iron Bar/exact/x44</p>
+<p>Adamantite Bar/exact/x27</p></td>
+<td>Plans: Lesser Ward of Shielding</td>
+</tr>
+</tbody>
+</table></div>
+<h4>WotLK</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Bars</strong></th>
+<th><strong>Misc</strong></th>
+</tr>
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td>108 Cobalt Bar</td>
+<td>6 Crystallized Air</td>
+</tr><tr class="header">
+<td>87 Saronite Bar</td>
+<td>2 Eternal Earth</td>
+</tr><tr class="odd">
+<td>14 Titanium Bar</td>
+<td>2 Eternal Shadow</td>
+</tr><tr class="header">
+<td>6 Titansteel Bar</td>
+<td>3 Eternal Water</td>
+</tr><tr class="odd">
+<td></td>
+<td>2 Frozen Orb</td>
+</tr><tr class="header">
+<td colspan="2">TSM Shopping Strings</td>
+</tr><tr class="odd">
+<td><p>Cobalt Bar/exact/x108</p>
+<p>Saronite Bar/exact/x87</p>
+<p>Titanium Bar/exact/x14</p>
+<p>Titansteel Bar/exact/x6</p></td>
+<td><p>Crystallized Air/exact/x6</p>
+<p>Eternal Earth/exact/x2</p>
+<p>Eternal Water/exact/x2</p>
+<p>Eternal Shadow/exact/x2</p>
+<p>Frozen Orb/exact/x2</p></td>
+</tr>
+</tbody>
+</table></div>
+<h3>Leveling 1 to 450</h3>
+<h4>Classic</h4>
+<p>* : Green/Yellow level craft, might require more crafts.</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Level</strong></th>
+<th><strong>Craft</strong></th>
+<th><strong>Quantity</strong></th>
+<th><strong>Total Material</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td colspan="4"><strong>Learn Apprentice Blacksmithing at
+1</strong></td>
+</tr><tr class="header">
+<td>1-25</td>
+<td><p>Rough Sharpening Stone</p>
+<p>(Can be sold)</p></td>
+<td>8</td>
+<td>8 Rough Stone</td>
+</tr><tr class="odd">
+<td>25-85</td>
+<td><p>Rough Grinding Stone</p>
+<p>(Keep them)</p></td>
+<td>32-53</td>
+<td>106 Rough Stone</td>
+</tr><tr class="header">
+<td colspan="4"><strong>Learn Journeyman Blacksmithing at
+50</strong></td>
+</tr><tr class="odd">
+<td>85-100</td>
+<td><p>Coarse Grinding Stone</p>
+<p>(Keep them)</p></td>
+<td>17-21</td>
+<td>42 Coarse Stone</td>
+</tr><tr class="header">
+<td>100-112</td>
+<td>Runed Copper Belt</td>
+<td>4</td>
+<td>40 Copper Bar</td>
+</tr><tr class="odd">
+<td>100-112</td>
+<td><p>Silver Rod</p>
+<p>(Expensive but more profit)</p></td>
+<td>5</td>
+<td>5 Silver Bar, 10 Rough Grinding Stone</td>
+</tr><tr class="header">
+<td>112-127</td>
+<td>Rough Bronze Leggings</td>
+<td>5</td>
+<td>30 Bronze Bar</td>
+</tr><tr class="odd">
+<td colspan="4"><strong>Learn Expert Blacksmithing at 125</strong></td>
+</tr><tr class="header">
+<td>127-151</td>
+<td><p>Heavy Grinding Stone</p>
+<p>(Keep them)</p></td>
+<td>23-26</td>
+<td>78 Heavy Stone</td>
+</tr><tr class="odd">
+<td>151-157</td>
+<td>Golden Rod</td>
+<td>2</td>
+<td>2 Gold Bar, 4 Coarse Grinding Stone</td>
+</tr><tr class="header">
+<td>157-166</td>
+<td>Green Iron Leggings</td>
+<td>3</td>
+<td>24 Iron Bar, 3 Heavy Grinding Stone, 3 Green Dye</td>
+</tr><tr class="odd">
+<td>166-190</td>
+<td>Green Iron Bracers</td>
+<td>8</td>
+<td>48 Iron Bar, 8 Green Dye</td>
+</tr><tr class="header">
+<td>190-202</td>
+<td>Golden Scale Bracers</td>
+<td>4</td>
+<td>20 Steel Bar, 8 Heavy Grinding Stone</td>
+</tr><tr class="odd">
+<td colspan="4"><strong>Learn Artisan Blacksmithing at 200</strong></td>
+</tr><tr class="header">
+<td>202-208</td>
+<td>Truesilver Rod</td>
+<td>2</td>
+<td>2 Truesilver Bar, 2 Heavy Grinding Stone</td>
+</tr><tr class="odd">
+<td>208-220*</td>
+<td>Truesilver Skeleton Key</td>
+<td>11</td>
+<td>11 Truesilver Bar, 11 Solid Grinding Stone</td>
+</tr><tr class="header">
+<td>220-226</td>
+<td>Heavy Mithril Gauntlet</td>
+<td>2</td>
+<td>12 Mithril Bar, 8 Mageweave Cloth</td>
+</tr><tr class="odd">
+<td>226-232</td>
+<td>Mithril Scale Pants</td>
+<td>2</td>
+<td>24 Mithril Bar</td>
+</tr><tr class="header">
+<td>232-250</td>
+<td>Mithril Coif</td>
+<td>6</td>
+<td>60 Mithril Bar, 36 Mageweave Cloth</td>
+</tr><tr class="odd">
+<td>250-262*</td>
+<td>Dense Grinding Stone</td>
+<td>8-10</td>
+<td>40 Dense Stone</td>
+</tr><tr class="header">
+<td>262-277</td>
+<td>Thorium Bracers</td>
+<td>5</td>
+<td>40 Thorium Bar</td>
+</tr><tr class="odd">
+<td colspan="4"><strong>Learn Master Blacksmithing at 275</strong></td>
+</tr><tr class="header">
+<td>277-280*</td>
+<td>Thorium Bracers</td>
+<td>2</td>
+<td>16 Thorium Bar</td>
+</tr><tr class="odd">
+<td>277-286*</td>
+<td><p>Arcanite Rod</p>
+<p>(Expensive but more profit)</p></td>
+<td>6</td>
+<td>18 Arcanite Bar, 6 Dense Grinding Stone</td>
+</tr><tr class="header">
+<td>280-301</td>
+<td>Thorium Helm</td>
+<td>7</td>
+<td>84 Thorium Bar, 7 Star Ruby</td>
+</tr>
+</tbody>
+</table></div>
+<h4>TBC</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Level</strong></th>
+<th><strong>Craft</strong></th>
+<th><strong>Quantity</strong></th>
+<th><strong>Total Material</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td>301-310</td>
+<td>Fel Iron Chain Coif</td>
+<td>3</td>
+<td>12 Fel Iron Bar</td>
+</tr><tr class="header">
+<td>301-310*</td>
+<td><p>Fel Iron Rod</p>
+<p>(Expensive but more profit)</p></td>
+<td>6</td>
+<td>24 Fel Iron Bar</td>
+</tr><tr class="odd">
+<td>310-316</td>
+<td>Fel Iron Plate Belt</td>
+<td>2</td>
+<td>8 Fel Iron Bar</td>
+</tr><tr class="header">
+<td>316-322</td>
+<td>Fel Iron Chain Gloves</td>
+<td>2</td>
+<td>10 Fel Iron Bar</td>
+</tr><tr class="odd">
+<td>322-325</td>
+<td>Fel Iron Chain Bracers</td>
+<td>1</td>
+<td>6 Fel Iron Bar</td>
+</tr><tr class="header">
+<td>325-337*</td>
+<td>Lesser Rune of Warding</td>
+<td>8-16</td>
+<td>16 Adamantite Bar</td>
+</tr><tr class="odd">
+<td>337-340*</td>
+<td>Fel Iron Chain Tunic</td>
+<td>2</td>
+<td>18 Fel Iron Bar</td>
+</tr><tr class="header">
+<td>340-352*</td>
+<td><p>Lesser Ward of Shielding</p>
+<p>(Recipe)</p></td>
+<td>10-11</td>
+<td>11 Adamantite Bar</td>
+</tr>
+</tbody>
+</table></div>
+
+<h4>WotLK</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Level</strong></th>
+<th><strong>Craft</strong></th>
+<th><strong>Quantity</strong></th>
+<th><strong>Total Material</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td colspan="4"><strong>Learn Grand Blacksmithing at 350 In
+Northrend</strong></td>
+</tr><tr class="header">
+<td>352-361</td>
+<td>Cobalt Boots</td>
+<td>3</td>
+<td>12 Cobalt Bar</td>
+</tr><tr class="odd">
+<td>361-370</td>
+<td>Cobalt Triangle Shield</td>
+<td>3</td>
+<td>12 Cobalt Bar</td>
+</tr><tr class="header">
+<td>361-376</td>
+<td><p>Eternium Rod</p>
+<p>(Recipe)</p>
+<p>(Expensive but more profit)</p></td>
+<td></td>
+<td>-</td>
+</tr><tr class="odd">
+<td>370-382</td>
+<td>Cobalt Gauntlets</td>
+<td>4</td>
+<td>20 Cobalt Bar</td>
+</tr><tr class="header">
+<td>382-385</td>
+<td>Spiked Cobalt Boots</td>
+<td>1</td>
+<td>7 Cobalt Bar</td>
+</tr><tr class="odd">
+<td>385-391</td>
+<td>Spiked Cobalt Shoulders</td>
+<td>2</td>
+<td>14 Cobalt Bar</td>
+</tr><tr class="header">
+<td>391-397</td>
+<td>Notched Cobalt War Axe</td>
+<td>2</td>
+<td>20 Cobalt Bar</td>
+</tr><tr class="odd">
+<td>397-400</td>
+<td>Spiked Cobalt Belt</td>
+<td>1</td>
+<td>7 Cobalt Bar</td>
+</tr><tr class="header">
+<td>400-406</td>
+<td>Horned Cobalt Helm</td>
+<td>2</td>
+<td>16 Cobalt Bar</td>
+</tr><tr class="odd">
+<td>406-415</td>
+<td>Deadly Saronite Dirk</td>
+<td>3</td>
+<td>21 Saronite Bar, 6 Crystallized Air</td>
+</tr><tr class="header">
+<td>415-421</td>
+<td>Eternal Belt Buckle</td>
+<td>2</td>
+<td>8 Saronite Bar, 2 Eternal Earth, 2 Eternal Water, 2 Eternal
+Shadow</td>
+</tr><tr class="odd">
+<td>421-430</td>
+<td>Titanium Rod</td>
+<td>3</td>
+<td>6 Saronite Bar, 3 Titanium Bar</td>
+</tr><tr class="header">
+<td>430-445</td>
+<td>Titanium Skeleton Key</td>
+<td>7-11</td>
+<td>44 Saronite Bar, 11 Titanium Bar</td>
+</tr><tr class="odd">
+<td>430-436*</td>
+<td><p>Titanium Rod</p>
+<p>(Expensive but more profit)</p></td>
+<td>8</td>
+<td>16 Saronite Bar, 8 Titanium Bar</td>
+</tr><tr class="header">
+<td>445-450</td>
+<td>Titansteel Shield Wall</td>
+<td>2</td>
+<td>8 Saronite Bar, 6 Titansteel Bar, 2 Frozen Orb</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="how-to-make-gold-with-blacksmithing">How to make gold with Blacksmithing</h2>
+<h3>Rods<img alt="" height="599" loading="lazy" src="../images/blacksmithing-02.webp" style="max-width:min(100%, 624px)" width="1387"/></h3>
+<p><a href="https://www.wowhead.com/wotlk/item=25846/plans-adamantite-rod"><u>Adamantite</u></a>
+and <a href="https://www.wowhead.com/wotlk/item=25847/plans-eternium-rod"><u>Eternium</u></a>
+rod requires recipes (available in the Auction House)</p>
+<h3>Gear</h3>
+<h4>264 Item Level</h4>
+<h4><img alt="" height="447" loading="lazy" src="../images/blacksmithing-03.webp" style="max-width:min(100%, 624px)" width="1400"/></h4>
+<p>Recipe vendor: <a href="https://www.wowhead.com/wotlk/npc=37687/alchemist-finklestein"><u>Alchemist
+Finklestein</u></a> in Icecrown Citadel (raid).</p>
+<p>Requires to be <strong>Revered</strong> with the <strong>Ashen
+Verdict</strong> to get all the recipes (some of them only require
+<strong>Honored</strong>).</p>
+<h4>245 Item Level<img alt="" height="735" loading="lazy" src="../images/blacksmithing-04.webp" style="max-width:min(100%, 624px)" width="1171"/></h4>
+<p>Recipes drop in <strong>Trial of the Crusader</strong> (ToC raid) or
+you can buy them in the <strong>Auction House</strong>.</p>
+<p>Each item has a <strong>Horde</strong> and <strong>Alliance</strong>
+version.</p>
+<h4>232 Item Level</h4>
+<p><img alt="" height="411" loading="lazy" src="../images/blacksmithing-05.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+<p>Recipes drop in <strong>Ulduar</strong> (raid) or you can buy them in
+the <strong>Auction House</strong>.</p>
+<h4>213 Item Level<img alt="" height="190" loading="lazy" src="../images/blacksmithing-06.webp" style="max-width:min(100%, 624px)" width="1157"/></h4>
+<h4>200 Item Level</h4>
+<p><img alt="" height="731" loading="lazy" src="../images/blacksmithing-07.webp" style="max-width:min(100%, 624px)" width="1158"/></p>
+<h3>Item Attachments</h3>
+<p><img alt="" height="300" loading="lazy" src="../images/blacksmithing-08.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+<p>Titanium Plating is learnt through a plan.</p>
+<h5>Titanium Plating Recipe</h5>
+<ul>
+<li>
+<p><strong>Horde Vendor:</strong> Requires Exalted with the
+<strong>Horde Expedition</strong><img alt="" height="591" loading="lazy" src="../images/blacksmithing-09.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+</li>
+</ul>
+<ul>
+<li>
+<p><strong>Alliance Vendor:</strong> Requires Exalted with the
+<strong>Alliance Vanguard</strong><img alt="" height="551" loading="lazy" src="../images/blacksmithing-10.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+</li>
+</ul>
+
+</div>
+<!--nav--><nav class="pager" aria-label="Previous and next guide"><a class="pager-prev" href="alchemy.html"><span>Previous</span>Alchemy 1 to 450</a><a class="pager-next" href="engineering.html"><span>Next</span>Engineering 1 to 450</a></nav><!--/nav-->
+</main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <span>Guides by Lost Unison</span>
+    <span><a href="https://www.youtube.com/@lostunison">YouTube</a> · <a href="https://discord.gg/md4a6BgUTs">Discord</a></span>
+  </div>
+</footer>
+<script src="../js/search-index.js"></script>
+<script src="../js/site.js"></script>
+</body>
+</html>

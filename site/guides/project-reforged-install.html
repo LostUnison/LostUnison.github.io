@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project Reforged Install</title>
+<meta name="description" content="Install the Project Reforged HD pack: the required patcher, DXVK, then the patch files you choose.">
+<link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{if(localStorage.getItem('lu-sb')==='mini')document.documentElement.classList.add('sb-mini')}catch(e){}</script>
+</head>
+<body data-root="../">
+<header class="site-header">
+  <div class="bar">
+    <div class="bar-start">
+      <button class="icon-btn" id="sb-toggle" type="button" aria-label="Guide menu" aria-controls="sidebar" aria-expanded="true"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../images/logo.svg" width="32" height="32" alt="">
+        <span class="brand-name">Lost Unison</span>
+      </a>
+    </div>
+    <form class="search" id="search-form" role="search" action="../search.html" method="get" autocomplete="off">
+      <button class="icon-btn search-back" id="search-back" type="button" aria-label="Close search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+      <div class="search-field">
+        <input id="q" name="q" type="text" placeholder="Search guides" aria-label="Search guides" enterkeyhint="search" role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list" spellcheck="false">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        <button class="search-clear" id="q-clear" type="button" aria-label="Clear search" hidden><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <button class="search-btn" type="submit" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <ul class="suggest" id="suggest" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+    <div class="bar-end">
+      <button class="icon-btn search-open" id="search-open" type="button" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <a class="bar-link" href="https://www.youtube.com/@lostunison">YouTube</a>
+      <a class="bar-link" href="https://discord.gg/md4a6BgUTs">Discord</a>
+    </div>
+  </div>
+</header>
+<div class="page">
+<aside class="sidenav" id="sidebar" aria-label="Guides">
+<nav class="sb-full" aria-label="All guides">
+<a class="sb-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<hr>
+<p class="sb-head">Leveling</p>
+<a class="sb-item" href="power-leveling.html" title="Power Leveling 1 to 80 (no boost)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Power Leveling 1 to 80 (no boost)</span></a>
+<a class="sb-item" href="paladin-leveling.html" title="Paladin Leveling 1 to 80"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Paladin Leveling 1 to 80</span></a>
+<hr>
+<p class="sb-head">Professions</p>
+<a class="sb-item" href="alchemy.html" title="Alchemy 1 to 450 (x3), Specializations and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Alchemy 1 to 450</span></a>
+<a class="sb-item" href="blacksmithing.html" title="Blacksmithing 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Blacksmithing 1 to 450</span></a>
+<a class="sb-item" href="engineering.html" title="Engineering 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Engineering 1 to 450</span></a>
+<a class="sb-item" href="enchanting.html" title="Enchanting 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Enchanting 1 to 450</span></a>
+<a class="sb-item" href="inscription.html" title="Inscription 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Inscription 1 to 450</span></a>
+<a class="sb-item" href="jewelcrafting.html" title="Jewelcrafting 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Jewelcrafting 1 to 450</span></a>
+<a class="sb-item" href="leatherworking.html" title="Leatherworking 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Leatherworking 1 to 450</span></a>
+<a class="sb-item" href="tailoring.html" title="Tailoring 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Tailoring 1 to 450</span></a>
+<a class="sb-item" href="skinning.html" title="Skinning 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Skinning 1 to 450</span></a>
+<a class="sb-item" href="mining.html" title="Mining 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Mining 1 to 450</span></a>
+<a class="sb-item" href="herbalism.html" title="Herbalism 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Herbalism 1 to 450</span></a>
+<a class="sb-item" href="cooking.html" title="Cooking 1 to 450"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Cooking 1 to 450</span></a>
+<a class="sb-item" href="fishing.html" title="Fishing 1 to 450, Find Fish, Sea Turtle and Heirloom Ring"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Fishing 1 to 450</span></a>
+<a class="sb-item" href="first-aid.html" title="First Aid 1 to 450 (x3)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>First Aid 1 to 450</span></a>
+<hr>
+<p class="sb-head">Addons</p>
+<a class="sb-item" href="tsm-part-1.html" title="TSM (TradeSkill Master) Part 1"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>TSM (TradeSkill Master) Part 1</span></a>
+<hr>
+<p class="sb-head">Gearing</p>
+<a class="sb-item" href="all-264-boe.html" title="All 264 Item Level BoE"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>All 264 Item Level BoE</span></a>
+<a class="sb-item" href="unlock-heroic-dungeons.html" title="Unlock Heroic Dungeons"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Unlock Heroic Dungeons</span></a>
+<hr>
+<p class="sb-head">Reputation</p>
+<a class="sb-item" href="thorium-brotherhood.html" title="Thorium Brotherhood Neutral to Revered"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Thorium Brotherhood Neutral to Revered</span></a>
+<a class="sb-item" href="ashen-verdict.html" title="Ashen Verdict Reputation Farm"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Ashen Verdict Reputation Farm</span></a>
+<hr>
+<p class="sb-head">Gold making</p>
+<a class="sb-item" href="gold-farming.html" title="Best Gold Farming (2,893 gold/h)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Best Gold Farming (2,893 gold/h)</span></a>
+<hr>
+<p class="sb-head">Game client</p>
+<a class="sb-item" href="windowed-mode.html" title="Windowed Mode"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Windowed Mode</span></a>
+<a class="sb-item" href="patch-y.html" title="Patch Y (Raid Visuals)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Patch Y (Raid Visuals)</span></a>
+<a class="sb-item" href="project-reforged-install.html" title="Project Reforged Install" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Project Reforged Install</span></a>
+<hr>
+</nav>
+<nav class="sb-rail" aria-label="Categories">
+<a class="mini-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<a class="mini-item" href="../index.html#leveling"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Leveling</span></a>
+<a class="mini-item" href="../index.html#professions"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Professions</span></a>
+<a class="mini-item" href="../index.html#addons"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>Addons</span></a>
+<a class="mini-item" href="../index.html#gearing"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Gearing</span></a>
+<a class="mini-item" href="../index.html#reputation"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Reputation</span></a>
+<a class="mini-item" href="../index.html#gold-making"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Gold</span></a>
+<a class="mini-item" href="../index.html#game-client" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Client</span></a>
+</nav>
+</aside>
+<div class="sb-scrim" id="sb-scrim"></div>
+<main class="guide">
+<!--nav--><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Guides</a><span aria-hidden="true">/</span><a href="../index.html#game-client">Game client</a><span aria-hidden="true">/</span><span>Project Reforged Install</span></nav><!--/nav-->
+<div class="prose">
+<h1>WotLK Warmane Icecrown - Project Reforged Install</h1>
+<p class="byline">Guide by <strong>Lost Unison</strong></p>
+<p class="lede">Download everything first, then install Project Reforged, DXVK, LuxVelum and Lexara.</p>
+</div>
+<div class="doc">
+<nav class="toc-side" aria-label="On this page"><p class="toc-side-title">On this page</p><ol><li class="lh2"><a href="#what-it-is">What it is</a></li><li class="lh2"><a href="#part-1">Part 1: Download everything</a></li><li class="lh3"><a href="#dl-required">Required</a></li><li class="lh3"><a href="#dl-recommended">Recommended</a></li><li class="lh3"><a href="#dl-patches">Patch files</a></li><li class="lh2"><a href="#part-2">Part 2: Installation</a></li><li class="lh3"><a href="#step-1">Step 1: Patch Wow.exe with St0ny's patcher (required)</a></li><li class="lh3"><a href="#step-2">Step 2: Install DXVK</a></li><li class="lh3"><a href="#step-3">Step 3: Copy the patch files into Data</a></li><li class="lh3"><a href="#step-4">Step 4: Install LuxVelum</a></li><li class="lh3"><a href="#step-5">Step 5: Install Lexara</a></li><li class="lh3"><a href="#step-6">Step 6: Install the lights shader</a></li><li class="lh3"><a href="#step-7">Step 7: Clear the cache and launch</a></li><li class="lh2"><a href="#part-3">Part 3: Check your versions</a></li><li class="lh2"><a href="#result">Result in game</a></li><li class="lh2"><a href="#troubleshooting">Troubleshooting</a></li><li class="lh3"><a href="#credits">Credits</a></li><li class="lh3"><a href="#sources">Sources</a></li></ol></nav>
+
+<div class="note"><p><strong>Start here:</strong> <a href="https://projectreforged.github.io/wotlk/downloads/" target="_blank" rel="noopener noreferrer">Downloads — Project Reforged WotLK</a> is the official page for all the patches. Versions change often. Open it before you download.</p></div>
+<h2 id="what-it-is">What it is</h2>
+<p>Project Reforged is a modular HD visual overhaul for the 3.3.5 client. This guide has two parts: first download everything, then install it.</p>
+
+<h2 id="part-1">Part 1: Download everything</h2>
+<p>Download all the files first. Put them in one new folder on your desktop. Do not open them yet.</p>
+<p>Each item has a <span class="dl-btn dl-demo">file name</span> button: it downloads the file directly. A <a class="src-link" href="#part-1">Source page</a> link opens the project page only.</p>
+<h3 id="dl-required">Required</h3>
+<ul>
+<li><p><strong>St0ny's AIO WoW EXE Patcher</strong> (ZIP): open the <a class="src-link" href="https://github.com/Raz0r1337/St0nys-AIO-WoW-EXE-Patcher/releases/latest" target="_blank" rel="noopener noreferrer">latest release page</a> and download the ZIP named <strong>St0nys-AIO-WoW-EXE-Patcher-&lt;version&gt;.zip</strong> (under Assets). The file name has the version number, so this link cannot point to the file directly.</p></li>
+<li><p><strong>Project Reforged Preset</strong>: <a class="dl-btn" href="https://pub-0f05631d243e4046993fc02ca7be9542.r2.dev/Wrath%20of%20the%20Lich%20King/mods/presets/patcher_selection.ini" target="_blank" rel="noopener noreferrer">patcher_selection.ini</a> <a class="src-link" href="https://projectreforged.github.io/wotlk/downloads/" target="_blank" rel="noopener noreferrer">Source page</a> This is the official patch selection of the project. The "Download Preset" button of the Dependencies block gives the same file. It can differ from the preset inside the patcher: in the version we compared, the built-in preset also turned on the patch that stops the random look in character creation.</p></li>
+</ul>
+<h3 id="dl-recommended">Recommended</h3>
+<ul>
+<li><p><strong>DXVK</strong> (modded for WoW), 32-bit: <a class="dl-btn" href="https://github.com/Raz0r1337/DXVK/releases/latest/download/DXVK-WoW-x86.zip" target="_blank" rel="noopener noreferrer">DXVK-WoW-x86.zip</a> <a class="src-link" href="https://github.com/Raz0r1337/DXVK/releases/latest" target="_blank" rel="noopener noreferrer">Source page</a> Do not download the x64 file: the 3.3.5a client is 32-bit.</p></li>
+<li><p><strong>LuxVelum</strong> (fog, light shafts, haze): <a class="dl-btn" href="https://github.com/Stormhand-dev/Luxvelum/releases/latest/download/Luxvelum-Win32.zip" target="_blank" rel="noopener noreferrer">Luxvelum-Win32.zip</a> <a class="src-link" href="https://github.com/Stormhand-dev/Luxvelum/releases/latest" target="_blank" rel="noopener noreferrer">Source page</a> This is the only LuxVelum file you need. The ZIP already contains the settings file. St0ny's patcher loads the DLL, so you do not need <strong>Luxvelum-version-dll-Win32.zip</strong>.</p></li>
+<li><p><strong>Lexara</strong> (HD fonts, no addon): <a class="dl-btn" href="https://github.com/Stormhand-dev/Lexara---HD-Font-Renderer-for-WoW-3.3.5/releases/latest/download/lexara.dll" target="_blank" rel="noopener noreferrer">lexara.dll</a> and <a class="dl-btn" href="https://github.com/Stormhand-dev/Lexara---HD-Font-Renderer-for-WoW-3.3.5/releases/latest/download/skia.dll" target="_blank" rel="noopener noreferrer">skia.dll</a> <a class="src-link" href="https://github.com/Stormhand-dev/Lexara---HD-Font-Renderer-for-WoW-3.3.5/releases/latest" target="_blank" rel="noopener noreferrer">Source page</a> St0ny's patch No. 30 loads <strong>Lexara.dll</strong>. The file lexara.dll is the same file as dinput8.dll (same SHA256), so do not download dinput8.dll.</p></li>
+<li><p><strong>Lights shader</strong> (needed by the patch "More lights", No. 68): <a class="dl-btn" href="https://github.com/Raz0r1337/WoW-lights-patch-shader/releases/latest/download/patch-5.MPQ.zip" target="_blank" rel="noopener noreferrer">patch-5.MPQ.zip</a> <a class="src-link" href="https://github.com/Raz0r1337/WoW-lights-patch-shader/releases/latest" target="_blank" rel="noopener noreferrer">Source page</a></p></li>
+
+</ul>
+<h3 id="dl-patches">Patch files</h3>
+<p>Download only the patches you want. All links are direct. Total size of all 12 patches: about 20 GB.</p>
+<ul>
+<li><p><strong>Patch-A</strong> Player Characters and NPCs (HD models): core. <a class="dl-btn" href="https://pub-0f05631d243e4046993fc02ca7be9542.r2.dev/Wrath%20of%20the%20Lich%20King/patches/patch-A.mpq" target="_blank" rel="noopener noreferrer">patch-A.mpq</a></p></li>
+<li><p><strong>Patch-C</strong> Creatures: core. Needs Patch-A. <a class="dl-btn" href="https://pub-0f05631d243e4046993fc02ca7be9542.r2.dev/Wrath%20of%20the%20Lich%20King/patches/patch-C.mpq" target="_blank" rel="noopener noreferrer">patch-C.mpq</a></p></li>
+<li><p><strong>Patch-B, Patch-D and Patch-E</strong>: one large set. Download all three, or none. Buildings <a class="dl-btn" href="https://pub-0f05631d243e4046993fc02ca7be9542.r2.dev/Wrath%20of%20the%20Lich%20King/patches/patch-B.mpq" target="_blank" rel="noopener noreferrer">patch-B.mpq</a>, Doodads <a class="dl-btn" href="https://pub-0f05631d243e4046993fc02ca7be9542.r2.dev/Wrath%20of%20the%20Lich%20King/patches/patch-D.mpq" target="_blank" rel="noopener noreferrer">patch-D.mpq</a>, Environment <a class="dl-btn" href="https://pub-0f05631d243e4046993fc02ca7be9542.r2.dev/Wrath%20of%20the%20Lich%20King/patches/patch-E.mpq" target="_blank" rel="noopener noreferrer">patch-E.mpq</a></p></li>
+<li><p><strong>Patch-G</strong> Gear and Weapons: core. <a class="dl-btn" href="https://pub-0f05631d243e4046993fc02ca7be9542.r2.dev/Wrath%20of%20the%20Lich%20King/patches/patch-G.mpq" target="_blank" rel="noopener noreferrer">patch-G.mpq</a></p></li>
+<li><p><strong>Patch-I</strong> Interface: core. <a class="dl-btn" href="https://pub-0f05631d243e4046993fc02ca7be9542.r2.dev/Wrath%20of%20the%20Lich%20King/patches/patch-I.mpq" target="_blank" rel="noopener noreferrer">patch-I.mpq</a></p></li>
+<li><p>Optional: <strong>Patch-M</strong> Maps and Loading Screens <a class="dl-btn" href="https://pub-0f05631d243e4046993fc02ca7be9542.r2.dev/Wrath%20of%20the%20Lich%20King/patches/patch-M.mpq" target="_blank" rel="noopener noreferrer">patch-M.mpq</a>, <strong>Patch-N</strong> Darker Nights <a class="dl-btn" href="https://pub-0f05631d243e4046993fc02ca7be9542.r2.dev/Wrath%20of%20the%20Lich%20King/patches/patch-N.mpq" target="_blank" rel="noopener noreferrer">patch-N.mpq</a>, <strong>Patch-P</strong> Spell Particle Effects <a class="dl-btn" href="https://pub-0f05631d243e4046993fc02ca7be9542.r2.dev/Wrath%20of%20the%20Lich%20King/patches/patch-P.mpq" target="_blank" rel="noopener noreferrer">patch-P.mpq</a></p></li>
+<li><p>Optional: <strong>Patch-U</strong> Upright Orcs. Needs Patch-A and Patch-C. <a class="dl-btn" href="https://pub-0f05631d243e4046993fc02ca7be9542.r2.dev/Wrath%20of%20the%20Lich%20King/patches/patch-U.mpq" target="_blank" rel="noopener noreferrer">patch-U.mpq</a></p></li>
+<li><p>Optional: <strong>Patch-S</strong> Sounds and Music. Standard (needs Patch-M) <a class="dl-btn" href="https://pub-0f05631d243e4046993fc02ca7be9542.r2.dev/Wrath%20of%20the%20Lich%20King/patches/patch-S.mpq" target="_blank" rel="noopener noreferrer">patch-S.mpq</a> or Standalone <a class="dl-btn" href="https://pub-0f05631d243e4046993fc02ca7be9542.r2.dev/Wrath%20of%20the%20Lich%20King/patches/extras/patch-S.mpq" target="_blank" rel="noopener noreferrer">patch-S.mpq (Standalone)</a>. Use only one patch-S.mpq.</p></li>
+</ul>
+
+<h2 id="part-2">Part 2: Installation</h2>
+<p>Close the game and the launcher before you start. Make a backup copy of your WoW folder [VERIFY]. Move the mouse over a <strong>?</strong> (or click it) to see the details of a line.</p>
+
+<h3 id="step-1">Step 1: Patch Wow.exe with St0ny's patcher (required)</h3>
+<p>You need an <strong>original, unmodified</strong> Wow.exe (3.3.5a, build 12340) and Windows PowerShell 5.1 or later (included in Windows 10 and later). The first start checks the file with SHA256.</p>
+<ul>
+<li><p><strong>Prepare.</strong> Close the game. Extract the St0ny patcher ZIP and keep the folder <strong>St0nys-AIO-WoW-EXE-Patcher</strong> outside your WoW folder. Copy <strong>patcher_selection.ini</strong> next to <strong>patcher-win.bat</strong>.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">The patcher saves its backups in this folder.</span><span class="tl">Copy <strong>patcher_selection.ini</strong> before the first start, next to <strong>patcher-win.bat</strong> and <strong>apply_patches.ps1</strong>. The patcher shows this selection when you open the patch menu. The file also sets the language to English.</span></span></span></p></li>
+<li><p><strong>Start.</strong> Double-click <strong>patcher-win.bat</strong>. Press <strong>P</strong>, give the path to your WoW folder and press <strong>Enter</strong>.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">Windows can show a warning about an unsigned app.</span><span class="tl">If the patcher asks for the language, type <strong>2</strong> for English. With the preset file, it does not ask.</span><span class="tl">For the path, type it or drag the folder (or Wow.exe) into the window. This is needed once only.</span></span></span></p></li>
+<li><p><strong>Choose the patches.</strong> Press <strong>1</strong> to open the patch menu. Check that <strong>No. 32 (LuxVelum loader)</strong> shows <strong>[X]</strong>. Type <strong>28</strong> and press Enter to turn No. 28 off (it must show <strong>[ ]</strong>). Then press <strong>Enter</strong> with nothing typed at the <strong>Input:</strong> prompt.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">The selection from patcher_selection.ini is already marked. Without that file, the built-in <strong>Reforged</strong> preset is selected. Press <strong>R</strong> to load the built-in preset instead.</span><span class="tl"><strong>[X]</strong> means applied. <strong>[ ]</strong> means skipped.</span><span class="tl">Patch <strong>No. 32</strong> is called <strong>Load LuxVelum.dll at startup</strong>. It makes Wow.exe load <strong>Luxvelum.dll</strong> (step 4). Without it, the DLL does nothing. The number can change between patcher versions.</span><span class="tl">The Reforged preset needs 3 companion files (steps 4 to 6): <strong>No. 30</strong> needs Lexara, <strong>No. 32</strong> needs LuxVelum and <strong>No. 68</strong> (More lights) needs the lights shader. Patch <strong>No. 31</strong> (LuxShoulderCam) is also selected. The menu says it is not needed with Lexara, so there is no file to download. The patch numbers can change between patcher versions.</span><span class="tl">Patch <strong>No. 28 (Load AwesomeWotlkLib.dll at startup)</strong> loads a DLL that this guide does not use. The selection then has 44 patches, not 45.</span><span class="tl">Pressing Enter with nothing typed accepts the selection and saves it. To turn another patch off, type its number and press Enter first, then press Enter again.</span></span></span></p></li>
+<li><p><strong>Chat bubble question.</strong> Press <strong>Enter</strong> to keep <strong>50</strong>.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">The patcher asks for the value of the patch <strong>"Increase the chat bubble range (original 25 yards)"</strong>. The choices are <strong>50, 100, 150, 200</strong>, or <strong>0</strong> for unlimited. This only changes how far you see the chat bubbles above characters.</span></span></span></p></li>
+<li><p><strong>Apply.</strong> Read the summary and type <strong>Y</strong> at <strong>Start patching now? (Y/N):</strong> Wait for <strong>[DONE] Wow.exe has been patched successfully.</strong> Press <strong>Enter</strong> to exit.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">The patcher prints <strong>Selection saved for next time.</strong> Then it shows the list <strong>The following 45 patches will be applied</strong>. With the full Reforged selection, the count is 45. With patch No. 28 off, it is 44. The list includes your chat bubble value (50).</span><span class="tl">Two notes under the list are normal for this setup. <strong>Wow.exe becomes larger</strong>: patches No. 9 (Font glyph fix), No. 67 (Pixel-exact icons) and No. 68 (More lights) append a section to Wow.exe. The patcher says some servers check the size of Wow.exe.</span><span class="tl"><strong>DLL patches</strong>: patches No. 30 (Lexara), No. 31 (LuxShoulderCam) and No. 32 (LuxVelum) load a DLL at startup. The patcher says the patch is safe, but a server can detect or block the DLL.</span><span class="tl">Type <strong>N</strong> at the question to go back without changes.</span><span class="tl">During the work, the patcher shows one line for each patch, from <strong>1/45</strong> to <strong>45/45</strong>. A <strong>[+]</strong> at the start of a line means the patch is applied. At the end it shows <strong>Total: 45 patches applied.</strong> (44 with No. 28 off).</span></span></span></p></li>
+<li><p><strong>Result.</strong> Your original is saved as <strong>Wow.exe.ORI</strong>. The patched <strong>Wow.exe</strong> is in your WoW folder. To change or restore patches, run <strong>patcher-win.bat</strong> again.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">The patched Wow.exe is written directly in your WoW folder. If an error occurs, Wow.exe stays unchanged. Backups stay in the patcher folder.</span><span class="tl">The patcher also writes <strong>patcher_state.ini</strong>. Next time, you can add or remove patches from this state.</span><span class="tl">On a repeat run, the patcher says <strong>Wow.exe.ORI (original) exists and stays untouched.</strong> This is normal. Your original file is safe.</span><span class="tl">To restore the original, use the restore option in the start menu, or switch all patches off with <strong>N</strong> and confirm.</span></span></span></p></li>
+</ul>
+<h3 id="step-2">Step 2: Install DXVK</h3>
+<ul>
+<li><p>Extract <strong>DXVK-WoW-x86.zip</strong>. Copy <strong>d3d9.dll</strong> (32-bit) next to Wow.exe.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">You need a graphics card and driver with Vulkan support.</span><span class="tl">Some anti-virus programs flag the 32-bit DLL. Add an exception if the file is removed.</span><span class="tl">To uninstall, delete d3d9.dll from the WoW folder.</span></span></span></p></li>
+<li><p>Make a <strong>dxvk.conf</strong> file to set the cursor size.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">DXVK does not include this file. Make it yourself.</span><span class="tl">1. Open your WoW folder, then the <strong>WTF</strong> folder.</span><span class="tl">2. Right-click an empty space. Choose <strong>New</strong>, then <strong>Text Document</strong>. Name it <strong>dxvk.conf</strong>. Remove the <strong>.txt</strong> ending. If you cannot see file endings, turn on <strong>File name extensions</strong> in the File Explorer View menu.</span><span class="tl">3. Open the file with Notepad. Write this line: <strong>d3d9.enlargeHardwareCursor = 1</strong>. This gives the original cursor size. The default value is 2.</span><span class="tl">4. Save the file and start the game again.</span><span class="tl">[VERIFY] The folder for this file is not confirmed. If the cursor does not change, move <strong>dxvk.conf</strong> next to <strong>Wow.exe</strong>. Standard DXVK reads the file from there.</span></span></span></p></li>
+</ul>
+<h3 id="step-3">Step 3: Copy the patch files into Data</h3>
+<ul>
+<li><p>Open the <strong>Data</strong> folder inside your WoW folder. Copy the Project Reforged patch files into it.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">[VERIFY file names and install order].</span><span class="tl">Do not rename the files [VERIFY].</span></span></span></p></li>
+</ul>
+
+<h3 id="step-4">Step 4: Install LuxVelum</h3>
+<ul>
+<li><p><strong>Copy.</strong> Extract <strong>Luxvelum-Win32.zip</strong> to a temporary folder. Copy only <strong>Luxvelum.dll</strong>, the <strong>Data</strong> folder and the <strong>WTF</strong> folder into your WoW folder.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">Accept the merge of the <strong>Data</strong> and <strong>WTF</strong> folders. The ZIP contains 2 folders and 5 files.</span><span class="tl">The files go to these places: <strong>Luxvelum.dll</strong> next to Wow.exe, <strong>WTF\Luxvelum.ini</strong> (settings), and <strong>Data\Luxvelum\</strong> (fogdata.bin, fogdata-without-darker-nights.bin, waterdata.bin, zones.ini).</span><span class="tl">Do not copy <strong>BUILD.txt</strong>, <strong>LICENSE</strong>, <strong>Dear-ImGui-LICENSE.txt</strong> and <strong>README.md</strong>. The game does not need them.</span><span class="tl">You do not need version.dll. Do not copy the version.dll of an old CoAVolFog or Luxveil package: the game does not start with it.</span><span class="tl">If you already have an older LuxVelum, keep your settings: do not overwrite <strong>WTF\Luxvelum.ini</strong> with the one from the ZIP.</span><span class="tl">To uninstall, delete <strong>Luxvelum.dll</strong>. The patched Wow.exe starts without it.</span></span></span></p></li>
+<li><p><strong>Use.</strong> In game, press <strong>Insert</strong> to open the LuxVelum settings window.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">The key is set by <strong>OverlayKey</strong> in <strong>WTF\Luxvelum.ini</strong>. Ctrl+F7 does not open it. Your changes are saved in <strong>WTF\Luxvelum.ini</strong>. The log is <strong>Logs\Luxvelum.log</strong>.</span><span class="tl">LuxVelum selects the fog data with or without the Patch-N darker nights by itself.</span><span class="tl">The release notes say the changes were tested in game on the author's client (RTX 4060, DXVK 3.1.1, Project Reforged patches). The automatic build check did not run Direct3D tests.</span></span></span></p></li>
+</ul>
+<h3 id="step-5">Step 5: Install Lexara</h3>
+<ul>
+<li><p>Copy <strong>lexara.dll</strong> and <strong>skia.dll</strong> next to Wow.exe.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">Do not copy <strong>dinput8.dll</strong> too. It is the same file as lexara.dll: the game would load Lexara twice.</span><span class="tl">There is no config file and no addon. HD fonts are always active.</span><span class="tl">If you do not use St0ny's patch No. 30, use <strong>dinput8.dll</strong> instead of lexara.dll. If another mod already uses dinput8.dll, rename the file to <strong>version.dll</strong> or <strong>dsound.dll</strong>.</span><span class="tl">To uninstall, delete lexara.dll and skia.dll.</span></span></span></p></li>
+</ul>
+<h3 id="step-6">Step 6: Install the lights shader</h3>
+<ul>
+<li><p><strong>Copy.</strong> Extract <strong>patch-5.MPQ.zip</strong> into your WoW <strong>Data</strong> folder. Check that <strong>Data</strong> has one folder named <strong>patch-5.MPQ</strong>, with <strong>Shaders</strong> inside.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">The ZIP does not contain an MPQ file. It contains a folder named <strong>patch-5.MPQ</strong>, with shader files inside. You must copy this folder into <strong>Data</strong>.</span><span class="tl">Right-click <strong>patch-5.MPQ.zip</strong> and choose <strong>Extract All</strong>. Choose your WoW <strong>Data</strong> folder as the destination. Do not make a second folder with the name of the ZIP.</span><span class="tl">Check that this file exists: <strong>Data\patch-5.MPQ\Shaders\Vertex\vs_3_0\Diffuse_T1.bls</strong>. The game loads this folder like an MPQ file.</span><span class="tl">These shaders need the patch <strong>More lights</strong> (No. 68) in Wow.exe. Without it, they give the same image as the original (4 lights).</span></span></span></p></li>
+<li><p><strong>Check the config.</strong> Open <strong>WTF\Config.wtf</strong>. Usually you change nothing.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">Open the file with Notepad. If there is no <strong>gxApi</strong> line, do nothing. The game then uses Direct3D 9, which is the default.</span><span class="tl">If the file has <strong>SET gxApi "opengl"</strong>, change it to <strong>SET gxApi "d3d9"</strong>.</span><span class="tl">If the file has <strong>SET fixedFunction "1"</strong>, change the value to <strong>0</strong>. If there is no fixedFunction line, do nothing [VERIFY].</span></span></span></p></li>
+</ul>
+<h3 id="step-7">Step 7: Clear the cache and launch</h3>
+<ul>
+<li><p>Delete the <strong>Cache</strong> folder at the game root. Launch the game with <strong>Wow.exe</strong>.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">[VERIFY that deleting the Cache folder is needed].</span></span></span></p></li>
+</ul>
+<h2 id="part-3">Part 3: Check your versions</h2>
+<p>Patches and tools change often. This script compares what you have with the official page and with the latest GitHub releases. It does not download or change any patch or tool file.</p>
+<ul>
+<li><p>Download the 2 files: <a class="dl-btn" href="../files/check-versions.bat" download>check-versions.bat</a> <a class="dl-btn" href="../files/check-versions.ps1" download>check-versions.ps1</a></p></li>
+<li><p>Put them in the folder that holds your <strong>patch-A.mpq</strong> to <strong>patch-U.mpq</strong> files.</p></li>
+<li><p>Double-click <strong>check-versions.bat</strong>. On the first run it creates a <strong>README.md</strong> table in the same folder.</p></li>
+<li><p>Open README.md and write the version you have for each patch and tool. Empty versions show as NOT RECORDED.</p></li>
+<li><p>Run check-versions.bat again. Each line shows <strong>OK</strong>, <strong>UPDATE</strong>, <strong>MISSING FILE</strong> or <strong>NOT RECORDED</strong>. The script also compares the size of each file with the file on the server.</p></li>
+<li><p>After you update, run <strong>check-versions.bat -UpdateReadme</strong> to save the new versions in README.md.</p></li>
+</ul>
+<p>The script needs Windows PowerShell 5.1 or later and an internet connection.</p>
+<details class="script-box"><summary>Show the script (check-versions.ps1)</summary>
+<pre><code>&lt;#
+.SYNOPSIS
+  Compare the Project Reforged patches in this folder with the official Downloads page.
+
+.DESCRIPTION
+  1. Read the versions you have now from the table in README.md (same folder).
+  2. Read the current versions from https://projectreforged.github.io/wotlk/downloads/
+  3. Show one line per patch: OK, UPDATE, MISSING FILE or NEW ON SITE.
+  4. Compare the size of each local .mpq file with the size of the file on the server.
+     The patch files are searched in all subfolders (for example the folder &quot;HD patches&quot;).
+  5. Compare the tools in the &quot;Tools&quot; table of README.md with the latest GitHub release:
+     St0ny AIO EXE Patcher, DXVK, LuxVelum, Lexara and the lights shader patch.
+  6. Check that the tool files exist in your subfolders (Required, Recommended and so on).
+  The script does not download or change any patch or tool file.
+
+.PARAMETER UpdateReadme
+  After you updated, write the latest versions (patches and tools) into the README.md tables.
+
+.PARAMETER NoToolCheck
+  Skip the check of the tools (St0ny patcher, DXVK, LuxVelum, Lexara, lights shader) on GitHub.
+
+.PARAMETER NoSizeCheck
+  Skip the size check (no request to the file server).
+
+.EXAMPLE
+  .\check-versions.ps1
+  .\check-versions.ps1 -UpdateReadme
+#&gt;
+param(
+    [switch]$UpdateReadme,
+    [switch]$NoSizeCheck,
+    [switch]$NoToolCheck
+)
+
+$ErrorActionPreference = &#x27;Stop&#x27;
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+$Url      = &#x27;https://projectreforged.github.io/wotlk/downloads/&#x27;
+$Folder   = $PSScriptRoot
+if (-not $Folder) { $Folder = Split-Path -Parent $MyInvocation.MyCommand.Path }
+$Readme   = Join-Path $Folder &#x27;README.md&#x27;
+
+# Index of every file and folder under this folder, subfolders included (one scan).
+$All = @(Get-ChildItem -Path $Folder -Recurse -Force -ErrorAction SilentlyContinue)
+
+# Find an item by name in any subfolder. Use &#x27;a|b&#x27; for alternative names. -Dir looks for a folder.
+function Find-Local([string]$Names, [switch]$Dir) {
+    foreach ($n in $Names.Split(&#x27;|&#x27;)) {
+        $hit = $All | Where-Object { $_.PSIsContainer -eq [bool]$Dir -and $_.Name -ieq $n } | Select-Object -First 1
+        if ($hit) { return $hit }
+    }
+    return $null
+}
+
+function Get-RelPath([string]$Full) {
+    if ($Full.StartsWith($Folder, [StringComparison]::OrdinalIgnoreCase)) { return $Full.Substring($Folder.Length).TrimStart(&#x27;\&#x27;) }
+    return $Full
+}
+
+function Convert-ToVersion([string]$Text) {
+    if ($Text -match &#x27;(\d+(?:\.\d+){0,3})&#x27;) {
+        $v = $Matches[1]
+        if ($v -notmatch &#x27;\.&#x27;) { $v = $v + &#x27;.0&#x27; }
+        return [version]$v
+    }
+    return $null
+}
+
+function Get-RemoteSize([string]$Link) {
+    try {
+        $r = Invoke-WebRequest -Uri $Link -Method Head -UseBasicParsing -TimeoutSec 30
+        $v = @($r.Headers[&#x27;Content-Length&#x27;])[0]
+        if ($v) { return [int64]$v }
+    } catch { }
+    return $null
+}
+
+function Format-Size([int64]$Bytes) {
+    if ($Bytes -ge 1GB) { return (&#x27;{0:N2} GB&#x27; -f ($Bytes / 1GB)) }
+    if ($Bytes -ge 1MB) { return (&#x27;{0:N1} MB&#x27; -f ($Bytes / 1MB)) }
+    return (&#x27;{0:N0} KB&#x27; -f ($Bytes / 1KB))
+}
+
+# ---------- 1. Local versions (README.md) ----------
+if (-not (Test-Path $Readme)) {
+    $template = @&#x27;
+# Patch HD - Project Reforged (WoW 3.3.5a)
+
+Write the version of each file you have in the Version column. Leave it empty if you do not know.
+Run check-versions.bat again after you edit this file.
+
+| File | Content | Version | Type | Size |
+|---|---|---|---|---|
+| patch-A.mpq | Player characters and NPCs (HD) | | Core | |
+| patch-B.mpq | Buildings | | B + D + E set | |
+| patch-C.mpq | Creatures | | Core | |
+| patch-D.mpq | Doodads | | B + D + E set | |
+| patch-E.mpq | Environment | | B + D + E set | |
+| patch-G.mpq | Gear and weapons | | Core | |
+| patch-I.mpq | Interface | | Core | |
+| patch-M.mpq | Maps and loading screens | | Optional | |
+| patch-N.mpq | Darker nights | | Optional | |
+| patch-P.mpq | Spell particle effects | | Optional | |
+| patch-S.mpq | Sounds and music | | Optional | |
+| patch-U.mpq | Upright orcs | | Optional | |
+
+## Tools
+
+| Tool | Version | Source |
+|---|---|---|
+| St0ny AIO EXE Patcher | | https://github.com/Raz0r1337/St0nys-AIO-WoW-EXE-Patcher/releases |
+| DXVK | | https://github.com/Raz0r1337/DXVK/releases |
+| LuxVelum | | https://github.com/Stormhand-dev/Luxvelum/releases |
+| Lexara | | https://github.com/Stormhand-dev/Lexara---HD-Font-Renderer-for-WoW-3.3.5/releases |
+| Lights shader | | https://github.com/Raz0r1337/WoW-lights-patch-shader/releases |
+&#x27;@
+    Set-Content -Path $Readme -Value $template -Encoding UTF8
+    Write-Host &#x27;README.md was not found. A new README.md was created in this folder.&#x27; -ForegroundColor Yellow
+    Write-Host &#x27;Open it and write the versions you have. Empty versions show as NOT RECORDED.&#x27; -ForegroundColor Yellow
+}
+$readmeLines = Get-Content -Path $Readme -Encoding UTF8
+$local = @{}
+foreach ($line in $readmeLines) {
+    if ($line -match &#x27;^\|\s*patch-([A-Z])\.mpq\s*\|&#x27;) {
+        $cells = $line.Split(&#x27;|&#x27;)
+        $local[$Matches[1].ToUpper()] = $cells[3].Trim()
+    }
+}
+$localTools = @{}
+foreach ($line in $readmeLines) {
+    if ($line -match &#x27;^\|\s*(St0ny AIO EXE Patcher|DXVK|LuxVelum|Lexara|Lights shader)\s*\|&#x27;) {
+        $cells = $line.Split(&#x27;|&#x27;)
+        $localTools[$Matches[1]] = $cells[2].Trim()
+    }
+}
+if ($local.Count -eq 0) {
+    Write-Host &#x27;No patch rows found in the README.md table.&#x27; -ForegroundColor Red
+    exit 2
+}
+
+# ---------- 2. Site versions ----------
+Write-Host &quot;Reading $Url ...&quot;
+try {
+    $html = (Invoke-WebRequest -Uri $Url -UseBasicParsing -TimeoutSec 30).Content
+} catch {
+    Write-Host &quot;Cannot read the Downloads page: $($_.Exception.Message)&quot; -ForegroundColor Red
+    exit 2
+}
+
+$site = [ordered]@{}
+foreach ($card in ($html -split &#x27;class=&quot;dl-card&quot;&#x27;)) {
+    if ($card -notmatch &#x27;class=&quot;dl-patch&quot;&gt;Patch-([A-Z])&lt;&#x27;) { continue }
+    $letter = $Matches[1].ToUpper()
+    $ver = $null
+    if ($card -match &#x27;class=&quot;dl-version&quot;&gt;.*?v(\d+(?:\.\d+)+)&#x27;) { $ver = $Matches[1] }
+    $links = @([regex]::Matches($card, &#x27;href=&quot;([^&quot;]+\.mpq)&quot;&#x27;) | ForEach-Object { $_.Groups[1].Value })
+    $site[$letter] = [pscustomobject]@{ Version = $ver; Links = $links }
+}
+if ($site.Count -eq 0) {
+    Write-Host &#x27;No patch found on the page. The page layout may have changed.&#x27; -ForegroundColor Red
+    exit 2
+}
+
+# ---------- 2b. Tools: latest GitHub release ----------
+$tools = @(
+    @{ Name = &#x27;St0ny AIO EXE Patcher&#x27;; Repo = &#x27;Raz0r1337/St0nys-AIO-WoW-EXE-Patcher&#x27; },
+    @{ Name = &#x27;DXVK&#x27;;                  Repo = &#x27;Raz0r1337/DXVK&#x27; },
+    @{ Name = &#x27;LuxVelum&#x27;;              Repo = &#x27;Stormhand-dev/Luxvelum&#x27; },
+    @{ Name = &#x27;Lexara&#x27;;                Repo = &#x27;Stormhand-dev/Lexara---HD-Font-Renderer-for-WoW-3.3.5&#x27; },
+    @{ Name = &#x27;Lights shader&#x27;;         Repo = &#x27;Raz0r1337/WoW-lights-patch-shader&#x27; }
+)
+$toolRows = @()
+if (-not $NoToolCheck) {
+    foreach ($tl in $tools) {
+        $latest = $null; $link = $null
+        try {
+            $rel = Invoke-RestMethod -Uri (&quot;https://api.github.com/repos/{0}/releases/latest&quot; -f $tl.Repo) -Headers @{ &#x27;User-Agent&#x27; = &#x27;check-versions&#x27; } -TimeoutSec 30
+            $latest = ([string]$rel.tag_name).TrimStart(&#x27;v&#x27;, &#x27;V&#x27;)
+            $link = $rel.html_url
+        } catch { }
+        $have = $localTools[$tl.Name]
+        if (-not $latest) { $st = &#x27;CHECK FAILED&#x27;; $col = &#x27;Yellow&#x27; }
+        elseif (-not $have) { $st = &#x27;NOT RECORDED&#x27;; $col = &#x27;Yellow&#x27; }
+        else {
+            $a = Convert-ToVersion $have
+            $b = Convert-ToVersion $latest
+            if (-not $a -or -not $b) { $st = &#x27;CHECK MANUALLY&#x27;; $col = &#x27;Yellow&#x27; }
+            elseif ($b -gt $a) { $st = &#x27;UPDATE&#x27;; $col = &#x27;Red&#x27; }
+            else { $st = &#x27;OK&#x27;; $col = &#x27;Green&#x27; }
+        }
+        $toolRows += [pscustomobject]@{
+            Tool = $tl.Name; Local = $(if ($have) { $have } else { &#x27;-&#x27; }); Latest = $(if ($latest) { $latest } else { &#x27;-&#x27; })
+            Status = $st; Link = $link; Color = $col
+        }
+    }
+}
+
+# ---------- 3. Compare ----------
+$rows = @()
+$letters = @($local.Keys) + @($site.Keys) | Sort-Object -Unique
+foreach ($l in $letters) {
+    $found = Find-Local (&quot;patch-$l.mpq&quot;)
+    $file  = if ($found) { $found.FullName } else { $null }
+    $have  = [bool]$found
+    $lv    = $local[$l]
+    $sv    = if ($site.Contains($l)) { $site[$l].Version } else { $null }
+
+    if (-not $site.Contains($l)) { $status = &#x27;NOT ON SITE&#x27;; $color = &#x27;Yellow&#x27; }
+    elseif (-not $have -and -not $lv) { $status = &#x27;NEW ON SITE&#x27;; $color = &#x27;Cyan&#x27; }
+    elseif (-not $have) { $status = &#x27;MISSING FILE&#x27;; $color = &#x27;Red&#x27; }
+    elseif (-not $lv) { $status = &#x27;NOT RECORDED&#x27;; $color = &#x27;Yellow&#x27; }
+    else {
+        $a = Convert-ToVersion $lv
+        $b = Convert-ToVersion $sv
+        if (-not $a -or -not $b) { $status = &#x27;CHECK MANUALLY&#x27;; $color = &#x27;Yellow&#x27; }
+        elseif ($b -gt $a) { $status = &#x27;UPDATE&#x27;; $color = &#x27;Red&#x27; }
+        elseif ($b -lt $a) { $status = &#x27;LOCAL IS NEWER&#x27;; $color = &#x27;Yellow&#x27; }
+        else { $status = &#x27;OK&#x27;; $color = &#x27;Green&#x27; }
+    }
+
+    $sizeNote = &#x27;&#x27;
+    if ($have -and -not $NoSizeCheck -and $site.Contains($l) -and $site[$l].Links.Count -gt 0) {
+        $localSize = (Get-Item $file).Length
+        $matched = $null
+        $known = $false
+        foreach ($lk in $site[$l].Links) {
+            $rs = Get-RemoteSize $lk
+            if ($null -eq $rs) { continue }
+            $known = $true
+            if ($rs -eq $localSize) {
+                $matched = if ($lk -match &#x27;/extras/&#x27;) { &#x27;same size as the extras file&#x27; } else { &#x27;same size as the main file&#x27; }
+                break
+            }
+        }
+        if ($matched) { $sizeNote = $matched }
+        elseif ($known) {
+            $sizeNote = &#x27;size differs from the server&#x27;
+            if ($status -eq &#x27;OK&#x27;) { $status = &#x27;OK (size differs)&#x27;; $color = &#x27;Yellow&#x27; }
+        }
+        else { $sizeNote = &#x27;size not checked&#x27; }
+    }
+
+    $rows += [pscustomobject]@{
+        Patch = &quot;patch-$l&quot;; Local = $(if ($lv) { $lv } else { &#x27;-&#x27; }); Site = $(if ($sv) { $sv } else { &#x27;-&#x27; })
+        Status = $status; Size = $sizeNote; Color = $color
+    }
+}
+
+# ---------- 4. Report ----------
+Write-Host &#x27;&#x27;
+Write-Host (&#x27;{0,-10} {1,-10} {2,-10} {3,-18} {4}&#x27; -f &#x27;Patch&#x27;, &#x27;You have&#x27;, &#x27;Site&#x27;, &#x27;Status&#x27;, &#x27;File size&#x27;)
+Write-Host (&#x27;-&#x27; * 78)
+foreach ($r in $rows) {
+    Write-Host (&#x27;{0,-10} {1,-10} {2,-10} {3,-18} {4}&#x27; -f $r.Patch, $r.Local, $r.Site, $r.Status, $r.Size) -ForegroundColor $r.Color
+}
+
+if ($toolRows.Count -gt 0) {
+    Write-Host &#x27;&#x27;
+    Write-Host (&#x27;{0,-24} {1,-12} {2,-12} {3}&#x27; -f &#x27;Tool&#x27;, &#x27;You have&#x27;, &#x27;Latest&#x27;, &#x27;Status&#x27;)
+    Write-Host (&#x27;-&#x27; * 78)
+    foreach ($r in $toolRows) {
+        Write-Host (&#x27;{0,-24} {1,-12} {2,-12} {3}&#x27; -f $r.Tool, $r.Local, $r.Latest, $r.Status) -ForegroundColor $r.Color
+        if ($r.Status -in @(&#x27;UPDATE&#x27;, &#x27;NOT RECORDED&#x27;) -and $r.Link) { Write-Host (&#x27;{0,-24} {1}&#x27; -f &#x27;&#x27;, $r.Link) }
+    }
+}
+
+# ---------- 4b. Tool files in your folders ----------
+$expected = @(
+    @{ Tool = &#x27;St0ny AIO EXE Patcher&#x27;; Item = &#x27;patcher-win.bat&#x27; },
+    @{ Tool = &#x27;St0ny AIO EXE Patcher&#x27;; Item = &#x27;apply_patches.ps1&#x27; },
+    @{ Tool = &#x27;St0ny AIO EXE Patcher&#x27;; Item = &#x27;patcher_selection.ini&#x27; },
+    @{ Tool = &#x27;DXVK&#x27;;                  Item = &#x27;d3d9.dll&#x27; },
+    @{ Tool = &#x27;LuxVelum&#x27;;              Item = &#x27;Luxvelum.dll&#x27; },
+    @{ Tool = &#x27;LuxVelum&#x27;;              Item = &#x27;fogdata.bin&#x27; },
+    @{ Tool = &#x27;LuxVelum&#x27;;              Item = &#x27;waterdata.bin&#x27; },
+    @{ Tool = &#x27;LuxVelum&#x27;;              Item = &#x27;zones.ini&#x27; },
+    @{ Tool = &#x27;LuxVelum&#x27;;              Item = &#x27;Luxvelum.ini&#x27; },
+    @{ Tool = &#x27;Lexara&#x27;;                Item = &#x27;lexara.dll|dinput8.dll&#x27; },
+    @{ Tool = &#x27;Lexara&#x27;;                Item = &#x27;skia.dll&#x27; },
+    @{ Tool = &#x27;Lights shader&#x27;;         Item = &#x27;patch-5.MPQ&#x27;; Dir = $true }
+)
+$fileRows = @()
+foreach ($e in $expected) {
+    $hit = if ($e.Dir) { Find-Local $e.Item -Dir } else { Find-Local $e.Item }
+    if ($hit) {
+        $fileRows += [pscustomobject]@{ Tool = $e.Tool; Item = $e.Item.Split(&#x27;|&#x27;)[0]; Status = &#x27;FOUND&#x27;; Where = (Get-RelPath $hit.FullName); Color = &#x27;Green&#x27; }
+    } else {
+        $fileRows += [pscustomobject]@{ Tool = $e.Tool; Item = $e.Item.Split(&#x27;|&#x27;)[0]; Status = &#x27;MISSING&#x27;; Where = &#x27;-&#x27;; Color = &#x27;Red&#x27; }
+    }
+}
+Write-Host &#x27;&#x27;
+Write-Host (&#x27;{0,-24} {1,-22} {2,-9} {3}&#x27; -f &#x27;Tool&#x27;, &#x27;File&#x27;, &#x27;Status&#x27;, &#x27;Found in&#x27;)
+Write-Host (&#x27;-&#x27; * 78)
+foreach ($r in $fileRows) {
+    Write-Host (&#x27;{0,-24} {1,-22} {2,-9} {3}&#x27; -f $r.Tool, $r.Item, $r.Status, $r.Where) -ForegroundColor $r.Color
+}
+$fileTodo = @($fileRows | Where-Object { $_.Status -eq &#x27;MISSING&#x27; })
+
+$todo = @($rows | Where-Object { $_.Status -in @(&#x27;UPDATE&#x27;, &#x27;MISSING FILE&#x27;, &#x27;OK (size differs)&#x27;) })
+$toolTodo = @($toolRows | Where-Object { $_.Status -eq &#x27;UPDATE&#x27; })
+Write-Host &#x27;&#x27;
+if ($toolTodo.Count -gt 0) {
+    Write-Host (&quot;{0} tool(s) to update: {1}&quot; -f $toolTodo.Count, (($toolTodo | ForEach-Object { $_.Tool }) -join &#x27;, &#x27;)) -ForegroundColor Red
+}
+if ($fileTodo.Count -gt 0) {
+    Write-Host (&quot;{0} tool file(s) not found in your folders: {1}&quot; -f $fileTodo.Count, (($fileTodo | ForEach-Object { $_.Item }) -join &#x27;, &#x27;)) -ForegroundColor Red
+}
+if ($todo.Count -eq 0) {
+    Write-Host &#x27;All patches match the site.&#x27; -ForegroundColor Green
+} else {
+    Write-Host (&quot;{0} patch(es) to check: {1}&quot; -f $todo.Count, (($todo | ForEach-Object { $_.Patch }) -join &#x27;, &#x27;)) -ForegroundColor Red
+    Write-Host &quot;Download: $Url&quot;
+    Write-Host &#x27;Keep the same file names. Back up the old file first. Then run: .\check-versions.ps1 -UpdateReadme&#x27;
+}
+Write-Host &#x27;Patch-A and Patch-S have 2 variants (HD or SD, Standard or Standalone). The size check tells which one you have.&#x27;
+
+# ---------- 5. Update the README table ----------
+if ($UpdateReadme) {
+    $out = foreach ($line in $readmeLines) {
+        if ($line -match &#x27;^\|\s*patch-([A-Z])\.mpq\s*\|&#x27;) {
+            $l = $Matches[1].ToUpper()
+            if ($site.Contains($l) -and $site[$l].Version) {
+                $cells = $line.Split(&#x27;|&#x27;)
+                $cells[3] = &#x27; &#x27; + $site[$l].Version + &#x27; &#x27;
+                $line = $cells -join &#x27;|&#x27;
+            }
+        }
+        $line
+    }
+    $out = foreach ($line in $out) {
+        if ($line -match &#x27;^\|\s*(St0ny AIO EXE Patcher|DXVK|LuxVelum|Lexara|Lights shader)\s*\|&#x27;) {
+            $nm = $Matches[1]
+            $tr = $toolRows | Where-Object { $_.Tool -eq $nm } | Select-Object -First 1
+            if ($tr -and $tr.Latest -ne &#x27;-&#x27;) {
+                $cells = $line.Split(&#x27;|&#x27;)
+                $cells[2] = &#x27; &#x27; + $tr.Latest + &#x27; &#x27;
+                $line = $cells -join &#x27;|&#x27;
+            }
+        }
+        $line
+    }
+    Set-Content -Path $Readme -Value $out -Encoding UTF8
+    Write-Host &#x27;&#x27;
+    Write-Host &#x27;README.md updated with the versions from the site.&#x27; -ForegroundColor Green
+}
+
+if ($todo.Count -gt 0 -or $toolTodo.Count -gt 0 -or $fileTodo.Count -gt 0) { exit 1 } else { exit 0 }
+</code></pre>
+</details>
+<h2 id="result">Result in game</h2>
+<p>Check a city, a dungeon and a raid. Look for new textures and models, fog and light effects, and sharp fonts [VERIFY in game].</p>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li><p>Nothing changes: check that the patch files are in <strong>Data</strong> and that the EXE patcher was applied.</p></li>
+<li><p>The game does not start: remove the DLL files you added one by one (LuxVelum, Lexara, then DXVK). Start with the last one you installed.</p></li>
+<li><p>Delete the <strong>Cache</strong> folder again and relaunch.</p></li>
+<li><p>Support: see the Support and Discord links on the <a href="https://projectreforged.github.io/wotlk/" target="_blank" rel="noopener noreferrer">official site</a>, or ask in the <a href="https://discord.gg/md4a6BgUTs" target="_blank" rel="noopener noreferrer">Lost Unison Discord</a>.</p></li>
+</ul>
+<h3 id="credits">Credits</h3>
+<p>Project Reforged and its contributors. Full credits are on the <a href="https://projectreforged.github.io/wotlk/" target="_blank" rel="noopener noreferrer">official site</a>. St0ny for the EXE patcher. Raz0r1337 for the DXVK build. Stormhand-dev for LuxVelum and Lexara.</p>
+<h3 id="sources">Sources</h3>
+<p><a href="https://projectreforged.github.io/wotlk/downloads/" target="_blank" rel="noopener noreferrer">Project Reforged Downloads</a>, <a href="https://github.com/Raz0r1337/dxvk/releases" target="_blank" rel="noopener noreferrer">DXVK releases</a>, <a href="https://github.com/Raz0r1337/St0nys-AIO-WoW-EXE-Patcher" target="_blank" rel="noopener noreferrer">St0ny EXE Patcher</a>, <a href="https://github.com/Stormhand-dev/Luxvelum" target="_blank" rel="noopener noreferrer">LuxVelum</a>, <a href="https://github.com/Stormhand-dev/Lexara---HD-Font-Renderer-for-WoW-3.3.5" target="_blank" rel="noopener noreferrer">Lexara</a> (read on 2026-11-24)</p>
+</div>
+<!--nav--><nav class="pager" aria-label="Previous and next guide"><a class="pager-prev" href="patch-y.html"><span>Previous</span>Patch Y (Raid Visuals)</a></nav><!--/nav-->
+</main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <span>Guides by Lost Unison</span>
+    <span><a href="https://www.youtube.com/@lostunison">YouTube</a> · <a href="https://discord.gg/md4a6BgUTs">Discord</a></span>
+  </div>
+</footer>
+<script src="../js/search-index.js"></script>
+<script src="../js/site.js"></script>
+<script id="toc-spy">
+(function(){var l=[].slice.call(document.querySelectorAll('.toc-side a'));if(!l.length||!('IntersectionObserver' in window))return;
+var m={};l.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
+var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){l.forEach(function(a){a.classList.remove('on')});m[x.target.id].classList.add('on')}})},{rootMargin:'-80px 0px -70% 0px'});
+Object.keys(m).forEach(function(i){var h=document.getElementById(i);if(h)o.observe(h)});})();
+</script>
+</body>
+</html>

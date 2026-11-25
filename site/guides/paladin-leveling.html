@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paladin Leveling 1 to 80</title>
+<meta name="description" content="Race, talents, glyphs, skills and a leveling plan for Paladins.">
+<link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{if(localStorage.getItem('lu-sb')==='mini')document.documentElement.classList.add('sb-mini')}catch(e){}</script>
+</head>
+<body data-root="../">
+<header class="site-header">
+  <div class="bar">
+    <div class="bar-start">
+      <button class="icon-btn" id="sb-toggle" type="button" aria-label="Guide menu" aria-controls="sidebar" aria-expanded="true"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../images/logo.svg" width="32" height="32" alt="">
+        <span class="brand-name">Lost Unison</span>
+      </a>
+    </div>
+    <form class="search" id="search-form" role="search" action="../search.html" method="get" autocomplete="off">
+      <button class="icon-btn search-back" id="search-back" type="button" aria-label="Close search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+      <div class="search-field">
+        <input id="q" name="q" type="text" placeholder="Search guides" aria-label="Search guides" enterkeyhint="search" role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list" spellcheck="false">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        <button class="search-clear" id="q-clear" type="button" aria-label="Clear search" hidden><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <button class="search-btn" type="submit" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <ul class="suggest" id="suggest" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+    <div class="bar-end">
+      <button class="icon-btn search-open" id="search-open" type="button" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <a class="bar-link" href="https://www.youtube.com/@lostunison">YouTube</a>
+      <a class="bar-link" href="https://discord.gg/md4a6BgUTs">Discord</a>
+    </div>
+  </div>
+</header>
+<div class="page">
+<aside class="sidenav" id="sidebar" aria-label="Guides">
+<nav class="sb-full" aria-label="All guides">
+<a class="sb-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<hr>
+<p class="sb-head">Leveling</p>
+<a class="sb-item" href="power-leveling.html" title="Power Leveling 1 to 80 (no boost)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Power Leveling 1 to 80 (no boost)</span></a>
+<a class="sb-item" href="paladin-leveling.html" title="Paladin Leveling 1 to 80" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Paladin Leveling 1 to 80</span></a>
+<hr>
+<p class="sb-head">Professions</p>
+<a class="sb-item" href="alchemy.html" title="Alchemy 1 to 450 (x3), Specializations and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Alchemy 1 to 450</span></a>
+<a class="sb-item" href="blacksmithing.html" title="Blacksmithing 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Blacksmithing 1 to 450</span></a>
+<a class="sb-item" href="engineering.html" title="Engineering 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Engineering 1 to 450</span></a>
+<a class="sb-item" href="enchanting.html" title="Enchanting 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Enchanting 1 to 450</span></a>
+<a class="sb-item" href="inscription.html" title="Inscription 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Inscription 1 to 450</span></a>
+<a class="sb-item" href="jewelcrafting.html" title="Jewelcrafting 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Jewelcrafting 1 to 450</span></a>
+<a class="sb-item" href="leatherworking.html" title="Leatherworking 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Leatherworking 1 to 450</span></a>
+<a class="sb-item" href="tailoring.html" title="Tailoring 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Tailoring 1 to 450</span></a>
+<a class="sb-item" href="skinning.html" title="Skinning 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Skinning 1 to 450</span></a>
+<a class="sb-item" href="mining.html" title="Mining 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Mining 1 to 450</span></a>
+<a class="sb-item" href="herbalism.html" title="Herbalism 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Herbalism 1 to 450</span></a>
+<a class="sb-item" href="cooking.html" title="Cooking 1 to 450"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Cooking 1 to 450</span></a>
+<a class="sb-item" href="fishing.html" title="Fishing 1 to 450, Find Fish, Sea Turtle and Heirloom Ring"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Fishing 1 to 450</span></a>
+<a class="sb-item" href="first-aid.html" title="First Aid 1 to 450 (x3)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>First Aid 1 to 450</span></a>
+<hr>
+<p class="sb-head">Addons</p>
+<a class="sb-item" href="tsm-part-1.html" title="TSM (TradeSkill Master) Part 1"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>TSM (TradeSkill Master) Part 1</span></a>
+<hr>
+<p class="sb-head">Gearing</p>
+<a class="sb-item" href="all-264-boe.html" title="All 264 Item Level BoE"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>All 264 Item Level BoE</span></a>
+<a class="sb-item" href="unlock-heroic-dungeons.html" title="Unlock Heroic Dungeons"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Unlock Heroic Dungeons</span></a>
+<hr>
+<p class="sb-head">Reputation</p>
+<a class="sb-item" href="thorium-brotherhood.html" title="Thorium Brotherhood Neutral to Revered"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Thorium Brotherhood Neutral to Revered</span></a>
+<a class="sb-item" href="ashen-verdict.html" title="Ashen Verdict Reputation Farm"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Ashen Verdict Reputation Farm</span></a>
+<hr>
+<p class="sb-head">Gold making</p>
+<a class="sb-item" href="gold-farming.html" title="Best Gold Farming (2,893 gold/h)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Best Gold Farming (2,893 gold/h)</span></a>
+<hr>
+<p class="sb-head">Game client</p>
+<a class="sb-item" href="windowed-mode.html" title="Windowed Mode"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Windowed Mode</span></a>
+<a class="sb-item" href="patch-y.html" title="Patch Y (Raid Visuals)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Patch Y (Raid Visuals)</span></a>
+<a class="sb-item" href="project-reforged-install.html" title="Project Reforged Install"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Project Reforged Install</span></a>
+<hr>
+</nav>
+<nav class="sb-rail" aria-label="Categories">
+<a class="mini-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<a class="mini-item" href="../index.html#leveling" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Leveling</span></a>
+<a class="mini-item" href="../index.html#professions"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Professions</span></a>
+<a class="mini-item" href="../index.html#addons"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>Addons</span></a>
+<a class="mini-item" href="../index.html#gearing"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Gearing</span></a>
+<a class="mini-item" href="../index.html#reputation"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Reputation</span></a>
+<a class="mini-item" href="../index.html#gold-making"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Gold</span></a>
+<a class="mini-item" href="../index.html#game-client"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Client</span></a>
+</nav>
+</aside>
+<div class="sb-scrim" id="sb-scrim"></div>
+<main class="guide">
+<!--nav--><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Guides</a><span aria-hidden="true">/</span><a href="../index.html#leveling">Leveling</a><span aria-hidden="true">/</span><span>Paladin Leveling 1 to 80</span></nav><!--/nav-->
+<div class="prose">
+<h1>WotLK Warmane Icecrown - Paladin Leveling 1 to 80</h1>
+<p class="byline">Guide by <strong>Lost Unison</strong></p>
+<p class="lede">Race, talents, glyphs, skills and a leveling plan for Paladins.</p>
+</div>
+<nav class="toc" aria-label="On this page"><span class="toc-title">On this page</span><ol><li><a href="#introduction">Introduction</a></li><li><a href="#race">Race</a></li><li><a href="#talents">Talents</a></li><li><a href="#glyphs">Glyphs</a></li><li><a href="#paladin-skills-recommendation">Paladin skills recommendation</a></li><li><a href="#leveling">Leveling</a></li></ol></nav>
+<div class="doc">
+
+<h2 id="introduction">Introduction</h2>
+<h3>Why Paladin</h3>
+<ul>
+<li>
+<p>Cheaper ground mount at level 20 and 40</p>
+</li>
+<li>
+<p>Versatile role</p>
+</li>
+<li>
+<p>Strong tank and healing</p>
+</li>
+</ul>
+<h2 id="race">Race</h2>
+<ul>
+<li>
+<p>Human</p>
+</li>
+<li>
+<p>Draenei</p>
+</li>
+<li>
+<p>Blood Elf</p>
+</li>
+</ul>
+<h2 id="talents">Talents</h2>
+<p><img alt="" height="747" loading="lazy" src="../images/paladin-leveling-01.webp" style="max-width:min(100%, 624px)" width="998"/></p>
+<h2 id="glyphs">Glyphs</h2>
+<p>https://www.wowhead.com/wotlk/talent-calc/paladin/-05005132203152321333311301-052300212003_001nmd11xqk21xqq</p>
+<p><img alt="" height="267" loading="lazy" src="../images/paladin-leveling-02.webp" style="max-width:min(100%, 624px)" width="997"/></p>
+<h2 id="paladin-skills-recommendation">Paladin skills recommendation</h2>
+<p>Due to our limited resource in gold, some skills will not be learned
+during the leveling.</p>
+<p><strong>Don’t learn</strong> these skills if you’re playing
+<strong>tank specialization</strong>.</p>
+<p>Holy specialization:</p>
+<ul>
+<li>
+<p>Holy Light</p>
+</li>
+<li>
+<p>Redemption (learn only level 1)</p>
+</li>
+<li>
+<p>Seal of Righteousness</p>
+</li>
+<li>
+<p>Exorcism</p>
+</li>
+<li>
+<p>Sense Undead</p>
+</li>
+<li>
+<p>Concentration Aura</p>
+</li>
+<li>
+<p>Turn Evil</p>
+</li>
+<li>
+<p>Seal of Light</p>
+</li>
+<li>
+<p>Holy Wrath</p>
+</li>
+</ul>
+<p>Retribution specialization:</p>
+<ul>
+<li>
+<p>Judgement of Light</p>
+</li>
+<li>
+<p>Judgement of Justice</p>
+</li>
+<li>
+<p>Hammer of Wrath</p>
+</li>
+<li>
+<p>Seal of Vengeance/Corruption</p>
+</li>
+<li>
+<p>Avenging Wrath</p>
+</li>
+</ul>
+<p>Protection specialization:</p>
+<ul>
+<li>
+<p>Seal of Justice</p>
+</li>
+<li>
+<p>Hand of Salvation</p>
+</li>
+<li>
+<p>Divine Intervention</p>
+</li>
+<li>
+<p>Shadow, Frost and Fire Aura</p>
+</li>
+<li>
+<p>Hand of Sacrifice</p>
+</li>
+</ul>
+<p>Visit your class trainer at these level:</p>
+<ul>
+<li>
+<p>16</p>
+</li>
+<li>
+<p>20</p>
+</li>
+<li>
+<p>24*</p>
+</li>
+<li>
+<p>26*</p>
+</li>
+<li>
+<p>30</p>
+</li>
+<li>
+<p>34*</p>
+</li>
+<li>
+<p>36*</p>
+</li>
+<li>
+<p>40</p>
+</li>
+<li>
+<p>42*</p>
+</li>
+<li>
+<p>44*</p>
+</li>
+<li>
+<p>46*</p>
+</li>
+<li>
+<p>50</p>
+</li>
+<li>
+<p>52*</p>
+</li>
+<li>
+<p>54*</p>
+</li>
+<li>
+<p>56*</p>
+</li>
+<li>
+<p>58*</p>
+</li>
+<li>
+<p>60</p>
+</li>
+<li>
+<p>62 (Crusader Aura)</p>
+</li>
+<li>
+<p>65*</p>
+</li>
+<li>
+<p>66*</p>
+</li>
+<li>
+<p>70</p>
+</li>
+<li>
+<p>71</p>
+</li>
+<li>
+<p>73*</p>
+</li>
+<li>
+<p>74*</p>
+</li>
+<li>
+<p>75</p>
+</li>
+<li>
+<p>76*</p>
+</li>
+<li>
+<p>77*</p>
+</li>
+<li>
+<p>79*</p>
+</li>
+<li>
+<p>80</p>
+</li>
+</ul>
+<p>* = Can be skipped</p>
+<h2 id="leveling">Leveling</h2>
+<h3>General tips</h3>
+<ul>
+<li>
+<p>Try to logout inside Capitals to gain rested XP</p>
+</li>
+<li>
+<p>Check <strong>“Paladin skills recommendation”</strong> section to
+optimise your time and gold with your class trainer</p>
+</li>
+<li>
+<p>Keep space in your inventory before each dungeon run</p>
+</li>
+<li>
+<p>At level 20 you can learn your 60% speed ground mount and at level 40
+your 100% speed ground mount</p>
+</li>
+<li>
+<p>Paladins don’t learn their “Resurrection spell” through their class
+trainer, It’s learned from a quest</p>
+</li>
+</ul>
+<h3>1 - 15</h3>
+<p><img alt="" height="668" loading="lazy" src="../images/paladin-leveling-03.webp" style="max-width:min(100%, 624px)" width="1002"/></p>
+<p>We start in Northshire.</p>
+<ul>
+<li>
+<p>Complete quest until reaching level 6</p>
+</li>
+<li>
+<p>Learn all skills from the trainer</p>
+</li>
+<li>
+<p>Take a 1 handed weapon from the quest reward</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>Complete all quest getting us to level 10 or close</p>
+</li>
+</ul>
+<p>Then we go to Goldshire and take all the quests.</p>
+<ul>
+<li>
+<p>Take all the quests</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>Set Hearthstone in Goldshire</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>Head to the mine in south of Goldshire</p>
+</li>
+<li>
+<p>Complete the 3 quests in the mine</p>
+</li>
+<li>
+<p>Head to “Forest’s edge” in the west</p>
+</li>
+<li>
+<p>Return and take the quest in front of the castle</p>
+</li>
+<li>
+<p>Head to the south to defeat Hoggler while killing the gnolls in the
+way</p>
+</li>
+<li>
+<p>Once completed, return the headband quest and head to Westfall</p>
+</li>
+</ul>
+<p><img alt="" height="668" loading="lazy" src="../images/paladin-leveling-04.webp" style="max-width:min(100%, 624px)" width="1002"/></p>
+<p>Once crossing the bridge, you will find 2 NPC, get the quests.</p>
+<ul>
+<li>
+<p>Collect 3 okras in the field next to them</p>
+</li>
+<li>
+<p>Head to the second field and collect the item</p>
+</li>
+<li>
+<p>Collect 4 more okras there</p>
+</li>
+<li>
+<p>Return the quests in the first field</p>
+</li>
+</ul>
+<p>Here, you should be level 14.</p>
+<ul>
+<li>
+<p>Use Hearthstone to return to Goldshire</p>
+</li>
+<li>
+<p>Return all the quest you have in Goldshire</p>
+</li>
+<li>
+<p>Learn skill from class trainer</p>
+</li>
+</ul>
+<h3>15 - 58</h3>
+<ul>
+<li>
+<p>Queue in RDF</p>
+</li>
+<li>
+<p>Head to Stormwind while waiting</p>
+</li>
+<li>
+<p>Set Hearthstone in Stormwind</p>
+</li>
+<li>
+<p>Once level 20 learn “Summon Warhorse” (60% speed ground mount) and
+take your class trainer quests to learn “Redemption”</p>
+</li>
+<li>
+<p>Complete it</p>
+</li>
+<li>
+<p>Buy from the Auction House “Glyph of Seal of Command” and equip
+it</p>
+</li>
+<li>
+<p>Go to Ironforge and learn axe wielding</p>
+</li>
+</ul>
+<p>Now the goal is to level while earning gold:</p>
+<ul>
+<li>
+<p>Do RDF -&gt; Learn skills</p>
+</li>
+<li>
+<p>When RDF is long -&gt; Do professions</p>
+</li>
+<li>
+<p>When inventory is full -&gt; sell your stuff in the Auction House</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>At level 40 you should be able to learn “Summon Charger” (100% speed
+ground mount)</p>
+</li>
+</ul>
+<h3>58 - 68</h3>
+<p>Head through the Dark Portal to the Outlands:</p>
+<ul>
+<li>
+<p>Take the introduction quest before the Dark Portal</p>
+</li>
+<li>
+<p>Complete quests in Hellfire Peninsula until reaching level 66 or 67
+(red marker for Horde and blue for Alliance quests)</p>
+</li>
+</ul>
+<p><img alt="" height="668" loading="lazy" src="../images/paladin-leveling-05.webp" style="max-width:min(100%, 624px)" width="1002"/></p>
+<ul>
+<li>
+<p>Head to Terokkar Forest and complete quests until reaching 68</p>
+</li>
+</ul>
+<p><img alt="" height="668" loading="lazy" src="../images/paladin-leveling-06.webp" style="max-width:min(100%, 624px)" width="1002"/></p>
+<p>Dungeons are not recommended for their low XP reward. Although I
+recommend you complete <strong>“Hellfire Ramparts”</strong> after you
+get the dungeon quest.</p>
+<h3>68 - 80</h3>
+<ul>
+<li>
+<p>Take the boat in <strong>Stormwind</strong> and head to
+<strong>Borean Tundra</strong> in the <strong>Northrend</strong></p>
+</li>
+<li>
+<p>Complete quests until reaching level 72</p>
+</li>
+<li>
+<p>Head to <strong>Dragonblight</strong> and complete quests until
+reaching level 74</p>
+</li>
+<li>
+<p>Head to <strong>Zul'Drak</strong> and complete quests until reaching
+level 77</p>
+</li>
+<li>
+<p>Get your free flying mount in <strong>The Storm Peaks</strong></p>
+</li>
+<li>
+<p>Complete the <strong>Argent Vanguard</strong> quest line in
+<strong>Icecrown</strong></p>
+</li>
+<li>
+<p>Complete the <strong>The Shadow Vault</strong> quest line in
+<strong>Icecrown</strong></p>
+</li>
+</ul>
+<p>Congratulations! Now you should be level 80.</p>
+<p>Make sure to check my <strong>Warmane Level 80 Gearing
+Guide</strong>.</p>
+
+</div>
+<!--nav--><nav class="pager" aria-label="Previous and next guide"><a class="pager-prev" href="power-leveling.html"><span>Previous</span>Power Leveling 1 to 80 (no boost)</a><a class="pager-next" href="alchemy.html"><span>Next</span>Alchemy 1 to 450</a></nav><!--/nav-->
+</main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <span>Guides by Lost Unison</span>
+    <span><a href="https://www.youtube.com/@lostunison">YouTube</a> · <a href="https://discord.gg/md4a6BgUTs">Discord</a></span>
+  </div>
+</footer>
+<script src="../js/search-index.js"></script>
+<script src="../js/site.js"></script>
+</body>
+</html>

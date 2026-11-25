@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alchemy 1 to 450 (x3), Specializations and Gold Making</title>
+<meta name="description" content="Mixology bonus, full leveling route, which specialization to pick and how to make gold.">
+<link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{if(localStorage.getItem('lu-sb')==='mini')document.documentElement.classList.add('sb-mini')}catch(e){}</script>
+</head>
+<body data-root="../">
+<header class="site-header">
+  <div class="bar">
+    <div class="bar-start">
+      <button class="icon-btn" id="sb-toggle" type="button" aria-label="Guide menu" aria-controls="sidebar" aria-expanded="true"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../images/logo.svg" width="32" height="32" alt="">
+        <span class="brand-name">Lost Unison</span>
+      </a>
+    </div>
+    <form class="search" id="search-form" role="search" action="../search.html" method="get" autocomplete="off">
+      <button class="icon-btn search-back" id="search-back" type="button" aria-label="Close search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+      <div class="search-field">
+        <input id="q" name="q" type="text" placeholder="Search guides" aria-label="Search guides" enterkeyhint="search" role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list" spellcheck="false">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        <button class="search-clear" id="q-clear" type="button" aria-label="Clear search" hidden><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <button class="search-btn" type="submit" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <ul class="suggest" id="suggest" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+    <div class="bar-end">
+      <button class="icon-btn search-open" id="search-open" type="button" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <a class="bar-link" href="https://www.youtube.com/@lostunison">YouTube</a>
+      <a class="bar-link" href="https://discord.gg/md4a6BgUTs">Discord</a>
+    </div>
+  </div>
+</header>
+<div class="page">
+<aside class="sidenav" id="sidebar" aria-label="Guides">
+<nav class="sb-full" aria-label="All guides">
+<a class="sb-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<hr>
+<p class="sb-head">Leveling</p>
+<a class="sb-item" href="power-leveling.html" title="Power Leveling 1 to 80 (no boost)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Power Leveling 1 to 80 (no boost)</span></a>
+<a class="sb-item" href="paladin-leveling.html" title="Paladin Leveling 1 to 80"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Paladin Leveling 1 to 80</span></a>
+<hr>
+<p class="sb-head">Professions</p>
+<a class="sb-item" href="alchemy.html" title="Alchemy 1 to 450 (x3), Specializations and Gold Making" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Alchemy 1 to 450</span></a>
+<a class="sb-item" href="blacksmithing.html" title="Blacksmithing 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Blacksmithing 1 to 450</span></a>
+<a class="sb-item" href="engineering.html" title="Engineering 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Engineering 1 to 450</span></a>
+<a class="sb-item" href="enchanting.html" title="Enchanting 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Enchanting 1 to 450</span></a>
+<a class="sb-item" href="inscription.html" title="Inscription 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Inscription 1 to 450</span></a>
+<a class="sb-item" href="jewelcrafting.html" title="Jewelcrafting 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Jewelcrafting 1 to 450</span></a>
+<a class="sb-item" href="leatherworking.html" title="Leatherworking 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Leatherworking 1 to 450</span></a>
+<a class="sb-item" href="tailoring.html" title="Tailoring 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Tailoring 1 to 450</span></a>
+<a class="sb-item" href="skinning.html" title="Skinning 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Skinning 1 to 450</span></a>
+<a class="sb-item" href="mining.html" title="Mining 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Mining 1 to 450</span></a>
+<a class="sb-item" href="herbalism.html" title="Herbalism 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Herbalism 1 to 450</span></a>
+<a class="sb-item" href="cooking.html" title="Cooking 1 to 450"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Cooking 1 to 450</span></a>
+<a class="sb-item" href="fishing.html" title="Fishing 1 to 450, Find Fish, Sea Turtle and Heirloom Ring"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Fishing 1 to 450</span></a>
+<a class="sb-item" href="first-aid.html" title="First Aid 1 to 450 (x3)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>First Aid 1 to 450</span></a>
+<hr>
+<p class="sb-head">Addons</p>
+<a class="sb-item" href="tsm-part-1.html" title="TSM (TradeSkill Master) Part 1"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>TSM (TradeSkill Master) Part 1</span></a>
+<hr>
+<p class="sb-head">Gearing</p>
+<a class="sb-item" href="all-264-boe.html" title="All 264 Item Level BoE"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>All 264 Item Level BoE</span></a>
+<a class="sb-item" href="unlock-heroic-dungeons.html" title="Unlock Heroic Dungeons"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Unlock Heroic Dungeons</span></a>
+<hr>
+<p class="sb-head">Reputation</p>
+<a class="sb-item" href="thorium-brotherhood.html" title="Thorium Brotherhood Neutral to Revered"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Thorium Brotherhood Neutral to Revered</span></a>
+<a class="sb-item" href="ashen-verdict.html" title="Ashen Verdict Reputation Farm"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Ashen Verdict Reputation Farm</span></a>
+<hr>
+<p class="sb-head">Gold making</p>
+<a class="sb-item" href="gold-farming.html" title="Best Gold Farming (2,893 gold/h)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Best Gold Farming (2,893 gold/h)</span></a>
+<hr>
+<p class="sb-head">Game client</p>
+<a class="sb-item" href="windowed-mode.html" title="Windowed Mode"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Windowed Mode</span></a>
+<a class="sb-item" href="patch-y.html" title="Patch Y (Raid Visuals)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Patch Y (Raid Visuals)</span></a>
+<a class="sb-item" href="project-reforged-install.html" title="Project Reforged Install"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Project Reforged Install</span></a>
+<hr>
+</nav>
+<nav class="sb-rail" aria-label="Categories">
+<a class="mini-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<a class="mini-item" href="../index.html#leveling"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Leveling</span></a>
+<a class="mini-item" href="../index.html#professions" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Professions</span></a>
+<a class="mini-item" href="../index.html#addons"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>Addons</span></a>
+<a class="mini-item" href="../index.html#gearing"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Gearing</span></a>
+<a class="mini-item" href="../index.html#reputation"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Reputation</span></a>
+<a class="mini-item" href="../index.html#gold-making"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Gold</span></a>
+<a class="mini-item" href="../index.html#game-client"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Client</span></a>
+</nav>
+</aside>
+<div class="sb-scrim" id="sb-scrim"></div>
+<main class="guide">
+<!--nav--><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Guides</a><span aria-hidden="true">/</span><a href="../index.html#professions">Professions</a><span aria-hidden="true">/</span><span>Alchemy 1 to 450</span></nav><!--/nav-->
+<div class="prose">
+<h1>WotLK Warmane Icecrown - Alchemy 1 to 450 (x3), Specializations and Gold Making</h1>
+<p class="byline">Guide by <strong>Lost Unison</strong></p>
+<p class="lede">Mixology bonus, full leveling route, which specialization to pick and how to make gold.</p>
+</div>
+<div class="video-links"><a class="video-btn" href="https://www.youtube.com/watch?v=aqbOYf7BQIc"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>Watch the video: Alchemy 1 to 450</a></div>
+<nav class="toc" aria-label="On this page"><span class="toc-title">On this page</span><ol><li><a href="#alchemy-bonus">Alchemy Bonus</a></li><li><a href="#leveling-alchemy-from-1-to-450">Leveling Alchemy from 1 to 450</a></li><li><a href="#conclusion">Conclusion</a></li></ol></nav>
+<div class="doc">
+
+<h2 id="alchemy-bonus">Alchemy Bonus</h2>
+<p>At level <strong>400 Alchemy</strong>, you unlock the passive bonus
+<strong>Mixology.</strong></p>
+<p><strong>Mixology</strong> gives increased effect and duration when
+you drink any elixir or flask.</p>
+<p>Here’s the bonuses for each flask:<img alt="" height="227" loading="lazy" src="../images/alchemy-01.webp" style="max-width:min(100%, 547px)" width="547"/></p>
+<h2 id="leveling-alchemy-from-1-to-450">Leveling Alchemy from 1 to 450</h2>
+<h4>Required Materials</h4>
+<p>SOME CRAFTS ARE YELLOW OR GREEN.</p>
+<p>YOU <strong>MIGHT</strong> NEED MORE MATERIALS THAN LISTED HERE.</p>
+<p>GET MORE MATERIALS.</p>
+<p>(usually add 3 or 5 for each material)</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Recipe</strong></th>
+<th><strong>Vendor</strong></th>
+<th><strong>Others</strong></th>
+<th colspan="2"><strong>Herbs</strong></th>
+<th><p><strong>Potions</strong></p>
+<p>(For Alchemy Specialization)</p></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td>Recipe: Super Mana Potion [<a href="https://www.wowhead.com/wotlk/item=22907/recipe-super-mana-potion"><u>Location</u></a>
+or Buy in AH]</td>
+<td>31 Empty Vial</td>
+<td>3 Dark Jade</td>
+<td>20 Peacebloom</td>
+<td>28 Blindweed</td>
+<td>4 Super Mana Potion</td>
+</tr><tr class="header">
+<td rowspan="10"></td>
+<td>29 Leaded Vial</td>
+<td>3 Huge Citrine</td>
+<td>20 Silverleaf</td>
+<td>15 Golden Sansam</td>
+<td>2 Super Healing Potion</td>
+</tr><tr class="odd">
+<td>32 Crystal Vial</td>
+<td>3 Eternal Fire</td>
+<td>25 Briarthorn</td>
+<td>2 Mountain Silversage</td>
+<td>5 Major Dreamless Sleep Potion</td>
+</tr><tr class="header">
+<td>47 Imbued Vial</td>
+<td>15 Pygmy Suckerfish</td>
+<td>11 Mageroyal</td>
+<td>17 Felweed</td>
+<td>Flying in Outland</td>
+</tr><tr class="odd">
+<td>5 Enchanted Vial</td>
+<td></td>
+<td>8 Bruiseweed</td>
+<td>8 Terocone</td>
+<td><strong>150 Gold</strong> if you want to switch
+<strong>Specialization</strong></td>
+</tr><tr class="header">
+<td rowspan="6"></td>
+<td rowspan="6"></td>
+<td>19 Stranglekelp</td>
+<td>5 Dreaming Glory</td>
+<td rowspan="6"></td>
+</tr><tr class="odd">
+<td>11 Liferoot</td>
+<td>17 Goldclover</td>
+</tr><tr class="header">
+<td>11 Kingsblood</td>
+<td>6 Deadnettle</td>
+</tr><tr class="odd">
+<td>10 Goldthorn</td>
+<td>15 Talandra's Rose</td>
+</tr><tr class="header">
+<td>32 Sungrass</td>
+<td>59 Icethorn</td>
+</tr><tr class="odd">
+<td>20 Khadgar's Whisker</td>
+<td>5 Frost Lotus</td>
+</tr>
+</tbody>
+</table></div>
+<p>Now choose which trinket to craft depending on what you need</p>
+<ul>
+<li>
+<p><strong>Tank</strong>: 20 Deadnettle, 12 Pygmy Oil, 1 Frost Lotus</p>
+</li>
+<li>
+<p><strong>Caster</strong>: 20 Goldclover, 2 Eternal Life, 1 Frost
+Lotus</p>
+</li>
+<li>
+<p><strong>Melee</strong>: 15 Adder's Tongue, 15 Tiger's Lily, 1 Frost
+Lotus</p>
+</li>
+</ul>
+<p>For example if you main spec <strong>Tank</strong> add 20 Deadnettle,
+12 Pygmy Oil, 1 Frost Lotus in your shopping list.</p>
+<h4>Leveling 1-450</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Level</strong></th>
+<th><strong>Craft</strong></th>
+<th><strong>Quantity</strong></th>
+<th><strong>Total Material</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td colspan="4"><strong>Learn Apprentice Alchemy at 1</strong></td>
+</tr><tr class="header">
+<td><strong>1-61</strong></td>
+<td>Minor Healing Potion (Keep 15 of therm)</td>
+<td>20</td>
+<td>20 Peacebloom, 20 Silverleaf, 20 Empty Vial</td>
+</tr><tr class="odd">
+<td colspan="4"><strong>Learn Journeyman Alchemy at 50</strong></td>
+</tr><tr class="header">
+<td><strong>61-106</strong></td>
+<td>Lesser Healing Potion</td>
+<td>15</td>
+<td>15 Minor Healing Potion, 15 Briarthorn</td>
+</tr><tr class="odd">
+<td><strong>106-112</strong></td>
+<td>Elixir of Wisdom</td>
+<td>2</td>
+<td>2 Mageroyal, 2 Briarthorn, 2 Empty Vial</td>
+</tr><tr class="header">
+<td><strong>112-136</strong></td>
+<td>Healing Potion</td>
+<td>8</td>
+<td>8 Bruiseweed, 8 Briarthorn, 8 Leaded Vial</td>
+</tr><tr class="odd">
+<td colspan="4"><strong>Learn Expert Alchemy at 125</strong></td>
+</tr><tr class="header">
+<td><strong>136-163</strong></td>
+<td>Lesser Mana Potion</td>
+<td>9</td>
+<td>9 Mageroyal, 9 Stranglekelp, 9 Empty Vial</td>
+</tr><tr class="odd">
+<td><strong>163-196</strong></td>
+<td>Greater Healing Potion</td>
+<td>11</td>
+<td>11 Liferoot, 11 Kingsblood, 11 Leaded Vial</td>
+</tr><tr class="header">
+<td><strong>196-220</strong></td>
+<td>Elixir of Agility</td>
+<td>10</td>
+<td>10 Stranglekelp, 10 Goldthorn, 10 Leaded Vial</td>
+</tr><tr class="odd">
+<td colspan="4"><strong>Learn Artisan Alchemy at 200</strong></td>
+</tr><tr class="header">
+<td><strong>220-250</strong></td>
+<td>Superior Healing Potion</td>
+<td>12</td>
+<td>12 Sungrass, 12 Khadgar’s Whisker, 12 Crystal Vial</td>
+</tr><tr class="odd">
+<td><strong>250-271</strong></td>
+<td>Elixir of Greater Intellect</td>
+<td>8</td>
+<td>8 Blindweed, 8 Khadgar’s Whisker, 8 Crystal Vial</td>
+</tr><tr class="header">
+<td><strong>271-295</strong></td>
+<td>Superior Mana Potion</td>
+<td>10</td>
+<td>20 Sungrass, 20 Blindweed, 10 Crystal Vial</td>
+</tr><tr class="odd">
+<td colspan="4"><strong>Learn Master Alchemy at 275 In
+Outland</strong></td>
+</tr><tr class="header">
+<td><strong>295-301</strong></td>
+<td>Major Healing Potion</td>
+<td>2</td>
+<td>4 Golden Sansam, 2 Mountain Silversage, 2 Crystal Vial</td>
+</tr><tr class="odd">
+<td><strong>301-322</strong></td>
+<td>Volatile Healing Potion</td>
+<td>8</td>
+<td>8 Golden Sansam, 8 Felweed, 8 Imbued Vial</td>
+</tr><tr class="header">
+<td><strong>322-343</strong></td>
+<td>Elixir of Draenic Wisdom</td>
+<td>8</td>
+<td>8 Felweed, 8 Terocone, 8 Imbued Vial</td>
+</tr><tr class="odd">
+<td><strong>343-349</strong></td>
+<td><p>Super Healing Potion</p>
+<p>(Keep it for Alchemy Specialization)</p></td>
+<td>3</td>
+<td>3 Golden Sansam, 3 Dreaming Glory, 3 Imbued Vial</td>
+</tr><tr class="header">
+<td><strong>349-352</strong></td>
+<td><p>Super Mana Potion</p>
+<p>(Keep it for Alchemy Specialization)</p></td>
+<td>1</td>
+<td>2 Dreaming Glory, 1 Felweed, 1 Imbued Vial</td>
+</tr><tr class="odd">
+<td colspan="4"><strong>Learn Grand Alchemy at 350 In
+Northrend</strong></td>
+</tr><tr class="header">
+<td><strong>352-370</strong></td>
+<td>Resurgent Healing Potion</td>
+<td>7</td>
+<td>14 Goldclover, 7 Imbued Vial</td>
+</tr><tr class="odd">
+<td><strong>370-376</strong></td>
+<td>Wrath Elixir</td>
+<td>3</td>
+<td>3 Goldclover, 6 Deadnettle, 3 Imbued Vial</td>
+</tr><tr class="header">
+<td><strong>376-385</strong></td>
+<td>Pygmy Oil</td>
+<td>15</td>
+<td>15 Pygmy Suckerfish</td>
+</tr><tr class="odd">
+<td><strong>385-397</strong></td>
+<td>Elixir of Spirit</td>
+<td>5</td>
+<td>15 Talandra’s Rose, 5 Imbued Vial</td>
+</tr><tr class="header">
+<td><strong>397-424</strong></td>
+<td>Indestructible Potion</td>
+<td>12</td>
+<td>24 Icethorn, 12 Imbued Vial</td>
+</tr><tr class="odd">
+<td><strong>424-427</strong></td>
+<td><p>Make your Alchemist Stone:</p>
+<p>Caster: Mercurial Alchemist Stone</p>
+<p>Melee: Mighty Alchemist Stone</p>
+<p>Tank: Indestructible Alchemist Stone</p></td>
+<td>1</td>
+<td>X</td>
+</tr><tr class="header">
+<td><strong>427-436</strong></td>
+<td>Alchemy: Transmute: Earthsiege Diamond</td>
+<td>3</td>
+<td>3 Dark Jade, 3 Huge Citrine, 3 Eternal Fire</td>
+</tr><tr class="odd">
+<td><strong>436-450</strong></td>
+<td><p>Flask of Pure Mojo</p>
+<p>(Cheapest)</p></td>
+<td>5</td>
+<td>35 Icethorn, 15 Pygmy Oil, 5 Frost Lotus, 5 Enchanted Vial</td>
+</tr><tr class="header">
+<td><strong>436-450</strong></td>
+<td>Flask of Frost Wyrm</td>
+<td>5</td>
+<td>25 Icethorn, 25 Lichbloom, 5 Frost Lotus, 5 Enchanted Vial</td>
+</tr><tr class="odd">
+<td><strong>436-450</strong></td>
+<td>Flask of Endless Rage</td>
+<td>5</td>
+<td>35 Lichbloom, 15 Goldclover, 5 Frost Lotus, 5 Enchanted Vial</td>
+</tr><tr class="header">
+<td><strong>436-450</strong></td>
+<td>Flask of Stoneblood</td>
+<td>5</td>
+<td>35 Lichbloom, 15 Crystallized Life, 5 Frost Lotus, 5 Enchanted
+Vial</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Alchemy Specializations</h3>
+<h4>What’s Alchemy Specializations</h4>
+<p>Once you reach Alchemy skill 325 and level 68, you may begin a quest
+to learn one of three specializations: <strong>Potion</strong>,
+<strong>Elixir</strong>, or <strong>Transmutation</strong>.</p>
+<p>Being specialized gives you a chance to create an extra 1 to 4 (for a
+total of 5) items while crafting Potions, Elixirs, or
+Transmutations.</p>
+<p>Keep in mind, you can switch Alchemy specializations for only 150g,
+and you don't have to do the quest for the specialization you are
+switching to! It's usually better to do the cheapest/easiest quest and
+then switch to the specialization you want.</p>
+<h4>Which one to pick?</h4>
+<p>Cheapest/easiest option: You can pick up the <a href="https://tbc.wowhead.com/quest=10897"><u>Master of Potions</u></a>
+quest from <a href="https://tbc.wowhead.com/npc=17909"><u>Lauranna
+Thar'well</u></a> at Cenarion Refuge in Zangarmarsh. To complete the
+quest, you will need:</p>
+<ul>
+<li>
+<p>5 Super Healing Potion</p>
+</li>
+<li>
+<p>5 Super Mana Potion</p>
+</li>
+<li>
+<p>5 Major Dreamless Sleep Potion</p>
+</li>
+</ul>
+<p>You will also need the Botanist's Field Guide from the second boss in
+Botanica.</p>
+<p><a href="https://www.youtube.com/watch?v=3bCeuu8PySw"><u>Dungeon
+Entrance at Outlands, Netherstorm</u></a> REQUIRES FLYING!!!</p>
+<p>More information in this guide : <a href="https://www.wow-professions.com/tbc/alchemy-specializations-tbc-classic"><u>Guide
+to Alchemy Specializations in TBC Classic</u></a></p>
+<h3>Make Gold</h3>
+<p> - - Make gold</p>
+<p>Now for the most important part, gold making<br/>
+<br/>
+The first thing to do once you level up alchemy is to decide which
+specialization to choose</p>
+<h3>Potions</h3>
+<p>If you choose potion specialization, you’ll have to learn potion of
+speed and potion of wild magic from the Northrend Alchemy Research</p>
+<p>You can learn Northrend Alchemy Research at level 400 at your alchemy
+trainer, it’s a craft that has a 68 hour cooldown, once completed, it
+will teach you a new potion recipe.</p>
+<p>There is 13 discoverable potion, so keep doing the research until you
+discover potion of speed and potion of wild magic</p>
+<h3>Elixirs</h3>
+<p>If you choose elixir specialization, you’ll craft flasks of endless
+rage, pure mojo, stoneblood and frost wyrm</p>
+<p>Keep in mind that Elixir specialization also includes elixirs and
+flasks</p>
+<h3>Transmutation</h3>
+<p>And if you choose transmutation specialization, you can do these
+following transmutation</p>
+<p>Keep in mind that every transmutation craft have a 20 hour
+cooldown</p>
+<h4>Wotlk</h4>
+<p>Transmute:</p>
+<ul>
+<li>
+<p>Titanium</p>
+</li>
+<li>
+<p>Skyflare Diamond</p>
+</li>
+<li>
+<p>Earthsiege Diamond</p>
+</li>
+<li>
+<p>Gems, ranked by their value in the market (might vary in the
+future):</p>
+</li>
+</ul>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Rank</strong></th>
+<th><strong>Gem</strong></th>
+</tr>
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td>1</td>
+<td>Cardinal Ruby (red) (learnt with a quest)</td>
+</tr><tr class="header">
+<td>2</td>
+<td>King’s Amber (yellow)</td>
+</tr><tr class="odd">
+<td>3</td>
+<td>Ametrine (orange)</td>
+</tr><tr class="header">
+<td>4</td>
+<td>Dreadstone (purple)</td>
+</tr><tr class="odd">
+<td>5</td>
+<td>Majestic Zircon (blue)</td>
+</tr><tr class="header">
+<td>6</td>
+<td>Eye of Zul (green)</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p>Eternals, ranked by their value in the market (might vary in the
+future):</p>
+</li>
+</ul>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Rank</strong></th>
+<th><strong>Eternal</strong></th>
+</tr>
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td>1</td>
+<td>Shadow</td>
+</tr><tr class="header">
+<td>2</td>
+<td>Fire</td>
+</tr><tr class="odd">
+<td>3</td>
+<td>Life</td>
+</tr><tr class="header">
+<td>4</td>
+<td>Air</td>
+</tr><tr class="odd">
+<td>5</td>
+<td>Earth</td>
+</tr><tr class="header">
+<td>6</td>
+<td>Water</td>
+</tr>
+</tbody>
+</table></div>
+<h4>TBC</h4>
+<p>Transmute:</p>
+<ul>
+<li>
+<p>Primal Might</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>Primals, ranked by their value in the market (might vary in the
+future):</p>
+</li>
+</ul>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Rank</strong></th>
+<th><strong>Primal</strong></th>
+</tr>
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td>1</td>
+<td>Water</td>
+</tr><tr class="header">
+<td>2</td>
+<td>Air</td>
+</tr><tr class="odd">
+<td>3</td>
+<td>Mana</td>
+</tr><tr class="header">
+<td>4</td>
+<td>Life</td>
+</tr><tr class="odd">
+<td>5</td>
+<td>Shadow</td>
+</tr><tr class="header">
+<td>6</td>
+<td>Fire</td>
+</tr><tr class="odd">
+<td>7</td>
+<td>Earth</td>
+</tr>
+</tbody>
+</table></div>
+
+
+
+<h4>Classic</h4>
+<p>Transmute:</p>
+<ul>
+<li>
+<p>Iron Bar to Gold Bar</p>
+</li>
+<li>
+<p>Arcanite Transmutation</p>
+</li>
+<li>
+<p>Essences, ranked by their value in the market (might vary in the
+future):</p>
+</li>
+</ul>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Rank</strong></th>
+<th><strong>Essence</strong></th>
+</tr>
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td>1</td>
+<td>Air</td>
+</tr><tr class="header">
+<td>2</td>
+<td>Water</td>
+</tr><tr class="odd">
+<td>3</td>
+<td>Living Essence</td>
+</tr><tr class="header">
+<td>4</td>
+<td>Fire</td>
+</tr><tr class="odd">
+<td>5</td>
+<td>Undeath</td>
+</tr><tr class="header">
+<td>6</td>
+<td>Earth</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Ranking Specializations</h3>
+<ul>
+<li>
+<p>Potion Specialization: requires recipe discovery but offers the most
+profit</p>
+</li>
+<li>
+<p>Elixir Specialization: no recipe required, decent profit</p>
+</li>
+<li>
+<p>Transmutation Specialization: Some recipe required, constant logging,
+decent profit</p>
+</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>I recommend Potion or Elixir specialization for their accessibility
+and profit</p>
+
+</div>
+<!--nav--><nav class="pager" aria-label="Previous and next guide"><a class="pager-prev" href="paladin-leveling.html"><span>Previous</span>Paladin Leveling 1 to 80</a><a class="pager-next" href="blacksmithing.html"><span>Next</span>Blacksmithing 1 to 450</a></nav><!--/nav-->
+</main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <span>Guides by Lost Unison</span>
+    <span><a href="https://www.youtube.com/@lostunison">YouTube</a> · <a href="https://discord.gg/md4a6BgUTs">Discord</a></span>
+  </div>
+</footer>
+<script src="../js/search-index.js"></script>
+<script src="../js/site.js"></script>
+</body>
+</html>

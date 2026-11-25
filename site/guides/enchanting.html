@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enchanting 1 to 450 (x3), Bonuses and Gold Making</title>
+<meta name="description" content="Ring enchants, formulas, trainers, leveling route, vellums and scrolls for gold.">
+<link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{if(localStorage.getItem('lu-sb')==='mini')document.documentElement.classList.add('sb-mini')}catch(e){}</script>
+</head>
+<body data-root="../">
+<header class="site-header">
+  <div class="bar">
+    <div class="bar-start">
+      <button class="icon-btn" id="sb-toggle" type="button" aria-label="Guide menu" aria-controls="sidebar" aria-expanded="true"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../images/logo.svg" width="32" height="32" alt="">
+        <span class="brand-name">Lost Unison</span>
+      </a>
+    </div>
+    <form class="search" id="search-form" role="search" action="../search.html" method="get" autocomplete="off">
+      <button class="icon-btn search-back" id="search-back" type="button" aria-label="Close search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+      <div class="search-field">
+        <input id="q" name="q" type="text" placeholder="Search guides" aria-label="Search guides" enterkeyhint="search" role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list" spellcheck="false">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        <button class="search-clear" id="q-clear" type="button" aria-label="Clear search" hidden><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <button class="search-btn" type="submit" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <ul class="suggest" id="suggest" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+    <div class="bar-end">
+      <button class="icon-btn search-open" id="search-open" type="button" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <a class="bar-link" href="https://www.youtube.com/@lostunison">YouTube</a>
+      <a class="bar-link" href="https://discord.gg/md4a6BgUTs">Discord</a>
+    </div>
+  </div>
+</header>
+<div class="page">
+<aside class="sidenav" id="sidebar" aria-label="Guides">
+<nav class="sb-full" aria-label="All guides">
+<a class="sb-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<hr>
+<p class="sb-head">Leveling</p>
+<a class="sb-item" href="power-leveling.html" title="Power Leveling 1 to 80 (no boost)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Power Leveling 1 to 80 (no boost)</span></a>
+<a class="sb-item" href="paladin-leveling.html" title="Paladin Leveling 1 to 80"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Paladin Leveling 1 to 80</span></a>
+<hr>
+<p class="sb-head">Professions</p>
+<a class="sb-item" href="alchemy.html" title="Alchemy 1 to 450 (x3), Specializations and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Alchemy 1 to 450</span></a>
+<a class="sb-item" href="blacksmithing.html" title="Blacksmithing 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Blacksmithing 1 to 450</span></a>
+<a class="sb-item" href="engineering.html" title="Engineering 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Engineering 1 to 450</span></a>
+<a class="sb-item" href="enchanting.html" title="Enchanting 1 to 450 (x3), Bonuses and Gold Making" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Enchanting 1 to 450</span></a>
+<a class="sb-item" href="inscription.html" title="Inscription 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Inscription 1 to 450</span></a>
+<a class="sb-item" href="jewelcrafting.html" title="Jewelcrafting 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Jewelcrafting 1 to 450</span></a>
+<a class="sb-item" href="leatherworking.html" title="Leatherworking 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Leatherworking 1 to 450</span></a>
+<a class="sb-item" href="tailoring.html" title="Tailoring 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Tailoring 1 to 450</span></a>
+<a class="sb-item" href="skinning.html" title="Skinning 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Skinning 1 to 450</span></a>
+<a class="sb-item" href="mining.html" title="Mining 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Mining 1 to 450</span></a>
+<a class="sb-item" href="herbalism.html" title="Herbalism 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Herbalism 1 to 450</span></a>
+<a class="sb-item" href="cooking.html" title="Cooking 1 to 450"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Cooking 1 to 450</span></a>
+<a class="sb-item" href="fishing.html" title="Fishing 1 to 450, Find Fish, Sea Turtle and Heirloom Ring"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Fishing 1 to 450</span></a>
+<a class="sb-item" href="first-aid.html" title="First Aid 1 to 450 (x3)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>First Aid 1 to 450</span></a>
+<hr>
+<p class="sb-head">Addons</p>
+<a class="sb-item" href="tsm-part-1.html" title="TSM (TradeSkill Master) Part 1"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>TSM (TradeSkill Master) Part 1</span></a>
+<hr>
+<p class="sb-head">Gearing</p>
+<a class="sb-item" href="all-264-boe.html" title="All 264 Item Level BoE"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>All 264 Item Level BoE</span></a>
+<a class="sb-item" href="unlock-heroic-dungeons.html" title="Unlock Heroic Dungeons"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Unlock Heroic Dungeons</span></a>
+<hr>
+<p class="sb-head">Reputation</p>
+<a class="sb-item" href="thorium-brotherhood.html" title="Thorium Brotherhood Neutral to Revered"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Thorium Brotherhood Neutral to Revered</span></a>
+<a class="sb-item" href="ashen-verdict.html" title="Ashen Verdict Reputation Farm"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Ashen Verdict Reputation Farm</span></a>
+<hr>
+<p class="sb-head">Gold making</p>
+<a class="sb-item" href="gold-farming.html" title="Best Gold Farming (2,893 gold/h)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Best Gold Farming (2,893 gold/h)</span></a>
+<hr>
+<p class="sb-head">Game client</p>
+<a class="sb-item" href="windowed-mode.html" title="Windowed Mode"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Windowed Mode</span></a>
+<a class="sb-item" href="patch-y.html" title="Patch Y (Raid Visuals)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Patch Y (Raid Visuals)</span></a>
+<a class="sb-item" href="project-reforged-install.html" title="Project Reforged Install"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Project Reforged Install</span></a>
+<hr>
+</nav>
+<nav class="sb-rail" aria-label="Categories">
+<a class="mini-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<a class="mini-item" href="../index.html#leveling"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Leveling</span></a>
+<a class="mini-item" href="../index.html#professions" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Professions</span></a>
+<a class="mini-item" href="../index.html#addons"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>Addons</span></a>
+<a class="mini-item" href="../index.html#gearing"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Gearing</span></a>
+<a class="mini-item" href="../index.html#reputation"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Reputation</span></a>
+<a class="mini-item" href="../index.html#gold-making"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Gold</span></a>
+<a class="mini-item" href="../index.html#game-client"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Client</span></a>
+</nav>
+</aside>
+<div class="sb-scrim" id="sb-scrim"></div>
+<main class="guide">
+<!--nav--><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Guides</a><span aria-hidden="true">/</span><a href="../index.html#professions">Professions</a><span aria-hidden="true">/</span><span>Enchanting 1 to 450</span></nav><!--/nav-->
+<div class="prose">
+<h1>WotLK Warmane Icecrown - Enchanting 1 to 450 (x3), Bonuses and Gold Making</h1>
+<p class="byline">Guide by <strong>Lost Unison</strong></p>
+<p class="lede">Ring enchants, formulas, trainers, leveling route, vellums and scrolls for gold.</p>
+</div>
+<div class="video-links"><a class="video-btn" href="https://www.youtube.com/watch?v=Xacr1i0HmpI"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>Watch the video: Enchanting 1 to 450</a></div>
+<nav class="toc" aria-label="On this page"><span class="toc-title">On this page</span><ol><li><a href="#enchanting-bonuses">Enchanting Bonuses</a></li><li><a href="#leveling-enchanting-from-1-to-450">Leveling Enchanting from 1 to 450</a></li><li><a href="#make-gold-with-enchanting">Make Gold with Enchanting</a></li></ol></nav>
+<div class="doc">
+
+<p><strong>WotLK
+Warmane Icecrown - Enchanting: Leveling and Make Gold Guide - by Lost
+Unison 1</strong></p>
+<p><strong>Enchanting Bonuses
+2</strong></p>
+<blockquote>
+<p>1. Profession Perk
+(Self-Only Enchants) 2</p>
+<p>Ring Enchants
+(Exclusive to Enchanters) 2</p>
+<p>2. Regular Enchanting Benefits
+2</p>
+</blockquote>
+<p><strong>Leveling
+Enchanting from 1 to 450 2</strong></p>
+<blockquote>
+<p>Material Cost 2</p>
+<p>Required Materials 2</p>
+<p>Classic 3</p>
+<p>TBC 4</p>
+<p>WotLK 5</p>
+<p>Acquiring Formulas 6</p>
+<p>Enchanting Trainer 7</p>
+<p>Classic 7</p>
+<p>TBC 7</p>
+<p>Horde 7</p>
+<p>WotLK 7</p>
+<p>Leveling 1 to 450 8</p>
+<p>Classic 8</p>
+<p>TBC 9</p>
+<p>WotLK 10</p>
+</blockquote>
+<p><strong>Make Gold with
+Enchanting 11</strong></p>
+<blockquote>
+<p>Vellums 11</p>
+<p>Enchanting Formulas 12</p>
+<p>Rods 13</p>
+<p>Enchanted Leather and
+Thorium 13</p>
+<p>Enchant Scrolls 13</p>
+<p>Classic 13</p>
+<p>TBC 13</p>
+<p>WotLK 13</p>
+<p>TSM Group Import String 15</p>
+</blockquote>
+<h2 id="enchanting-bonuses">Enchanting Bonuses</h2>
+<h3>1. Profession Perk (Self-Only Enchants)</h3>
+<p>As an Enchanter, you can enchant <strong>your own rings</strong>  - 
+this is the main profession bonus.</p>
+<h4>Ring Enchants (Exclusive to Enchanters)</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Enchant</strong></th>
+<th><strong>Effect</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><strong>Enchant Ring - Greater Assault</strong></td>
+<td>+40 Attack Power per ring</td>
+<td>Total: +80 AP</td>
+</tr><tr class="header">
+<td><strong>Enchant Ring - Greater Spellpower</strong></td>
+<td>+23 Spell Power per ring</td>
+<td>Total: +46 SP</td>
+</tr><tr class="odd">
+<td><strong>Enchant Ring - Stamina</strong></td>
+<td>+30 Stamina per ring</td>
+<td>Total: +60 Stamina</td>
+</tr>
+</tbody>
+</table></div>
+<h3>2. Regular Enchanting Benefits</h3>
+<p>Besides the self-only perks, you can also:</p>
+<ul>
+<li>
+<p><strong>Disenchant</strong> items into dusts, essences, and shards
+(used for enchanting or selling).</p>
+</li>
+<li>
+<p><strong>Enchant weapons and armor</strong> for other players (a
+steady gold source).</p>
+</li>
+</ul>
+<h2 id="leveling-enchanting-from-1-to-450">Leveling Enchanting from 1 to 450</h2>
+<h3>Material Cost</h3>
+<p>Material cost should be around <strong>4000 - 5000</strong> depending
+on the market (calculated in May 2025)</p>
+<h3>Required Materials</h3>
+
+<h4>Classic</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Dust</strong></th>
+<th><strong>Essences</strong></th>
+<th><strong>Rods</strong></th>
+<th><strong>Misc</strong></th>
+<th><p><strong>Formulas</strong></p>
+<p>(see acquiring formulas)</p></th>
+</tr>
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><p>99 Strange Dust</p>
+<p>44 Soul Dust</p>
+<p>57 Vision Dust</p>
+<p>202 Dream Dust</p></td>
+<td><p>1 Lesser Magic Essence</p>
+<p>3 Greater Magic Essence</p>
+<p>2 Greater Astral Essence</p>
+<p>2 Greater Mystic Essence</p></td>
+<td><p>1 Silver Rod</p>
+<p>1 Golden Rod</p>
+<p>1 Truesilver Rod</p></td>
+<td><p>1 Iridescent Pearl</p>
+<p>1 Black Pearl</p>
+<p>8 Purple Lotus</p>
+<p>1 Copper Rod (vendor)</p>
+<p>3 Simple Wood (vendor)</p>
+<p>4 Crystal Vial (vendor)</p></td>
+<td><p><a href="https://www.wowhead.com/wotlk/item=11101/formula-enchant-bracer-lesser-strength"><u>Enchant
+Bracer - Lesser Strength</u></a></p>
+<p><a href="https://www.wowhead.com/wotlk/spell=13817/enchant-shield-stamina#taught-by-item"><u>Enchant
+Shield - Stamina</u></a></p>
+<p><a href="https://www.wowhead.com/wotlk/item=16215/formula-enchant-boots-greater-stamina"><u>Enchant
+Boots - Greater Stamina</u></a></p>
+<p><a href="https://www.wowhead.com/wotlk/item=20754/formula-lesser-mana-oil#sold-by"><u>Formula:
+Lesser Mana Oil</u></a></p>
+<p><a href="https://www.wowhead.com/wotlk/item=16217/formula-enchant-shield-greater-stamina"><u>Formula:
+Enchant Shield - Greater Stamina</u></a> <u>(BIND WHEN PICKED UP, you
+can’t transfer it via mail)</u></p>
+<p><u><a href="https://www.wowhead.com/classic/item=16243/formula-runed-arcanite-rod#comments">Formula:
+Runed Arcanite Rod</a> (BIND WHEN PICKED UP, you can’t transfer it via
+mail)</u></p></td>
+</tr><tr class="header">
+<td colspan="4">TSM Shopping Strings</td>
+<td></td>
+</tr><tr class="odd">
+<td><p>Strange Dust/exact/x99</p>
+<p>Soul Dust/exact/x44</p>
+<p>Vision Dust/exact/x57</p>
+<p>Dream Dust/exact/x202</p>
+<p>Lesser Magic Essence/exact/x1</p></td>
+<td><p>Lesser Magic Essence/exact/x1</p>
+<p>Greater Magic Essence/exact/x3</p>
+<p>Greater Astral Essence/exact/x2</p>
+<p>Greater Mystic Essence/exact/x2</p></td>
+<td><p>Silver Rod/exact/x1</p>
+<p>Golden Rod/exact/x1</p>
+<p>Truesilver Rod/exact/x1</p></td>
+<td><p>Iridescent Pearl/exact/x1</p>
+<p>Black Pearl/exact/x1</p>
+<p>Purple Lotus/exact/x8</p>
+<p>1 Copper Rod (vendor)</p>
+<p>3 Simple Wood (vendor)</p>
+<p>4 Crystal Vial (vendor)</p></td>
+<td><p><a href="https://www.wowhead.com/wotlk/item=11101/formula-enchant-bracer-lesser-strength"><u>Enchant
+Bracer - Lesser Strength</u></a></p>
+<p><a href="https://www.wowhead.com/wotlk/spell=13817/enchant-shield-stamina#taught-by-item"><u>Enchant
+Shield - Stamina</u></a></p>
+<p><a href="https://www.wowhead.com/wotlk/item=16215/formula-enchant-boots-greater-stamina"><u>Enchant
+Boots - Greater Stamina</u></a></p>
+<p><a href="https://www.wowhead.com/wotlk/item=20754/formula-lesser-mana-oil#sold-by"><u>Formula:
+Lesser Mana Oil</u></a></p>
+<p><a href="https://www.wowhead.com/wotlk/item=16217/formula-enchant-shield-greater-stamina"><u>Formula:
+Enchant Shield - Greater Stamina</u></a> <u>(BIND WHEN PICKED UP, you
+can’t transfer it via mail)</u></p>
+<p><u><a href="https://www.wowhead.com/classic/item=16243/formula-runed-arcanite-rod#comments">Formula:
+Runed Arcanite Rod</a> (BIND WHEN PICKED UP, you can’t transfer it via
+mail)</u></p></td>
+</tr>
+</tbody>
+</table></div>
+<h4>TBC</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Dust</strong></th>
+<th><strong>Essences/Shards</strong></th>
+<th><strong>Rods</strong></th>
+<th><strong>Misc</strong></th>
+</tr>
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><p>10 Illusion Dust</p>
+<p>85 Arcane Dust</p></td>
+<td><p>8 Greater Eternal Essence</p>
+<p>8 Large Brilliant Shard</p></td>
+<td><p>1 Arcanite Rod</p>
+<p>1 Fel Iron Rod</p></td>
+<td><p>1 Golden Pearl</p>
+<p>8 Nightmare Vine</p>
+<p>8 Imbued Vial (vendor)</p>
+<p><a href="https://www.wowhead.com/wotlk/item=28282/formula-enchant-shield-major-stamina#sold-by"><u>Formula:
+Enchant Shield - Major Stamina</u></a></p>
+<p><a href="https://www.wowhead.com/wotlk/item=22563/formula-superior-wizard-oil#sold-by"><u>Formula:
+Superior Wizard Oil</u></a></p></td>
+</tr><tr class="header">
+<td colspan="4">TSM Shopping Strings</td>
+</tr><tr class="odd">
+<td><p>Illusion Dust/exact/x10</p>
+<p>Arcane Dust/exact/x85</p></td>
+<td><p>Greater Eternal Essence/exact/x8</p>
+<p>Large Brilliant Shard/exact/x8</p></td>
+<td><p>Arcanite Rod/exact/x1</p>
+<p>Fel Iron Rod/exact/x1</p></td>
+<td><p>Golden Pearl/exact/x1</p>
+<p>Nightmare Vine/exact/x8</p>
+<p>Imbued Vial/exact/x8</p>
+<p><a href="https://www.wowhead.com/wotlk/item=28282/formula-enchant-shield-major-stamina#sold-by"><u>Formula:
+Enchant Shield - Major Stamina</u></a></p>
+<p><a href="https://www.wowhead.com/wotlk/item=22563/formula-superior-wizard-oil#sold-by"><u>Formula:
+Superior Wizard Oil</u></a></p></td>
+</tr>
+</tbody>
+</table></div>
+
+<h4>WotLK</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Dust</strong></th>
+<th><strong>Essences/Shards</strong></th>
+<th><strong>Rods</strong></th>
+<th><strong>Misc</strong></th>
+</tr>
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td>246 Infinite Dust</td>
+<td><p>14 Greater Planar Essence</p>
+<p>6 Lesser Cosmic Essence</p>
+<p>42 Greater Cosmic Essence</p>
+<p>8 Large Prismatic Shard</p>
+<p>26 Dream Shard</p></td>
+<td><p>1 Adamantite Rod</p>
+<p>1 Eternium Rod</p>
+<p>1 Titanium Rod</p></td>
+<td><p>4 Crystallized Water</p>
+<p><a href="https://www.wowhead.com/wotlk/item=44471/formula-enchant-cloak-mighty-armor"><u>Formula:
+Enchant Cloak - Mighty Armor</u></a> (4 Dream Shard)</p>
+<p><a href="https://www.wowhead.com/wotlk/item=44491/formula-enchant-boots-tuskarrs-vitality"><u>Formula:
+Enchant Boots - Tuskarr's Vitality</u></a> (4 Dream Shard)</p></td>
+</tr><tr class="header">
+<td colspan="4">TSM Shopping Strings</td>
+</tr><tr class="odd">
+<td>Infinite Dust/exact/x246</td>
+<td><p>Greater Planar Essence/exact/x14</p>
+<p>Lesser Cosmic Essence/exact/x6</p>
+<p>Greater Cosmic Essence/exact/x42</p>
+<p>Large Prismatic Shard/exact/x8</p>
+<p>Dream Shard/exact/x26</p></td>
+<td><p>Adamantite Rod/exact/x1</p>
+<p>Eternium Rod/exact/x1</p>
+<p>Titanium Rod/exact/x1</p></td>
+<td><p>Crystallized Water/exact/x4</p>
+<p><a href="https://www.wowhead.com/wotlk/item=44471/formula-enchant-cloak-mighty-armor"><u>Formula:
+Enchant Cloak - Mighty Armor</u></a> (4 Dream Shard)</p>
+<p><a href="https://www.wowhead.com/wotlk/item=44491/formula-enchant-boots-tuskarrs-vitality"><u>Formula:
+Enchant Boots - Tuskarr's Vitality</u></a> (4 Dream Shard)</p></td>
+</tr>
+</tbody>
+</table></div>
+
+<h3>Acquiring Formulas</h3>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Formula</strong></th>
+<th><strong>Source</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td colspan="2"><strong>Classic (1-300)</strong></td>
+</tr><tr class="header">
+<td><a href="https://www.wowhead.com/wotlk/item=11101/formula-enchant-bracer-lesser-strength"><u>Formula:
+Enchant Bracer - Lesser Strength</u></a></td>
+<td>Auction House</td>
+</tr><tr class="odd">
+<td><a href="https://www.wowhead.com/wotlk/spell=13817/enchant-shield-stamina#taught-by-item"><u>Formula:
+Enchant Shield - Stamina</u></a></td>
+<td>Auction House</td>
+</tr><tr class="header">
+<td><a href="https://www.wowhead.com/wotlk/item=16215/formula-enchant-boots-greater-stamina"><u>Formula:
+Enchant Boots - Greater Stamina</u></a></td>
+<td>Auction House</td>
+</tr><tr class="odd">
+<td><a href="https://www.wowhead.com/wotlk/item=20754/formula-lesser-mana-oil#sold-by"><u>Formula:
+Lesser Mana Oil</u></a></td>
+<td><p>Auction House /</p>
+<p><strong>Neutral</strong> Vendor : Silithus - <a href="https://www.wowhead.com/wotlk/npc=15419/kania"><u>Kania</u></a></p></td>
+</tr><tr class="header">
+<td><p><a href="https://www.wowhead.com/wotlk/item=16217/formula-enchant-shield-greater-stamina"><u>Formula:
+Enchant Shield - Greater Stamina</u></a></p>
+<p><u>(BIND WHEN PICKED UP, you can’t transfer it via mail)</u></p></td>
+<td><p><strong>Horde</strong> : Undercity - <a href="https://www.wowhead.com/wotlk/npc=4229/mythrindir"><u>Mythrin'dir</u></a></p>
+<p><strong>Alliance</strong> : Darnassus - <a href="https://www.wowhead.com/wotlk/npc=4561/daniel-bartlett"><u>Daniel
+Bartlett</u></a></p></td>
+</tr><tr class="odd">
+<td><p><a href="https://www.wowhead.com/classic/item=16243/formula-runed-arcanite-rod#comments"><u>Formula:
+Runed Arcanite Rod</u></a></p>
+<p><u>(BIND WHEN PICKED UP, you can’t transfer it via mail)</u></p></td>
+<td><strong>Neutral</strong> Vendor : Moonglade - <a href="https://www.wowhead.com/classic/npc=12022/lorelae-wintersong"><u>Lorelae
+Wintersong</u></a></td>
+</tr><tr class="header">
+<td colspan="2"><strong>TBC (300-375)</strong></td>
+</tr><tr class="odd">
+<td><a href="https://www.wowhead.com/wotlk/item=28282/formula-enchant-shield-major-stamina#sold-by"><u>Formula:
+Enchant Shield - Major Stamina</u></a></td>
+<td><p>Auction House /</p>
+<p><strong>Neutral</strong> Vendor : Shattrath - <a href="https://www.wowhead.com/wotlk/npc=19663/madame-ruby"><u>Madame
+Ruby</u></a></p></td>
+</tr><tr class="header">
+<td><a href="https://www.wowhead.com/wotlk/item=22563/formula-superior-wizard-oil#sold-by"><u>Formula:
+Superior Wizard Oil</u></a></td>
+<td><p>Auction House /</p>
+<p><strong>Neutral</strong> Vendor : Shattrath - <a href="https://www.wowhead.com/wotlk/npc=19663/madame-ruby"><u>Madame
+Ruby</u></a></p></td>
+</tr><tr class="odd">
+<td colspan="2"><strong>WotLK (375-450)</strong></td>
+</tr><tr class="header">
+<td><p><a href="https://www.wowhead.com/wotlk/item=44471/formula-enchant-cloak-mighty-armor"><u>Formula:
+Enchant Cloak - Mighty Armor</u></a> (4 Dream Shard)</p>
+<p><a href="https://www.wowhead.com/wotlk/item=44491/formula-enchant-boots-tuskarrs-vitality"><u>Formula:
+Enchant Boots - Tuskarr's Vitality</u></a> (4 Dream Shard)</p></td>
+<td><strong>Neutral</strong> : Dalaran - <a href="https://www.wowhead.com/wotlk/npc=32514/vanessa-sellers"><u>Vanessa
+Sellers</u></a></td>
+</tr>
+</tbody>
+</table></div>
+<h3>Enchanting Trainer</h3>
+<p>For <strong>Enchanting,</strong> you need to visit different trainers
+throughout your leveling since each trainer teaches only specific
+recipes tied with the expansion.</p>
+<h4>Classic</h4>
+<p>Any capital</p>
+<h4>TBC</h4>
+<p>Outland; Hellfire Peninsula:</p>
+<h5>Horde</h5>
+<p><a href="https://www.wowhead.com/tbc/npc=18753/felannia"><u>Felannia</u></a></p>
+<p>Alliance</p>
+<p><a href="https://www.wowhead.com/tbc/npc=18773/johan-barnes"><u>Johan
+Barnes</u></a></p>
+<h4>WotLK</h4>
+<p><a href="https://www.wowhead.com/wotlk/npc=28693/enchanter-nalthanis"><u>Enchanter
+Nalthanis</u></a></p>
+<h3>Leveling 1 to 450</h3>
+<h4>Classic</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Level</strong></th>
+<th><strong>Craft</strong></th>
+<th><strong>Quantity</strong></th>
+<th><strong>Total Material</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td colspan="4"><strong>Learn Apprentice Enchanter at 1</strong></td>
+</tr><tr class="header">
+<td><strong>1-4</strong></td>
+<td>Runed Copper Rod</td>
+<td>1</td>
+<td>1 Copper Rod, 1 Strange Dust, 1 Lesser Magic Essence</td>
+</tr><tr class="odd">
+<td><strong>4-70</strong></td>
+<td>Bracer - Minor Health / Disenchant</td>
+<td>22</td>
+<td>22 Strange Dust</td>
+</tr><tr class="header">
+<td colspan="4"><strong>Learn Journeyman Enchanter at 50</strong></td>
+</tr><tr class="odd">
+<td><strong>70-91*</strong></td>
+<td>Bracer - Minor Health / Disenchant</td>
+<td>10</td>
+<td>10 Strange Dust</td>
+</tr><tr class="header">
+<td><strong>91-121</strong></td>
+<td>Bracer - Minor Stamina</td>
+<td>10</td>
+<td>30 Strange Dust</td>
+</tr><tr class="odd">
+<td><strong>121-136</strong></td>
+<td>Bracer - Minor Strength</td>
+<td>6</td>
+<td>30 Strange Dust</td>
+</tr><tr class="header">
+<td colspan="4"><strong>Learn Expert Enchanter at 125</strong></td>
+</tr><tr class="odd">
+<td><strong>136-139</strong></td>
+<td>Runed Silver Rod</td>
+<td>1</td>
+<td><p>1 Silver Rod, 6 Strange Dust,</p>
+<p>3 Greater Magic Essence, 1</p>
+<p>Runed Copper Rod</p></td>
+</tr><tr class="header">
+<td><strong>139-142</strong></td>
+<td>Bracer - Lesser Stamina</td>
+<td>1</td>
+<td>2 Soul Dust</td>
+</tr><tr class="odd">
+<td><strong>142-187</strong></td>
+<td><p>Bracer - Lesser Strength</p>
+<p><strong>(recipe)</strong></p></td>
+<td>20</td>
+<td>40 Soul Dust</td>
+</tr><tr class="header">
+<td><strong>187-190</strong></td>
+<td>Runed Golden Rod</td>
+<td>1</td>
+<td>1 Golden Rod, 1 Iridescent Pearl, 2 Greater Astral Essence, 2 Soul
+Dust, 1 Runed Silver Rod</td>
+</tr><tr class="odd">
+<td><strong>190-220</strong></td>
+<td>Bracer - Strength</td>
+<td>14</td>
+<td>14 Vision Dust</td>
+</tr><tr class="header">
+<td colspan="4"><strong>Learn Artisan Enchanter at 200</strong></td>
+</tr><tr class="odd">
+<td><strong>220-223</strong></td>
+<td>Runed Truesilver Rod</td>
+<td>1</td>
+<td>1 Truesilver Rod, 1 Black Pearl, 2 Greater Mystic Essence, 2 Vision
+Dust, 1 Runed Golden Rod</td>
+</tr><tr class="header">
+<td><strong>223-247</strong></td>
+<td>Cloak - Greater Defense</td>
+<td>11</td>
+<td>33 Vision Dust</td>
+</tr><tr class="odd">
+<td><strong>247-250*</strong></td>
+<td>Shield - Stamina <strong>(recipe)</strong></td>
+<td>2</td>
+<td>10 Vision Dust</td>
+</tr><tr class="header">
+<td><strong>250-262</strong></td>
+<td>Lesser Mana Oil <strong>(recipe)</strong></td>
+<td>4</td>
+<td>12 Dream Dust, 8 Purple Lotus, 4 Crystal Vial</td>
+</tr><tr class="odd">
+<td><strong>262-265</strong></td>
+<td><p>Boots - Greater Stamina</p>
+<p><strong>(recipe)</strong></p></td>
+<td>1</td>
+<td>5 Dream Dust</td>
+</tr><tr class="header">
+<td><strong>265-286</strong></td>
+<td>Shield - Greater Stamina</td>
+<td>7</td>
+<td>35 Dream Dust</td>
+</tr>
+</tbody>
+</table></div>
+<h4>TBC</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th colspan="4"><strong>Learn Master Enchanter at 275 In
+Outland</strong></th>
+</tr>
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><strong>286-325*</strong></td>
+<td>Shield - Greater Stamina <strong>(recipe)</strong></td>
+<td>30</td>
+<td>150 Dream Dust (Don’t worry it’s cheap)</td>
+</tr><tr class="header">
+<td><strong>325-328</strong></td>
+<td><p>Runed Arcanite Rod</p>
+<p><strong>(recipe)</strong></p></td>
+<td>1</td>
+<td>1 Arcanite Rod, 1 Golden Pearl, 10 Illusion Dust, 4 Greater Eternal
+Essence, 1 Runed Truesilver Rod, 2 Large Brilliant Shard</td>
+</tr><tr class="odd">
+<td><strong>328-331</strong></td>
+<td>Runed Fel Iron Rod</td>
+<td>1</td>
+<td>1 Fel Iron Rod, 4 Greater Eternal Essence, 6 Large Brilliant Shard,
+1 Runed Arcanite Rod</td>
+</tr><tr class="header">
+<td><strong>331-340</strong></td>
+<td>Shield - Major Stamina <strong>(recipe)</strong></td>
+<td>4</td>
+<td>60 Arcane Dust</td>
+</tr><tr class="odd">
+<td><strong>340-352*</strong></td>
+<td>Superior Wizard Oil <strong>(recipe)</strong></td>
+<td>8</td>
+<td>24 Arcane Dust, 8 Nightmare Vine, 8 Imbued Vial</td>
+</tr>
+</tbody>
+</table></div>
+
+<h4>WotLK</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th colspan="4"><strong>Learn Grand Enchanter at 350 In
+Northrend</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><strong>352-361</strong></td>
+<td>Cloak - Speed</td>
+<td>3</td>
+<td>18 Infinite Dust</td>
+</tr><tr class="header">
+<td><strong>361-370</strong></td>
+<td>Bracers - Striking</td>
+<td>3</td>
+<td>18 Infinite Dust</td>
+</tr><tr class="odd">
+<td><strong>370-373</strong></td>
+<td>Runed Adamantite Rod</td>
+<td>1</td>
+<td><p>1 Adamantite Rod, 8</p>
+<p>Greater Planar Essence, 8</p>
+<p>Large Prismatic Shard, 1 Primal Might, 1 Runed Fel Iron Rod</p></td>
+</tr><tr class="header">
+<td><strong>373-382</strong></td>
+<td>Chest - Super Stats</td>
+<td>3</td>
+<td>12 Infinite Dust, 6 Lesser Cosmic Essence</td>
+</tr><tr class="odd">
+<td><strong>382-385</strong></td>
+<td>Runed Eternium Rod</td>
+<td>1</td>
+<td><p>1 Eternium Rod, 6 Greater Planar Essence, 6</p>
+<p>Arcane Dust, 1 Runed Adamantite Rod</p></td>
+</tr><tr class="header">
+<td><strong>385-397</strong></td>
+<td>Boots - Icewalker</td>
+<td>4</td>
+<td>32 Infinite Dust, 4 Crystallized Water</td>
+</tr><tr class="odd">
+<td><strong>397-406</strong></td>
+<td>Cloak - Superior Agility</td>
+<td>3</td>
+<td>27 Infinite Dust</td>
+</tr><tr class="header">
+<td><strong>406-415</strong></td>
+<td>Gloves - Expertise</td>
+<td>3</td>
+<td>36 Infinite Dust</td>
+</tr><tr class="odd">
+<td><strong>415-427</strong></td>
+<td>Gloves - Major Agility</td>
+<td>4</td>
+<td>16 Greater Cosmic Essence, 4 Dream Shard</td>
+</tr><tr class="header">
+<td><strong>427-430</strong></td>
+<td>Runed Titanium Rod</td>
+<td>1</td>
+<td><p>1 Titanium Rod, 40 Infinite Dust, 12 Greater Cosmic Essence,
+8</p>
+<p>Dream Shard, 1 Runed Eternium Rod</p></td>
+</tr><tr class="odd">
+<td><strong>430-442</strong></td>
+<td>Cloak - Mighty Armor <strong>(recipe)</strong></td>
+<td>4</td>
+<td><p>4 Dream Shard (to learn formula),</p>
+<p>60 Infinite Dust, 8 Greater Cosmic Essence</p></td>
+</tr><tr class="header">
+<td><strong>442-450</strong></td>
+<td>Boots - Tuskarr's Vitality <strong>(recipe)</strong></td>
+<td>3</td>
+<td><p>4 Dream Shard (to learn formula),</p>
+<p>30 Infinite Dust, 6 Greater Cosmic Essence, 6 Dream Shard</p></td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="make-gold-with-enchanting">Make Gold with Enchanting</h2>
+<h3>Vellums</h3>
+<p>To create <strong>enchanted scrolls</strong>, you’ll need
+<strong>Weapon and Armor Vellums</strong>.<br/>
+These items are made by <strong>Scribes</strong> through the
+<strong>Inscription profession</strong>,<br/>
+but you can easily buy them on the <strong>Auction House</strong> if you
+don’t have Inscription yourself.</p>
+<p>Vellums are divided into <strong>three tiers</strong>:</p>
+<ul>
+<li>
+<p>The <strong>first tier</strong> is used for <strong>Classic
+enchants</strong>,</p>
+</li>
+<li>
+<p>The <strong>second tier</strong> is for <strong>TBC
+enchants</strong>,</p>
+</li>
+<li>
+<p>And the <strong>third tier</strong> is for <strong>WotLK
+enchants</strong>.</p>
+</li>
+</ul>
+<p>Once you have the right vellum, simply <strong>cast your enchant
+directly onto it</strong>  - <br/>
+This turns it into an <strong>Enchanting Scroll</strong> that you can
+then <strong>post and sell on the Auction House</strong>.</p>
+<p><img alt="" height="441" loading="lazy" src="../images/enchanting-01.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+
+<h3>Enchanting Formulas</h3>
+<p>To make the most of Enchanting, it’s recommended to get these
+formulas:</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Expansion</strong></th>
+<th><strong>Formulas</strong></th>
+<th><strong>Source</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td rowspan="9">Classic (1-60)</td>
+<td><a href="https://www.wowhead.com/wotlk/item=16253/formula-enchant-chest-greater-stats"><u>Formula:
+Enchant Chest - Greater Stats</u></a></td>
+<td>AH (2000 gold) / Random TBC world drop</td>
+</tr><tr class="header">
+<td><a href="https://www.wowhead.com/wotlk/item=16252/formula-enchant-weapon-crusader"><u>Formula:
+Enchant Weapon - Crusader</u></a></td>
+<td>AH (2000 gold) / Drop on <a href="https://www.wowhead.com/wotlk/npc=4494/scarlet-spellbinder"><u>Scarlet
+Spellbinder</u></a> and <a href="https://www.wowhead.com/wotlk/npc=9451/scarlet-archmage"><u>Scarlet
+Archmage</u></a> (low chance)</td>
+</tr><tr class="odd">
+<td><a href="https://www.wowhead.com/wotlk/item=11207/formula-enchant-weapon-fiery-weapon"><u>Formula:
+Enchant Weapon - Fiery Weapon</u></a></td>
+<td>AH (1000 gold) / Drop on <a href="https://www.wowhead.com/wotlk/npc=9024/pyromancer-loregrain"><u>Pyromancer
+Loregrain</u></a> in Blackrock Depths</td>
+</tr><tr class="header">
+<td><a href="https://www.wowhead.com/wotlk/item=19449/formula-enchant-weapon-mighty-intellect"><u>Formula:
+Enchant Weapon - Mighty Intellect</u></a></td>
+<td rowspan="2"><p>Sold from <a href="https://www.wowhead.com/wotlk/npc=12944/lokhtos-darkbargainer"><u>Lokhtos
+Darkbargainer</u></a> in Blackrock Depths</p>
+<p>You need to be <strong>Revered</strong> with the <a href="https://www.wowhead.com/wotlk/faction=59/thorium-brotherhood"><u>Thorium
+Brotherhood</u></a> to be able to buy it</p>
+<p>Get <strong>Revered</strong> by completing</p></td>
+</tr><tr class="odd">
+<td><a href="https://www.wowhead.com/wotlk/item=19448/formula-enchant-weapon-mighty-spirit"><u>Formula:
+Enchant Weapon - Mighty Spirit</u></a></td>
+</tr><tr class="header">
+<td><a href="https://www.wowhead.com/wotlk/item=18260/formula-enchant-weapon-healing-power"><u>Formula:
+Enchant Weapon - Healing Power</u></a></td>
+<td>AH (500 gold) / Drop on <strong>Molten Core</strong> Bosses</td>
+</tr><tr class="odd">
+<td><a href="https://www.wowhead.com/wotlk/item=18259/formula-enchant-weapon-spellpower"><u>Formula:
+Enchant Weapon - Spellpower</u></a></td>
+<td>AH (700 gold) / Drop on <strong>Molten Core</strong> Bosses</td>
+</tr><tr class="header">
+<td><a href="https://www.wowhead.com/classic/item=19445/formula-enchant-weapon-agility"><u>Formula:
+Enchant Weapon - Agility</u></a></td>
+<td rowspan="2"><p>Sold by <a href="https://www.wowhead.com/classic/npc=11557/meilosh"><u>Meilosh</u></a></p>
+<p>You need to be</p>
+<p><strong>Friendly</strong> with the <a href="https://www.wowhead.com/classic/faction=576/timbermaw-hold"><u>Timbermaw
+Hold</u></a></p></td>
+</tr><tr class="odd">
+<td><a href="https://www.wowhead.com/wotlk/item=22392/formula-enchant-2h-weapon-agility"><u>Formula:
+Enchant 2H Weapon - Agility</u></a></td>
+</tr><tr class="header">
+<td rowspan="2">TBC (60-70)</td>
+<td><a href="https://www.wowhead.com/wotlk/item=22559/formula-enchant-weapon-mongoose"><u>Formula:
+Enchant Weapon - Mongoose</u></a></td>
+<td>Drop from <a href="https://www.wowhead.com/wotlk/npc=15687/moroes"><u>Moroes</u></a>
+in <strong>Karazhan</strong></td>
+</tr><tr class="odd">
+<td><a href="https://www.wowhead.com/wotlk/item=33307/formula-enchant-weapon-executioner"><u>Formula:
+Enchant Weapon - Executioner</u></a></td>
+<td>Drop from <a href="https://www.wowhead.com/wotlk/zone=3805/zulaman"><u>Zul'Aman</u></a>
+Bosses</td>
+</tr><tr class="header">
+<td rowspan="2">WotLK (70-80)</td>
+<td><a href="https://www.wowhead.com/wotlk/spell=64441/enchant-weapon-blade-ward"><u>Enchant
+Weapon - Blade Ward</u></a></td>
+<td rowspan="2">Drop from <a href="https://www.wowhead.com/wotlk/zone=4273/ulduar"><u>Ulduar</u></a>
+Bosses</td>
+</tr><tr class="odd">
+<td><a href="https://www.wowhead.com/wotlk/spell=64579/enchant-weapon-blood-draining"><u>Enchant
+Weapon - Blood Draining</u></a></td>
+</tr>
+</tbody>
+</table></div>
+<h3>Rods</h3>
+<h3><img alt="" height="81" loading="lazy" src="../images/enchanting-02.webp" style="max-width:min(100%, 172px)" width="172"/></h3>
+<h3>Enchanted Leather and Thorium</h3>
+<h3><img alt="" height="45" loading="lazy" src="../images/enchanting-03.webp" style="max-width:min(100%, 190px)" width="190"/></h3>
+<h3>Enchant Scrolls</h3>
+<h4>Classic</h4>
+<p><img alt="" height="80" loading="lazy" src="../images/enchanting-04.webp" style="max-width:min(100%, 312px)" width="312"/></p>
+<p><img alt="" height="106" loading="lazy" src="../images/enchanting-05.webp" style="max-width:min(100%, 308px)" width="308"/></p>
+<h4>TBC</h4>
+<h4><img alt="" height="45" loading="lazy" src="../images/enchanting-06.webp" style="max-width:min(100%, 295px)" width="295"/></h4>
+<h4><img alt="" height="59" loading="lazy" src="../images/enchanting-07.webp" style="max-width:min(100%, 290px)" width="290"/></h4>
+<h4>WotLK</h4>
+<p>Most popular to least popular:</p>
+<p><img alt="" height="43" loading="lazy" src="../images/enchanting-08.webp" style="max-width:min(100%, 294px)" width="294"/><img alt="" height="83" loading="lazy" src="../images/enchanting-09.webp" style="max-width:min(100%, 364px)" width="364"/><img alt="" height="105" loading="lazy" src="../images/enchanting-10.webp" style="max-width:min(100%, 355px)" width="355"/><img alt="" height="101" loading="lazy" src="../images/enchanting-11.webp" style="max-width:min(100%, 374px)" width="374"/><img alt="" height="161" loading="lazy" src="../images/enchanting-12.webp" style="max-width:min(100%, 355px)" width="355"/><img alt="" height="109" loading="lazy" src="../images/enchanting-13.webp" style="max-width:min(100%, 319px)" width="319"/><img alt="" height="295" loading="lazy" src="../images/enchanting-14.webp" style="max-width:min(100%, 342px)" width="342"/></p>
+<h3>TSM Group Import String</h3>
+
+
+
+
+
+
+</div>
+<!--nav--><nav class="pager" aria-label="Previous and next guide"><a class="pager-prev" href="engineering.html"><span>Previous</span>Engineering 1 to 450</a><a class="pager-next" href="inscription.html"><span>Next</span>Inscription 1 to 450</a></nav><!--/nav-->
+</main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <span>Guides by Lost Unison</span>
+    <span><a href="https://www.youtube.com/@lostunison">YouTube</a> · <a href="https://discord.gg/md4a6BgUTs">Discord</a></span>
+  </div>
+</footer>
+<script src="../js/search-index.js"></script>
+<script src="../js/site.js"></script>
+</body>
+</html>

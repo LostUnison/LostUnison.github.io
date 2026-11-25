@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unlock Heroic Dungeons</title>
+<meta name="description" content="Reach the item level needed for heroics with cheap BoE, trinkets and relics.">
+<link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{if(localStorage.getItem('lu-sb')==='mini')document.documentElement.classList.add('sb-mini')}catch(e){}</script>
+</head>
+<body data-root="../">
+<header class="site-header">
+  <div class="bar">
+    <div class="bar-start">
+      <button class="icon-btn" id="sb-toggle" type="button" aria-label="Guide menu" aria-controls="sidebar" aria-expanded="true"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../images/logo.svg" width="32" height="32" alt="">
+        <span class="brand-name">Lost Unison</span>
+      </a>
+    </div>
+    <form class="search" id="search-form" role="search" action="../search.html" method="get" autocomplete="off">
+      <button class="icon-btn search-back" id="search-back" type="button" aria-label="Close search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+      <div class="search-field">
+        <input id="q" name="q" type="text" placeholder="Search guides" aria-label="Search guides" enterkeyhint="search" role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list" spellcheck="false">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        <button class="search-clear" id="q-clear" type="button" aria-label="Clear search" hidden><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <button class="search-btn" type="submit" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <ul class="suggest" id="suggest" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+    <div class="bar-end">
+      <button class="icon-btn search-open" id="search-open" type="button" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <a class="bar-link" href="https://www.youtube.com/@lostunison">YouTube</a>
+      <a class="bar-link" href="https://discord.gg/md4a6BgUTs">Discord</a>
+    </div>
+  </div>
+</header>
+<div class="page">
+<aside class="sidenav" id="sidebar" aria-label="Guides">
+<nav class="sb-full" aria-label="All guides">
+<a class="sb-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<hr>
+<p class="sb-head">Leveling</p>
+<a class="sb-item" href="power-leveling.html" title="Power Leveling 1 to 80 (no boost)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Power Leveling 1 to 80 (no boost)</span></a>
+<a class="sb-item" href="paladin-leveling.html" title="Paladin Leveling 1 to 80"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Paladin Leveling 1 to 80</span></a>
+<hr>
+<p class="sb-head">Professions</p>
+<a class="sb-item" href="alchemy.html" title="Alchemy 1 to 450 (x3), Specializations and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Alchemy 1 to 450</span></a>
+<a class="sb-item" href="blacksmithing.html" title="Blacksmithing 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Blacksmithing 1 to 450</span></a>
+<a class="sb-item" href="engineering.html" title="Engineering 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Engineering 1 to 450</span></a>
+<a class="sb-item" href="enchanting.html" title="Enchanting 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Enchanting 1 to 450</span></a>
+<a class="sb-item" href="inscription.html" title="Inscription 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Inscription 1 to 450</span></a>
+<a class="sb-item" href="jewelcrafting.html" title="Jewelcrafting 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Jewelcrafting 1 to 450</span></a>
+<a class="sb-item" href="leatherworking.html" title="Leatherworking 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Leatherworking 1 to 450</span></a>
+<a class="sb-item" href="tailoring.html" title="Tailoring 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Tailoring 1 to 450</span></a>
+<a class="sb-item" href="skinning.html" title="Skinning 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Skinning 1 to 450</span></a>
+<a class="sb-item" href="mining.html" title="Mining 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Mining 1 to 450</span></a>
+<a class="sb-item" href="herbalism.html" title="Herbalism 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Herbalism 1 to 450</span></a>
+<a class="sb-item" href="cooking.html" title="Cooking 1 to 450"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Cooking 1 to 450</span></a>
+<a class="sb-item" href="fishing.html" title="Fishing 1 to 450, Find Fish, Sea Turtle and Heirloom Ring"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Fishing 1 to 450</span></a>
+<a class="sb-item" href="first-aid.html" title="First Aid 1 to 450 (x3)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>First Aid 1 to 450</span></a>
+<hr>
+<p class="sb-head">Addons</p>
+<a class="sb-item" href="tsm-part-1.html" title="TSM (TradeSkill Master) Part 1"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>TSM (TradeSkill Master) Part 1</span></a>
+<hr>
+<p class="sb-head">Gearing</p>
+<a class="sb-item" href="all-264-boe.html" title="All 264 Item Level BoE"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>All 264 Item Level BoE</span></a>
+<a class="sb-item" href="unlock-heroic-dungeons.html" title="Unlock Heroic Dungeons" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Unlock Heroic Dungeons</span></a>
+<hr>
+<p class="sb-head">Reputation</p>
+<a class="sb-item" href="thorium-brotherhood.html" title="Thorium Brotherhood Neutral to Revered"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Thorium Brotherhood Neutral to Revered</span></a>
+<a class="sb-item" href="ashen-verdict.html" title="Ashen Verdict Reputation Farm"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Ashen Verdict Reputation Farm</span></a>
+<hr>
+<p class="sb-head">Gold making</p>
+<a class="sb-item" href="gold-farming.html" title="Best Gold Farming (2,893 gold/h)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Best Gold Farming (2,893 gold/h)</span></a>
+<hr>
+<p class="sb-head">Game client</p>
+<a class="sb-item" href="windowed-mode.html" title="Windowed Mode"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Windowed Mode</span></a>
+<a class="sb-item" href="patch-y.html" title="Patch Y (Raid Visuals)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Patch Y (Raid Visuals)</span></a>
+<a class="sb-item" href="project-reforged-install.html" title="Project Reforged Install"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Project Reforged Install</span></a>
+<hr>
+</nav>
+<nav class="sb-rail" aria-label="Categories">
+<a class="mini-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<a class="mini-item" href="../index.html#leveling"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Leveling</span></a>
+<a class="mini-item" href="../index.html#professions"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Professions</span></a>
+<a class="mini-item" href="../index.html#addons"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>Addons</span></a>
+<a class="mini-item" href="../index.html#gearing" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Gearing</span></a>
+<a class="mini-item" href="../index.html#reputation"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Reputation</span></a>
+<a class="mini-item" href="../index.html#gold-making"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Gold</span></a>
+<a class="mini-item" href="../index.html#game-client"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Client</span></a>
+</nav>
+</aside>
+<div class="sb-scrim" id="sb-scrim"></div>
+<main class="guide">
+<!--nav--><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Guides</a><span aria-hidden="true">/</span><a href="../index.html#gearing">Gearing</a><span aria-hidden="true">/</span><span>Unlock Heroic Dungeons</span></nav><!--/nav-->
+<div class="prose">
+<h1>WotLK Warmane Icecrown - Unlock Heroic Dungeons</h1>
+<p class="byline">Guide by <strong>Lost Unison</strong></p>
+<p class="lede">Reach the item level needed for heroics with cheap BoE, trinkets and relics.</p>
+</div>
+<div class="doc">
+<h2 id="unlock-heroic-dungeons">Unlock Heroic Dungeons</h2>
+<p>To unlock Heroic Dungeons you need 180+ iLevel while filling all
+available slots.</p>
+<p><img alt="" height="447" loading="lazy" src="../images/unlock-heroic-dungeons-01.webp" style="max-width:min(100%, 359px)" width="359"/></p>
+<h3>Step 1: Identify Cheap BoE (Bind on Equip)</h3>
+<p>Check the <strong>Auction House</strong> for cheap <strong>264 iLevel
+BoE</strong>. Use this table to get the cheapest one available.</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Slot</strong></th>
+<th><strong>Item</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Price (g)</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><strong>Necklace</strong></td>
+<td>Wodin's Lucky Necklace</td>
+<td>Melee</td>
+<td>519</td>
+</tr><tr class="header">
+<td><strong>Shoulder</strong></td>
+<td>Stiffened Corpse Shoulderpads</td>
+<td>Cloth / Caster</td>
+<td>250</td>
+</tr><tr class="odd">
+<td><strong>Chest</strong></td>
+<td>Carapace of Forgotten Kings</td>
+<td>Mail / Melee</td>
+<td>958</td>
+</tr><tr class="header">
+<td><strong>Bracers</strong></td>
+<td>Crypt Keeper's Bracers</td>
+<td>Plate / Caster</td>
+<td>260</td>
+</tr><tr class="odd">
+<td rowspan="3"><strong>Waist</strong></td>
+<td>Professor's Bloodied Smock</td>
+<td>Leather / Caster</td>
+<td>377</td>
+</tr><tr class="header">
+<td>Belt of the Blood Nova</td>
+<td>Mail / Caster</td>
+<td>190</td>
+</tr><tr class="odd">
+<td>Belt of the Lonely Noble (Caster 264</td>
+<td>Plate / Caster</td>
+<td>140</td>
+</tr><tr class="header">
+<td><strong>Legs</strong></td>
+<td>Leggings of Dubious Charms</td>
+<td>Mail / Caster</td>
+<td>61</td>
+</tr><tr class="odd">
+<td><strong>Ring 1</strong></td>
+<td>Harbinger's Bone Band</td>
+<td>Tank</td>
+<td>146</td>
+</tr><tr class="header">
+<td><strong>Ring 2</strong></td>
+<td>Ring of Rotting Sinew</td>
+<td>Melee</td>
+<td>325</td>
+</tr><tr class="odd">
+<td><strong>Ranged</strong></td>
+<td>Rowan's Rifle of Silver Bullets</td>
+<td>Ranged</td>
+<td>57</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Step 2: Get Trinkets and Idol, Sigil, Libram or Totem</h3>
+<p>You can get 2 good trinkets easily while doing the first quests of
+the <strong>Argent Crusade</strong> in <strong>Icecrown.</strong></p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Quest</strong></th>
+<th><strong>Reward</strong></th>
+</tr>
+
+
+</thead>
+<tbody><tr class="odd">
+<td><a href="https://www.wowhead.com/wotlk/quest=13039/defending-the-vanguard"><u>Defending
+The Vanguard</u></a></td>
+<td>Crusader's Locket (174 item level)</td>
+</tr><tr class="header">
+<td><a href="https://www.wowhead.com/wotlk/quest=13086/the-last-line-of-defense"><u>The
+Last Line Of Defense</u></a></td>
+<td><p><img alt="" height="92" loading="lazy" src="../images/unlock-heroic-dungeons-02.webp" style="max-width:min(100%, 298px)" width="349"/></p>
+<p>(174 item level)</p></td>
+</tr>
+</tbody>
+</table></div>
+<h3>Step 3: Fill Remaining Slots</h3>
+<p>Now we fill the remaining slots with <strong>uncommon</strong> or
+<strong>rare</strong> items from the <strong>Auction House.</strong> I
+recommend you buy items between <strong>150 and 200 item
+level.</strong></p>
+<p>Here’s a list of cheap <strong>200 item level BoE.</strong></p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Slot</strong></th>
+<th><strong>Item</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Price (g)</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><strong>Head</strong></td>
+<td>Helm of the Lightning Halls</td>
+<td>Mail / Caster</td>
+<td>84</td>
+</tr><tr class="header">
+<td rowspan="2"><strong>Necklace</strong></td>
+<td>Burning Skull Pendant</td>
+<td>Tank</td>
+<td>100</td>
+</tr><tr class="odd">
+<td>Emerald Choker</td>
+<td>Tank</td>
+<td>110</td>
+</tr><tr class="header">
+<td><strong>Shoulder</strong></td>
+<td>Runecaster's Mantle</td>
+<td>Cloth</td>
+<td>19</td>
+</tr><tr class="odd">
+<td rowspan="3"><strong>Cloak</strong></td>
+<td>Tattered Castle Drape</td>
+<td>Cloth / Tank</td>
+<td>130</td>
+</tr><tr class="header">
+<td>Cloak of Bloodied Waters</td>
+<td>Cloth / Melee</td>
+<td>150</td>
+</tr><tr class="odd">
+<td>Reanimator's Cloak</td>
+<td>Cloth / Caster</td>
+<td>164</td>
+</tr><tr class="header">
+<td rowspan="3"><strong>Chest</strong></td>
+<td>Ymirjar Physician's Robe</td>
+<td>Leather / Caster</td>
+<td>65</td>
+</tr><tr class="odd">
+<td>Patina-Coated Breastplate</td>
+<td>Plate / Caster</td>
+<td>25</td>
+</tr><tr class="header">
+<td>Aviary Guardsman's Hauberk</td>
+<td>Mail / Melee</td>
+<td>30</td>
+</tr><tr class="odd">
+<td rowspan="3"><strong>Bracers</strong></td>
+<td>Drake-Champion's Bracers</td>
+<td>Leather / Melee</td>
+<td>193</td>
+</tr><tr class="header">
+<td>Bands of the Sky Ring</td>
+<td>Mail / Caster</td>
+<td>88</td>
+</tr><tr class="odd">
+<td>Bands of Fading Light</td>
+<td>Plate / Caster</td>
+<td>23</td>
+</tr><tr class="header">
+<td rowspan="2"><strong>Gloves</strong></td>
+<td>Awakened Handguards</td>
+<td>Leather / Caster</td>
+<td>46</td>
+</tr><tr class="odd">
+<td>Web Winder Gloves</td>
+<td>Plate / Caster</td>
+<td>25</td>
+</tr><tr class="header">
+<td rowspan="2"><strong>Waist</strong></td>
+<td>Belt of Tasseled Lanterns</td>
+<td>Mail / Melee</td>
+<td>80</td>
+</tr><tr class="odd">
+<td>Waistguard of the Risen Knight</td>
+<td>Plate / Tank</td>
+<td>90</td>
+</tr><tr class="header">
+<td><strong>Ring 1</strong></td>
+<td>Stained-Glass Shard Ring</td>
+<td>Melee</td>
+<td>122</td>
+</tr><tr class="odd">
+<td rowspan="5"><strong>Main Hand</strong></td>
+<td rowspan="2">Librarian's Paper Cutter</td>
+<td rowspan="2">Mix</td>
+<td rowspan="2">21</td>
+</tr><tr class="header">
+</tr><tr class="odd">
+<td>Tankard O' Terror</td>
+<td>Melee</td>
+<td>277</td>
+</tr><tr class="header">
+<td>Namlak's Supernumerary Sticker</td>
+<td>Melee</td>
+<td>323</td>
+</tr><tr class="odd">
+<td>Avool's Sword of Jin</td>
+<td>Melee</td>
+<td>351</td>
+</tr><tr class="header">
+<td><strong>Off Hand</strong></td>
+<td>Frostbridge Orb</td>
+<td>Caster</td>
+<td>79</td>
+</tr><tr class="odd">
+<td><strong>Ranged</strong></td>
+<td>Tracker's Balanced Knives</td>
+<td>Melee</td>
+<td>22</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Build Example: Cloth</h3>
+<p>For the head, shoulder, chest, wrist, hands, waist, and feet, I
+recommend you check the duskweave, spiked cobalt or TODO (depending on
+what you can wear)</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Slot / Armor</strong></th>
+<th><strong>Items</strong></th>
+<th><strong>Item Level</strong></th>
+<th><strong>Price (g)</strong></th>
+<th><strong>Source</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><strong>Head</strong></td>
+<td>Duskweave Cowl</td>
+<td>154</td>
+<td>20 - 40</td>
+<td>Auction House / Profession</td>
+</tr><tr class="header">
+<td><strong>Necklace</strong></td>
+<td>Emerald Choker</td>
+<td>200</td>
+<td>60</td>
+<td>Auction House</td>
+</tr><tr class="odd">
+<td><strong>Shoulder</strong></td>
+<td>Duskweave Shoulders</td>
+<td>264</td>
+<td>250</td>
+<td>Auction House</td>
+</tr><tr class="header">
+<td><strong>Cloak</strong></td>
+<td>Reanimator's Cloak</td>
+<td>200</td>
+<td>245</td>
+<td>Auction House</td>
+</tr><tr class="odd">
+<td><strong>Chest</strong></td>
+<td>Duskweave Robe</td>
+<td>158</td>
+<td>20 - 40</td>
+<td>Auction House / Profession</td>
+</tr><tr class="header">
+<td><strong>Bracers</strong></td>
+<td>Duskweave Wristwraps</td>
+<td>158</td>
+<td>20 - 40</td>
+<td>Auction House / Profession</td>
+</tr><tr class="odd">
+<td><strong>Gloves</strong></td>
+<td>Duskweave Gloves</td>
+<td>158</td>
+<td>20 - 40</td>
+<td>Auction House / Profession</td>
+</tr><tr class="header">
+<td><strong>Waist</strong></td>
+<td>Duskweave Belt</td>
+<td>154</td>
+<td>20 - 40</td>
+<td>Auction House / Profession</td>
+</tr><tr class="odd">
+<td><strong>Legs</strong></td>
+<td>Duskweave Leggings</td>
+<td>154</td>
+<td>20 - 40</td>
+<td>Auction House / Profession</td>
+</tr><tr class="header">
+<td><strong>Feet</strong></td>
+<td>Duskweave Boots</td>
+<td>162</td>
+<td>20 - 40</td>
+<td>Auction House / Profession</td>
+</tr><tr class="odd">
+<td><strong>Ring 1</strong></td>
+<td>Stained-Glass Shard Ring</td>
+<td>200</td>
+<td>122</td>
+<td>Auction House</td>
+</tr><tr class="header">
+<td><strong>Ring 2</strong></td>
+<td>Harbinger's Bone Band</td>
+<td>264</td>
+<td>200 - 300</td>
+<td>Auction House</td>
+</tr><tr class="odd">
+<td><strong>Trinket 1</strong></td>
+<td><a href="https://www.wowhead.com/wotlk/quest=13086/the-last-line-of-defense"><u>The
+Last Line Of Defense</u></a></td>
+<td>174</td>
+<td>0</td>
+<td>Quest Reward</td>
+</tr><tr class="header">
+<td><strong>Trinket 2</strong></td>
+<td><a href="https://www.wowhead.com/wotlk/quest=12903/thats-what-friends-are-for"><u>That's
+What Friends Are For...</u></a></td>
+<td>158</td>
+<td>0</td>
+<td>Quest Reward</td>
+</tr><tr class="odd">
+<td rowspan="2"><strong>Main Hand</strong></td>
+<td>Daggers: Librarian's Paper Cutter</td>
+<td>Daggers: 200</td>
+<td>30-60</td>
+<td>Auction House</td>
+</tr><tr class="header">
+<td>1 or 2 Hand Weapon</td>
+<td>Any uncommon 1 or 2 Hand Weapon between 150 and 178 item level</td>
+<td>30-60</td>
+<td>Auction House</td>
+</tr><tr class="odd">
+<td><strong>Off Hand</strong></td>
+<td>Off-hand, Shield</td>
+<td>Any uncommon: 150-178</td>
+<td>30-60</td>
+<td>Auction House</td>
+</tr><tr class="header">
+<td rowspan="4"><strong>Ranged</strong></td>
+<td>Thrown: Tracker's Balanced Knives</td>
+<td>Thrown: 200</td>
+<td>30-70</td>
+<td>Auction House</td>
+</tr><tr class="odd">
+<td>Gun: Rowan's Rifle of Silver Bullets</td>
+<td>264</td>
+<td>20-40</td>
+<td>Auction House</td>
+</tr><tr class="header">
+<td>Wand</td>
+<td>Any uncommon wand between 150 and 178 item level</td>
+<td>50-60</td>
+<td>Auction House</td>
+</tr><tr class="odd">
+<td>Libram, Sigil, Totem, Idol: Get it with <strong>Honor
+Points</strong> from <a href="https://www.wowhead.com/wotlk/npc=31865/zom-bocom"><u>Zom
+Bocom</u></a></td>
+<td>232</td>
+<td>12000 <strong>Honor Points</strong></td>
+<td>Honor Vendor</td>
+</tr>
+</tbody>
+</table></div>
+
+</div>
+<!--nav--><nav class="pager" aria-label="Previous and next guide"><a class="pager-prev" href="all-264-boe.html"><span>Previous</span>All 264 Item Level BoE</a><a class="pager-next" href="thorium-brotherhood.html"><span>Next</span>Thorium Brotherhood Neutral to Revered</a></nav><!--/nav-->
+</main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <span>Guides by Lost Unison</span>
+    <span><a href="https://www.youtube.com/@lostunison">YouTube</a> · <a href="https://discord.gg/md4a6BgUTs">Discord</a></span>
+  </div>
+</footer>
+<script src="../js/search-index.js"></script>
+<script src="../js/site.js"></script>
+</body>
+</html>

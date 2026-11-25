@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TSM (TradeSkill Master) Part 1</title>
+<meta name="description" content="Download, install and configure TSM, then scan and buy on the Auction House.">
+<link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{if(localStorage.getItem('lu-sb')==='mini')document.documentElement.classList.add('sb-mini')}catch(e){}</script>
+</head>
+<body data-root="../">
+<header class="site-header">
+  <div class="bar">
+    <div class="bar-start">
+      <button class="icon-btn" id="sb-toggle" type="button" aria-label="Guide menu" aria-controls="sidebar" aria-expanded="true"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../images/logo.svg" width="32" height="32" alt="">
+        <span class="brand-name">Lost Unison</span>
+      </a>
+    </div>
+    <form class="search" id="search-form" role="search" action="../search.html" method="get" autocomplete="off">
+      <button class="icon-btn search-back" id="search-back" type="button" aria-label="Close search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+      <div class="search-field">
+        <input id="q" name="q" type="text" placeholder="Search guides" aria-label="Search guides" enterkeyhint="search" role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list" spellcheck="false">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        <button class="search-clear" id="q-clear" type="button" aria-label="Clear search" hidden><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <button class="search-btn" type="submit" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <ul class="suggest" id="suggest" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+    <div class="bar-end">
+      <button class="icon-btn search-open" id="search-open" type="button" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <a class="bar-link" href="https://www.youtube.com/@lostunison">YouTube</a>
+      <a class="bar-link" href="https://discord.gg/md4a6BgUTs">Discord</a>
+    </div>
+  </div>
+</header>
+<div class="page">
+<aside class="sidenav" id="sidebar" aria-label="Guides">
+<nav class="sb-full" aria-label="All guides">
+<a class="sb-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<hr>
+<p class="sb-head">Leveling</p>
+<a class="sb-item" href="power-leveling.html" title="Power Leveling 1 to 80 (no boost)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Power Leveling 1 to 80 (no boost)</span></a>
+<a class="sb-item" href="paladin-leveling.html" title="Paladin Leveling 1 to 80"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Paladin Leveling 1 to 80</span></a>
+<hr>
+<p class="sb-head">Professions</p>
+<a class="sb-item" href="alchemy.html" title="Alchemy 1 to 450 (x3), Specializations and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Alchemy 1 to 450</span></a>
+<a class="sb-item" href="blacksmithing.html" title="Blacksmithing 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Blacksmithing 1 to 450</span></a>
+<a class="sb-item" href="engineering.html" title="Engineering 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Engineering 1 to 450</span></a>
+<a class="sb-item" href="enchanting.html" title="Enchanting 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Enchanting 1 to 450</span></a>
+<a class="sb-item" href="inscription.html" title="Inscription 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Inscription 1 to 450</span></a>
+<a class="sb-item" href="jewelcrafting.html" title="Jewelcrafting 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Jewelcrafting 1 to 450</span></a>
+<a class="sb-item" href="leatherworking.html" title="Leatherworking 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Leatherworking 1 to 450</span></a>
+<a class="sb-item" href="tailoring.html" title="Tailoring 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Tailoring 1 to 450</span></a>
+<a class="sb-item" href="skinning.html" title="Skinning 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Skinning 1 to 450</span></a>
+<a class="sb-item" href="mining.html" title="Mining 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Mining 1 to 450</span></a>
+<a class="sb-item" href="herbalism.html" title="Herbalism 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Herbalism 1 to 450</span></a>
+<a class="sb-item" href="cooking.html" title="Cooking 1 to 450"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Cooking 1 to 450</span></a>
+<a class="sb-item" href="fishing.html" title="Fishing 1 to 450, Find Fish, Sea Turtle and Heirloom Ring"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Fishing 1 to 450</span></a>
+<a class="sb-item" href="first-aid.html" title="First Aid 1 to 450 (x3)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>First Aid 1 to 450</span></a>
+<hr>
+<p class="sb-head">Addons</p>
+<a class="sb-item" href="tsm-part-1.html" title="TSM (TradeSkill Master) Part 1" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>TSM (TradeSkill Master) Part 1</span></a>
+<hr>
+<p class="sb-head">Gearing</p>
+<a class="sb-item" href="all-264-boe.html" title="All 264 Item Level BoE"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>All 264 Item Level BoE</span></a>
+<a class="sb-item" href="unlock-heroic-dungeons.html" title="Unlock Heroic Dungeons"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Unlock Heroic Dungeons</span></a>
+<hr>
+<p class="sb-head">Reputation</p>
+<a class="sb-item" href="thorium-brotherhood.html" title="Thorium Brotherhood Neutral to Revered"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Thorium Brotherhood Neutral to Revered</span></a>
+<a class="sb-item" href="ashen-verdict.html" title="Ashen Verdict Reputation Farm"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Ashen Verdict Reputation Farm</span></a>
+<hr>
+<p class="sb-head">Gold making</p>
+<a class="sb-item" href="gold-farming.html" title="Best Gold Farming (2,893 gold/h)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Best Gold Farming (2,893 gold/h)</span></a>
+<hr>
+<p class="sb-head">Game client</p>
+<a class="sb-item" href="windowed-mode.html" title="Windowed Mode"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Windowed Mode</span></a>
+<a class="sb-item" href="patch-y.html" title="Patch Y (Raid Visuals)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Patch Y (Raid Visuals)</span></a>
+<a class="sb-item" href="project-reforged-install.html" title="Project Reforged Install"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Project Reforged Install</span></a>
+<hr>
+</nav>
+<nav class="sb-rail" aria-label="Categories">
+<a class="mini-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<a class="mini-item" href="../index.html#leveling"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Leveling</span></a>
+<a class="mini-item" href="../index.html#professions"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Professions</span></a>
+<a class="mini-item" href="../index.html#addons" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>Addons</span></a>
+<a class="mini-item" href="../index.html#gearing"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Gearing</span></a>
+<a class="mini-item" href="../index.html#reputation"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Reputation</span></a>
+<a class="mini-item" href="../index.html#gold-making"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Gold</span></a>
+<a class="mini-item" href="../index.html#game-client"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Client</span></a>
+</nav>
+</aside>
+<div class="sb-scrim" id="sb-scrim"></div>
+<main class="guide">
+<!--nav--><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Guides</a><span aria-hidden="true">/</span><a href="../index.html#addons">Addons</a><span aria-hidden="true">/</span><span>TSM (TradeSkill Master) Part 1</span></nav><!--/nav-->
+<div class="prose">
+<h1>WotLK Warmane Icecrown - TSM (TradeSkill Master) Part 1</h1>
+<p class="byline">Guide by <strong>Lost Unison</strong></p>
+<p class="lede">Download, install and configure TSM, then scan and buy on the Auction House.</p>
+</div>
+<div class="video-links"><a class="video-btn" href="https://www.youtube.com/watch?v=iHRTpIqdHQY"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>Watch the video: How to use TSM, Part 1</a></div>
+<nav class="toc" aria-label="On this page"><span class="toc-title">On this page</span><ol><li><a href="#what-is-tsm">What is TSM?</a></li><li><a href="#download">Download</a></li><li><a href="#installation">Installation</a></li><li><a href="#tsm-modules">TSM Modules</a></li><li><a href="#configuration">Configuration</a></li><li><a href="#how-to-access-tsm-menu">How to Access TSM Menu?</a></li><li><a href="#tsm-interface">TSM Interface</a></li><li><a href="#how-to-use-tsm">How to use TSM?</a></li></ol></nav>
+<div class="doc">
+<h2 id="what-is-tsm">What is TSM?</h2>
+<p>TSM, or <strong>TradeSkillMaster</strong>, is a World of Warcraft
+addon that automates and streamlines <strong>Auction House</strong>,
+<strong>crafting</strong>, and <strong>inventory</strong>
+management.</p>
+<p>It lets you:</p>
+<ul>
+<li>
+<p><strong>Auto-buy materials</strong> up to a set amount</p>
+</li>
+<li>
+<p><strong>Post auctions in batches</strong> with custom pricing</p>
+</li>
+<li>
+<p><strong>Track crafting costs and profit</strong></p>
+</li>
+<li>
+<p><strong>Organize items into groups</strong> for faster shopping and
+posting</p>
+</li>
+<li>
+<p><strong>Create custom shopping strings</strong> to instantly search
+for materials</p>
+</li>
+</ul>
+<p>TSM is mainly used by players who want faster crafting, easier
+profession management, and efficient goldmaking.</p>
+<h2 id="download">Download</h2>
+<p>You can get the addon from this link: <a href="https://felbite.com/addon/3303-tsm/"><u>https://felbite.com/addon/3303-tsm/</u></a></p>
+<p><img alt="" height="841" loading="lazy" src="../images/tsm-part-1-01.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+<p><img alt="" height="831" loading="lazy" src="../images/tsm-part-1-02.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+<h2 id="installation">Installation</h2>
+<ol type="1">
+<li>
+<p>Go to your <strong>“World of Warcraft”</strong> for Wrath of the Lich
+King expansion folder.<img alt="" height="480" loading="lazy" src="../images/tsm-part-1-03.webp" style="max-width:min(100%, 452px)" width="622"/></p>
+</li>
+<li>
+<p>Enter the <strong>“Interface”</strong> folder.</p>
+</li>
+<li>
+<p>Enter the <strong>“AddOns”</strong> folder.<img alt="" height="65" loading="lazy" src="../images/tsm-part-1-04.webp" style="max-width:min(100%, 624px)" width="625"/></p>
+</li>
+<li>
+<p>Open your downloaded file
+<strong>“felbite.com-tradeskillmaster-wotlk-3.3.5.zip”</strong> and
+extract it or copy its content inside the <strong>“AddOns”</strong>
+folder.<img alt="" height="316" loading="lazy" src="../images/tsm-part-1-05.webp" style="max-width:min(100%, 329px)" width="328"/></p>
+</li>
+</ol>
+<h2 id="tsm-modules">TSM Modules</h2>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Module Folder</strong></th>
+<th><strong>What It Does</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><strong>TradeSkillMaster</strong></td>
+<td>Core addon framework; required for all other modules.</td>
+</tr><tr class="header">
+<td><strong>TradeSkillMaster_Accounting</strong></td>
+<td>Tracks your gold income/expenses, sales, purchases, and detailed
+profit history.</td>
+</tr><tr class="odd">
+<td><strong>TradeSkillMaster_AuctionDB</strong></td>
+<td>Stores Auction House scan data: market values, historical prices,
+region data.</td>
+</tr><tr class="header">
+<td><strong>TradeSkillMaster_Auctioning</strong></td>
+<td>Automates posting auctions using pricing rules, undercut settings,
+and groups.</td>
+</tr><tr class="odd">
+<td><strong>TradeSkillMaster_Crafting</strong></td>
+<td>Calculates crafting costs, profit margins, and optimal crafting
+queues.</td>
+</tr><tr class="header">
+<td><strong>TradeSkillMaster_Destroying</strong></td>
+<td>Automates Disenchanting, Milling, and Prospecting; shows profit per
+destroy.</td>
+</tr><tr class="odd">
+<td><strong>TradeSkillMaster_ItemTracker</strong></td>
+<td>Tracks items across all your characters, bags, bank, guild
+bank.</td>
+</tr><tr class="header">
+<td><strong>TradeSkillMaster_Mailing</strong></td>
+<td>Automates sending mail to alts; quick-send for grouped items.</td>
+</tr><tr class="odd">
+<td><strong>TradeSkillMaster_Shopping</strong></td>
+<td>Lets you search and buy items using shopping lists / strings; fast
+material buying.</td>
+</tr><tr class="header">
+<td><strong>TradeSkillMaster_Warehousing</strong></td>
+<td>Automates moving items between bags, bank, and guild bank for
+inventory organization.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="configuration">Configuration</h2>
+<p>After you log in, you press the <strong>“AddOns”</strong> button and
+you’ll find that all the modules are checked by default. You can uncheck
+modules if you don’t need them, if you uncheck
+<strong>“TradeSkillMaster”,</strong> then the rest of the modules won’t
+run.</p>
+<p><img alt="" height="971" loading="lazy" src="../images/tsm-part-1-06.webp" style="max-width:min(100%, 312px)" width="1400"/></p>
+<p>Press the “AddOns” button at the down left corner.</p>
+<p><img alt="" height="701" loading="lazy" src="../images/tsm-part-1-07.webp" style="max-width:min(100%, 624px)" width="824"/></p>
+<p>TSM and its modules.</p>
+<h2 id="how-to-access-tsm-menu">How to Access TSM Menu?</h2>
+<ul>
+<li>
+<p>Type “/tsm” in the chat.</p>
+</li>
+<li>
+<p>Press this icon on your minimap border.<img alt="" height="440" loading="lazy" src="../images/tsm-part-1-08.webp" style="max-width:min(100%, 482px)" width="482"/></p>
+</li>
+</ul>
+<h2 id="tsm-interface">TSM Interface</h2>
+<ul>
+<li>
+<p>This is the <strong>configuration</strong> interface:<img alt="" height="673" loading="lazy" src="../images/tsm-part-1-09.webp" style="max-width:min(100%, 624px)" width="927"/>You
+can control the space it takes by dragging the bottom right corner. If
+you have disabled some modules, they will disappear from the <strong>9
+icon tabs</strong> located on the top border.</p>
+</li>
+<li>
+<p>This is the interface when you open the <strong>Auction
+House:</strong><img alt="" height="516" loading="lazy" src="../images/tsm-part-1-10.webp" style="max-width:min(100%, 624px)" width="891"/>It adds 3 new tabs on the bottom
+corner: AuctionDB, Auctioning and Shopping.</p>
+</li>
+</ul>
+<h2 id="how-to-use-tsm">How to use TSM?</h2>
+<p>TSM can feel overwhelming at first, especially if you’ve never used
+an Auction House addon before. But once you understand the basics,
+everything becomes much easier.</p>
+<p>Let’s start with: <strong>Auction House scanning</strong>.</p>
+<h3>Auction House Scanning</h3>
+<p>TSM relies on <strong>AuctionDB data</strong> to function  -  this
+includes things like:</p>
+<ul>
+<li>
+<p>Current market prices</p>
+</li>
+<li>
+<p>Historical prices</p>
+</li>
+<li>
+<p>Region/global averages</p>
+</li>
+<li>
+<p>Minimum/maximum seen prices</p>
+</li>
+<li>
+<p>Crafting cost calculations</p>
+</li>
+</ul>
+<p>To get this pricing data, you need to <strong>scan the Auction House
+regularly</strong>.</p>
+<h4>How to Perform a Scan</h4>
+<p>Once you open the <strong>Auction House interface</strong>, click on
+the <strong>AuctionDB</strong> tab in the TSM window.</p>
+<p>For most situations, you’ll only need the <strong>“Run GetAll
+Scan”</strong> option.<br/>
+This is the fastest type of scan TSM offers  -  it reads <em>every auction
+on the server</em> in just a few seconds and updates all of your pricing
+data at once.</p>
+<p>If your server allows GetAll scans (most do), this is the preferred
+method because it:</p>
+<ul>
+<li>
+<p>Refreshes all Auction House prices</p>
+</li>
+<li>
+<p>Updates crafting profits</p>
+</li>
+<li>
+<p>Makes shopping and posting more accurate</p>
+</li>
+<li>
+<p>Saves a huge amount of time compared to full scans</p>
+</li>
+</ul>
+<p>Just press <strong>Run GetAll Scan</strong>, wait a moment for TSM to
+retrieve all the data, and you’re good to go.</p>
+<p><img alt="" height="515" loading="lazy" src="../images/tsm-part-1-11.webp" style="max-width:min(100%, 624px)" width="894"/></p>
+
+<h4>How to buy</h4>
+<p><img alt="" height="523" loading="lazy" src="../images/tsm-part-1-12.webp" style="max-width:min(100%, 624px)" width="895"/></p>
+<p>To purchase items quickly and efficiently with TSM, follow these
+steps:</p>
+<ol type="1">
+<li>
+<p>Open the <strong>Shopping</strong> tab in the Auction House.</p>
+</li>
+<li>
+<p>Type the name of the item you want into the <strong>search box at the
+top</strong>.<br/>
+Press <strong>Enter</strong> or click <strong>Search</strong>.</p>
+</li>
+<li>
+<p>Wait for the results to load.</p>
+</li>
+<li>
+<p>If many different items show up, <strong>sort by % Market
+Value</strong> to filter out overpriced listings.</p>
+</li>
+<li>
+<p>Check the <strong>stack size</strong> to make sure you’re buying the
+amount you want.</p>
+</li>
+<li>
+<p>Check the <strong>price per item</strong> to confirm it’s a good
+deal.</p>
+</li>
+<li>
+<p>Click <strong>Buyout</strong> and confirm the purchase  -  or simply
+<strong>Alt + Click</strong> the item to buy it instantly.</p>
+</li>
+<li>
+<p>You can use modifiers to control how TSM searches:</p>
+</li>
+</ol>
+<p>/exact</p>
+<p>Use this when you want TSM to search <strong>only that specific
+item</strong> and ignore similar items.<br/>
+<strong>Example:</strong> Silk Cloth/exact</p>
+<p>Without /exact, a search for <em>Silk Cloth</em> would also match
+items like:</p>
+<ul>
+<li>
+<p>Bolt of Embersilk Cloth</p>
+</li>
+<li>
+<p>Bolt of Silk Cloth</p>
+</li>
+<li>
+<p>Embersilk Cloth</p>
+</li>
+<li>
+<p>Silk Cloth</p>
+</li>
+</ul>
+<p>Adding /exact ensures only <strong>Silk Cloth</strong> appears in the
+results.</p>
+<p>/x</p>
+<p>Use this to tell TSM <strong>how many</strong> you want to buy.<br/>
+<strong>Example:</strong> Infinite Dust/x200<br/>
+TSM will stop buying once you reach <strong>200 Infinite
+Dust</strong>.</p>
+<p>This is very useful when you need to buy a list of materials for
+profession leveling.</p>
+
+</div>
+<!--nav--><nav class="pager" aria-label="Previous and next guide"><a class="pager-prev" href="first-aid.html"><span>Previous</span>First Aid 1 to 450</a><a class="pager-next" href="all-264-boe.html"><span>Next</span>All 264 Item Level BoE</a></nav><!--/nav-->
+</main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <span>Guides by Lost Unison</span>
+    <span><a href="https://www.youtube.com/@lostunison">YouTube</a> · <a href="https://discord.gg/md4a6BgUTs">Discord</a></span>
+  </div>
+</footer>
+<script src="../js/search-index.js"></script>
+<script src="../js/site.js"></script>
+</body>
+</html>

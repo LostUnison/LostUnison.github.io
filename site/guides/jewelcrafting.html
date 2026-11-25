@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jewelcrafting 1 to 450 (x3) and Bonuses</title>
+<meta name="description" content="Dragon's Eye gems, daily tokens, trinkets, leveling route and the Saronite shuffle.">
+<link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{if(localStorage.getItem('lu-sb')==='mini')document.documentElement.classList.add('sb-mini')}catch(e){}</script>
+</head>
+<body data-root="../">
+<header class="site-header">
+  <div class="bar">
+    <div class="bar-start">
+      <button class="icon-btn" id="sb-toggle" type="button" aria-label="Guide menu" aria-controls="sidebar" aria-expanded="true"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../images/logo.svg" width="32" height="32" alt="">
+        <span class="brand-name">Lost Unison</span>
+      </a>
+    </div>
+    <form class="search" id="search-form" role="search" action="../search.html" method="get" autocomplete="off">
+      <button class="icon-btn search-back" id="search-back" type="button" aria-label="Close search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+      <div class="search-field">
+        <input id="q" name="q" type="text" placeholder="Search guides" aria-label="Search guides" enterkeyhint="search" role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list" spellcheck="false">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        <button class="search-clear" id="q-clear" type="button" aria-label="Clear search" hidden><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <button class="search-btn" type="submit" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <ul class="suggest" id="suggest" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+    <div class="bar-end">
+      <button class="icon-btn search-open" id="search-open" type="button" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <a class="bar-link" href="https://www.youtube.com/@lostunison">YouTube</a>
+      <a class="bar-link" href="https://discord.gg/md4a6BgUTs">Discord</a>
+    </div>
+  </div>
+</header>
+<div class="page">
+<aside class="sidenav" id="sidebar" aria-label="Guides">
+<nav class="sb-full" aria-label="All guides">
+<a class="sb-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<hr>
+<p class="sb-head">Leveling</p>
+<a class="sb-item" href="power-leveling.html" title="Power Leveling 1 to 80 (no boost)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Power Leveling 1 to 80 (no boost)</span></a>
+<a class="sb-item" href="paladin-leveling.html" title="Paladin Leveling 1 to 80"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Paladin Leveling 1 to 80</span></a>
+<hr>
+<p class="sb-head">Professions</p>
+<a class="sb-item" href="alchemy.html" title="Alchemy 1 to 450 (x3), Specializations and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Alchemy 1 to 450</span></a>
+<a class="sb-item" href="blacksmithing.html" title="Blacksmithing 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Blacksmithing 1 to 450</span></a>
+<a class="sb-item" href="engineering.html" title="Engineering 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Engineering 1 to 450</span></a>
+<a class="sb-item" href="enchanting.html" title="Enchanting 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Enchanting 1 to 450</span></a>
+<a class="sb-item" href="inscription.html" title="Inscription 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Inscription 1 to 450</span></a>
+<a class="sb-item" href="jewelcrafting.html" title="Jewelcrafting 1 to 450 (x3) and Bonuses" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Jewelcrafting 1 to 450</span></a>
+<a class="sb-item" href="leatherworking.html" title="Leatherworking 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Leatherworking 1 to 450</span></a>
+<a class="sb-item" href="tailoring.html" title="Tailoring 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Tailoring 1 to 450</span></a>
+<a class="sb-item" href="skinning.html" title="Skinning 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Skinning 1 to 450</span></a>
+<a class="sb-item" href="mining.html" title="Mining 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Mining 1 to 450</span></a>
+<a class="sb-item" href="herbalism.html" title="Herbalism 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Herbalism 1 to 450</span></a>
+<a class="sb-item" href="cooking.html" title="Cooking 1 to 450"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Cooking 1 to 450</span></a>
+<a class="sb-item" href="fishing.html" title="Fishing 1 to 450, Find Fish, Sea Turtle and Heirloom Ring"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Fishing 1 to 450</span></a>
+<a class="sb-item" href="first-aid.html" title="First Aid 1 to 450 (x3)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>First Aid 1 to 450</span></a>
+<hr>
+<p class="sb-head">Addons</p>
+<a class="sb-item" href="tsm-part-1.html" title="TSM (TradeSkill Master) Part 1"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>TSM (TradeSkill Master) Part 1</span></a>
+<hr>
+<p class="sb-head">Gearing</p>
+<a class="sb-item" href="all-264-boe.html" title="All 264 Item Level BoE"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>All 264 Item Level BoE</span></a>
+<a class="sb-item" href="unlock-heroic-dungeons.html" title="Unlock Heroic Dungeons"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Unlock Heroic Dungeons</span></a>
+<hr>
+<p class="sb-head">Reputation</p>
+<a class="sb-item" href="thorium-brotherhood.html" title="Thorium Brotherhood Neutral to Revered"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Thorium Brotherhood Neutral to Revered</span></a>
+<a class="sb-item" href="ashen-verdict.html" title="Ashen Verdict Reputation Farm"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Ashen Verdict Reputation Farm</span></a>
+<hr>
+<p class="sb-head">Gold making</p>
+<a class="sb-item" href="gold-farming.html" title="Best Gold Farming (2,893 gold/h)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Best Gold Farming (2,893 gold/h)</span></a>
+<hr>
+<p class="sb-head">Game client</p>
+<a class="sb-item" href="windowed-mode.html" title="Windowed Mode"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Windowed Mode</span></a>
+<a class="sb-item" href="patch-y.html" title="Patch Y (Raid Visuals)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Patch Y (Raid Visuals)</span></a>
+<a class="sb-item" href="project-reforged-install.html" title="Project Reforged Install"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Project Reforged Install</span></a>
+<hr>
+</nav>
+<nav class="sb-rail" aria-label="Categories">
+<a class="mini-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<a class="mini-item" href="../index.html#leveling"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Leveling</span></a>
+<a class="mini-item" href="../index.html#professions" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Professions</span></a>
+<a class="mini-item" href="../index.html#addons"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>Addons</span></a>
+<a class="mini-item" href="../index.html#gearing"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Gearing</span></a>
+<a class="mini-item" href="../index.html#reputation"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Reputation</span></a>
+<a class="mini-item" href="../index.html#gold-making"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Gold</span></a>
+<a class="mini-item" href="../index.html#game-client"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Client</span></a>
+</nav>
+</aside>
+<div class="sb-scrim" id="sb-scrim"></div>
+<main class="guide">
+<!--nav--><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Guides</a><span aria-hidden="true">/</span><a href="../index.html#professions">Professions</a><span aria-hidden="true">/</span><span>Jewelcrafting 1 to 450</span></nav><!--/nav-->
+<div class="prose">
+<h1>WotLK Warmane Icecrown - Jewelcrafting 1 to 450 (x3) and Bonuses</h1>
+<p class="byline">Guide by <strong>Lost Unison</strong></p>
+<p class="lede">Dragon's Eye gems, daily tokens, trinkets, leveling route and the Saronite shuffle.</p>
+</div>
+<div class="video-links"><a class="video-btn" href="https://www.youtube.com/watch?v=B_rpImoeogk"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>Watch the video: Jewelcrafting 1 to 450</a></div>
+<div class="doc">
+<h2 id="jewelcrafting-bonuses">Jewelcrafting Bonuses</h2>
+<p>Jewelcrafting offers one of the strongest and most flexible
+profession bonuses in Wrath of the Lich King.<br/>
+The main perk comes from <strong>Jewelcrafter-only gems</strong>, which
+give <strong>higher stats</strong> than regular gems.</p>
+<h3>1. Jewelcrafter-Only Gems (Dragon’s Eye Gems)</h3>
+<p>As a Jewelcrafter, you can use up to <strong>three</strong> special
+gems called <strong>Dragon’s Eyes</strong>.<br/>
+These gems provide <strong>significantly stronger stats</strong> than
+standard rare gems, giving you a major stat boost.</p>
+<p>For example:</p>
+<ul>
+<li>
+<p><strong>Runed Dragon’s Eye</strong> gives <strong>+39 Spell
+Power<br/>
+</strong> compared to a normal <strong>+23 Spell Power</strong> gem.</p>
+</li>
+<li>
+<p><strong>Bold Dragon’s Eye</strong> gives <strong>+34 Strength<br/>
+</strong> compared to <strong>+20 Strength</strong>.</p>
+</li>
+<li>
+<p><strong>Delicate Dragon’s Eye</strong> gives <strong>+34
+Agility<br/>
+</strong> compared to <strong>+20 Agility</strong>.</p>
+</li>
+<li>
+<p><strong>Rigid Dragon’s Eye</strong> gives <strong>+34 Hit
+Rating<br/>
+</strong> compared to <strong>+20 Hit Rating</strong>.</p>
+</li>
+</ul>
+<p>And so on.</p>
+<p><img alt="" height="929" loading="lazy" src="../images/jewelcrafting-01.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+<p>Since you can use <strong>three</strong> of these, the total bonus
+you gain compared to regular gems is roughly:</p>
+<ul>
+<li>
+<p><strong>+48 Spell Power</strong>, or</p>
+</li>
+<li>
+<p><strong>+84 Attack Power</strong>, or</p>
+</li>
+<li>
+<p><strong>+42 Strength</strong>, or</p>
+</li>
+<li>
+<p><strong>+42 Agility</strong>, or</p>
+</li>
+<li>
+<p><strong>+42 Stamina</strong>, depending on your build.</p>
+</li>
+</ul>
+<p>These numbers put Jewelcrafting <strong>on par with the very best
+professions</strong> in WotLK.</p>
+<h3>2. Daily Quests &amp; Tokens</h3>
+<p>To buy Dragon’s Eye gems and exclusive recipes, you’ll complete
+<strong>Jewelcrafting daily quests</strong>.<br/>
+These give <strong>Dalaran Jewelcrafter’s Tokens</strong>, which you use
+to purchase:</p>
+<ul>
+<li>
+<p>JC-only gem cuts</p>
+</li>
+<li>
+<p>Dragon’s Eyes</p>
+</li>
+<li>
+<p>Trinket recipes</p>
+</li>
+<li>
+<p>Meta gem patterns</p>
+</li>
+</ul>
+<p><img alt="" height="255" loading="lazy" src="../images/jewelcrafting-02.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+<p>This creates a <strong>stable gold source</strong>, since cuts and
+Dragon’s Eyes always stay in demand.</p>
+<h3><strong>3. Special Trinkets</strong></h3>
+<p>Jewelcrafters can craft powerful pre-raid trinkets such as:</p>
+<ul>
+<li>
+<p><strong>Figurine – Sapphire Owl</strong> (healer/caster)</p>
+</li>
+<li>
+<p><strong>Figurine – Monarch Crab</strong> (tanks)</p>
+</li>
+<li>
+<p><strong>Figurine – Emerald Boar</strong> (melee DPS)</p>
+</li>
+</ul>
+<p><img alt="" height="363" loading="lazy" src="../images/jewelcrafting-03.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+<p>These are extremely useful early in the expansion and often last into
+Naxxramas.</p>
+<h3>4. Additional Goldmaking</h3>
+<p>Jewelcrafting is one of the <strong>best goldmaking
+professions</strong> in WotLK thanks to:</p>
+<ul>
+<li>
+<p>Prospecting Saronite Ore and Titanium Ore</p>
+</li>
+<li>
+<p>Cutting high-demand gems</p>
+</li>
+<li>
+<p>Selling Dragon’s Eyes</p>
+</li>
+<li>
+<p>Meta gems</p>
+</li>
+<li>
+<p>Icy Prisms (Daily cooldown profitable item)</p>
+</li>
+</ul>
+<p>A Jewelcrafter can make gold <strong>every single day</strong>,
+making it both a performance and economic powerhouse.</p>
+<h2 id="leveling-jewelcrafting-from-1-to-450">Leveling Jewelcrafting from 1 to 450</h2>
+<h3>Material Cost</h3>
+<p>Material cost should be around <strong>2000 - 3000 gold</strong>
+depending on the market (calculated in 01/05/2025 (dd/MM/yyyy)</p>
+<h3>Required Materials</h3>
+<p>SOME CRAFTS ARE YELLOW OR GREEN.</p>
+<p>YOU <strong>MIGHT</strong> NEED MORE MATERIALS THAN LISTED HERE.</p>
+<h4>Classic</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Stones</strong></th>
+<th><strong>Bars</strong></th>
+<th><strong>Gems</strong></th>
+</tr>
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><p>50 Solid Stone</p>
+<p>20 Flask of Mojo</p>
+<p>2 Heart of the Wild</p>
+<p>4 Essence of Undeath</p></td>
+<td><p>52 Copper Bar</p>
+<p>126 Bronze Bar</p>
+<p>8 Golden Bar</p>
+<p>26 Mithril Bar</p>
+<p>26 Truesilver Bar</p>
+<p>18 Thorium Bar</p></td>
+<td><p>3 Lesser Moonstone</p>
+<p>42 Shadowgem</p>
+<p>2 Jade</p>
+<p>7 Citrine</p>
+<p>15 Aquamarine</p>
+<p>6 Large Opal</p>
+<p>4 Blue Sapphire</p>
+<p>6 Huge Emerald</p></td>
+</tr><tr class="header">
+<td colspan="3">TSM Shopping Strings</td>
+</tr><tr class="odd">
+<td><p>Solid Stone/exact/x50</p>
+<p>Flask of Mojo/exact/x20</p>
+<p>Heart of the Wild/exact/x2</p>
+<p>Essence of Undeath/exact/x4</p></td>
+<td><p>Copper Bar/exact/x52</p>
+<p>Bronze Bar/exact/x84</p>
+<p>Golden Bar/exact/x8</p>
+<p>Mithril Bar/exact/x26</p>
+<p>Truesilver Bar/exact/x26</p>
+<p>Thorium Bar/exact/x18</p></td>
+<td><p>Lesser Moonstone/exact/x3</p>
+<p>Shadowgem/exact/x42</p>
+<p>Jade/exact/x2</p>
+<p>Citrine/exact/x7</p>
+<p>Aquamarine/exact/x15</p>
+<p>Large Opal/exact/x6</p>
+<p>Blue Sapphire/exact/x4</p>
+<p>Huge Emerald/exact/x6</p></td>
+</tr>
+</tbody>
+</table></div>
+<h4>TBC</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Gems</strong></th>
+</tr>
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><p>12 Deep Peridot</p>
+<p>8 Flame Spessarite</p>
+<p>2 Shadow Draenite</p></td>
+</tr><tr class="header">
+<td>TSM Shopping Strings</td>
+</tr><tr class="odd">
+<td><p>Deep Peridot/exact/x12</p>
+<p>Flame Spessarite/exact/x8</p>
+<p>Shadow Draenite/exact/x2</p></td>
+</tr>
+</tbody>
+</table></div>
+<h4>WotLK</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Gems</strong></th>
+<th><strong>Misc</strong></th>
+</tr>
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><p>25 Shadow Crystal</p>
+<p>13 Forest Emerald</p>
+<p>8 Chalcedony</p>
+<p>8 Dark Jade</p></td>
+<td>8 Frozen Orb</td>
+</tr><tr class="header">
+<td colspan="2">TSM Shopping Strings</td>
+</tr><tr class="odd">
+<td><p>Shadow Crystal/exact/x25</p>
+<p>Forest Emerald/exact/x13</p>
+<p>Chalcedony/exact/x8</p>
+<p>Dark Jade/exact/x8</p></td>
+<td>Frozen Orb/exact/x8</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Jewelcrafting Trainer</h3>
+<p>For <strong>Jewelcrafting,</strong> you need to visit 2 different
+trainers throughout your leveling.</p>
+<ul>
+<li>
+<p>for Classic and TBC :</p>
+</li>
+</ul>
+<p><strong>Alliance :</strong> Exodar - <a href="https://www.wowhead.com/wotlk/npc=19778/farii"><u>Farii</u></a></p>
+<p><strong>Horde :</strong> Silvermoon - <a href="https://www.wowhead.com/wotlk/npc=19775/kalinda"><u>Kalinda</u></a></p>
+<ul>
+<li>
+<p>For Wrath of the Lich King</p>
+</li>
+</ul>
+<p><strong>Neutral:</strong> Dalaran - <a href="https://www.wowhead.com/wotlk/npc=28701/timothy-jones">Timothy
+Jones</a></p>
+<h3>Leveling 1 to 450</h3>
+<h4>Classic</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Level</strong></th>
+<th><strong>Craft</strong></th>
+<th><strong>Quantity</strong></th>
+<th><strong>Total Material</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td colspan="4"><strong>Learn Apprentice Jewelcrafting at
+1</strong></td>
+</tr><tr class="header">
+<td><strong>1-52</strong></td>
+<td>Delicate Copper Wire</td>
+<td>26</td>
+<td>52 Copper Bar</td>
+</tr><tr class="odd">
+<td><p><strong>Alternative:</strong></p>
+<p><strong>1-52</strong></p></td>
+<td>Rough Stone Statue</td>
+<td>24</td>
+<td>192 Rough Stone</td>
+</tr><tr class="header">
+<td colspan="4"><strong>Learn Journeyman Jewelcrafting at
+50</strong></td>
+</tr><tr class="odd">
+<td><strong>52-91</strong></td>
+<td>Bronze Setting</td>
+<td>29</td>
+<td>58 Bronze Bar</td>
+</tr><tr class="header">
+<td><p><strong>Alternative:</strong></p>
+<p><strong>52-91</strong></p></td>
+<td>Coarse Stone Statue</td>
+<td>28</td>
+<td>224 Coarse Stone</td>
+</tr><tr class="odd">
+<td><strong>91-97</strong></td>
+<td>Solid Bronze Ring</td>
+<td>5</td>
+<td>20 Bronze Bar</td>
+</tr><tr class="header">
+<td><strong>97-100</strong></td>
+<td>Bronze Torc</td>
+<td>1</td>
+<td>6 Bronze Bar, Bronze Setting, Lesser Moonstone</td>
+</tr><tr class="odd">
+<td><strong>100-145</strong></td>
+<td>Ring of Twilight Shadows</td>
+<td>21</td>
+<td>42 Shadowgem, 42 Bronze Bar</td>
+</tr><tr class="header">
+<td colspan="4"><strong>Learn Expert Jewelcrafting at 125</strong></td>
+</tr><tr class="odd">
+<td><strong>145-151</strong></td>
+<td>Golden Ring of Power</td>
+<td>2</td>
+<td>8 Golden Bar, 2 Lesser Moonstone, 2 Jade, 2 Citrine</td>
+</tr><tr class="header">
+<td><strong>151-176</strong></td>
+<td>Mithril Filigree</td>
+<td>8</td>
+<td>16 Mithril Bar</td>
+</tr><tr class="odd">
+<td><strong>176-187</strong></td>
+<td>Solid Stone Statue</td>
+<td>5</td>
+<td>50 Solid Stone</td>
+</tr><tr class="header">
+<td><strong>187-202</strong></td>
+<td>Citrine Ring of Rapid Healing</td>
+<td>5</td>
+<td>5 Citrine, 10 Mithril Bar</td>
+</tr><tr class="odd">
+<td colspan="4"><strong>Learn Artisan Jewelcrafting at 200</strong></td>
+</tr><tr class="header">
+<td><strong>202-211</strong></td>
+<td>Amulet of Truesight</td>
+<td>3</td>
+<td>24 Truesilver Bar</td>
+</tr><tr class="odd">
+<td><strong>211-226</strong></td>
+<td>Aquamarine Signet</td>
+<td>5</td>
+<td>15 Aquamarine, 20 Flask of Mojo</td>
+</tr><tr class="header">
+<td><strong>226-256</strong></td>
+<td>Thorium Setting</td>
+<td>18</td>
+<td>18 Thorium Bar</td>
+</tr><tr class="odd">
+<td><strong>256-262</strong></td>
+<td>Truesilver Healing Ring</td>
+<td>2</td>
+<td>2 Truesilver Bar, 2 Heart of the Wild</td>
+</tr><tr class="header">
+<td><strong>262-280</strong></td>
+<td>Simple Opal Ring</td>
+<td>6</td>
+<td>6 Large Opal, 6 Thorium Setting</td>
+</tr><tr class="odd">
+<td colspan="4"><strong>Learn Master Jewelcrafting at 275</strong></td>
+</tr><tr class="header">
+<td><strong>280-292</strong></td>
+<td>Sapphire Pendant of Winter Night</td>
+<td>4</td>
+<td>4 Blue Sapphire, 4 Essence of Undeath, 4 Thorium Setting</td>
+</tr><tr class="odd">
+<td><strong>292-301</strong></td>
+<td>Emerald Lion RIng</td>
+<td>3</td>
+<td>6 Huge Emerald, 3 Thorium Setting</td>
+</tr>
+</tbody>
+</table></div>
+<h4>TBC</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>301-322*</strong></th>
+<th>Radiant Deep Peridot</th>
+<th>9</th>
+<th>9 Deep Peridot</th>
+</tr>
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><strong>322-325*</strong></td>
+<td>Jagged Deep Peridot</td>
+<td>1</td>
+<td>Deep Peridot</td>
+</tr><tr class="header">
+<td><strong>325-337*</strong></td>
+<td>Glinting Flame Spessarite</td>
+<td>4</td>
+<td>4 Flame Spessarite</td>
+</tr><tr class="odd">
+<td><strong>337-340*</strong></td>
+<td>Sovereign Shadow Draenite</td>
+<td>2</td>
+<td>2 Shadow Draenite</td>
+</tr><tr class="header">
+<td><strong>340-346*</strong></td>
+<td>Jagged Deep Peridot</td>
+<td>7</td>
+<td>2 Deep Peridot</td>
+</tr><tr class="odd">
+<td><strong>346-352*</strong></td>
+<td>Glinting Flame Spessarite</td>
+<td>4</td>
+<td>4 Flame Spessarite</td>
+</tr>
+</tbody>
+</table></div>
+<h4>WotLK</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th colspan="4"><strong>Learn Grand Jewelcrafting at 350</strong></th>
+</tr>
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><strong>352-397</strong></td>
+<td>Any Gem crafted from <strong>Shadow Crystal</strong></td>
+<td>17</td>
+<td>17 Shadow Crystal</td>
+</tr><tr class="header">
+<td><strong>Alternative: 352-400</strong></td>
+<td><p>Bloodstone Band /</p>
+<p>Crystal Chalcedony Amulet /</p>
+<p>Sun Rock Ring / Crystal Citrine Necklace <strong>(if you have
+disenchanting)</strong></p></td>
+<td>18</td>
+<td><p>36 Crystallized Earth,</p>
+<p>18 Bloodstone or Chalcedony or Huge Citrine or Sun Crystal</p></td>
+</tr><tr class="odd">
+<td><strong>397-427</strong></td>
+<td>Any Gem crafted from <strong>Forest Emerald</strong></td>
+<td>13</td>
+<td>13 Forest Emerald</td>
+</tr><tr class="header">
+<td><strong>Alternative: 397-421</strong></td>
+<td>Stoneguard Band (if you have disenchanting)</td>
+<td>11</td>
+<td>22 Eternal Earth</td>
+</tr><tr class="odd">
+<td><strong>427-450</strong></td>
+<td>Icy Prism (can be crafted every 20 hours in real life)</td>
+<td>8</td>
+<td>8 Frozen Orb, 8 Chalcedony, 8 Shadow Crystal, 8 Dark Jade</td>
+</tr><tr class="header">
+<td><strong>Alternative: 427-450</strong></td>
+<td>Any Meta-gem crafted from <strong>Earthsiege/Skyflare
+Diamond</strong></td>
+<td>9</td>
+<td>9 Earthsiege/Skyflare Diamond</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Make Gold</h3>
+<h4>Saronite Shuffle</h4>
+<h5>Requirement</h5>
+<ul>
+<li>
+<p>Enchanting 375+</p>
+</li>
+<li>
+<p>Jewelcrafting 375+</p>
+</li>
+</ul>
+<h5>TSM Groups</h5>
+<h6>Jewelcrafting Structure</h6>
+<ul>
+<li>
+<p>Crafts</p>
+</li>
+<li>
+<p>Materials</p>
+</li>
+<li>
+<p>Saronite Shuffle</p>
+</li>
+</ul>
+<h3>Make Gold</h3>
+<p><img alt="" height="506" loading="lazy" src="../images/jewelcrafting-04.webp" style="max-width:min(100%, 624px)" width="1003"/></p>
+<p><img alt="" height="241" loading="lazy" src="../images/jewelcrafting-05.webp" style="max-width:min(100%, 624px)" width="991"/></p>
+<p><img alt="" height="467" loading="lazy" src="../images/jewelcrafting-06.webp" style="max-width:min(100%, 624px)" width="994"/></p>
+<p>Red- Spell power, armor pen, str, agi, atp probably in that order</p>
+<p>Blue - stamina, spirit, mp5 in that order</p>
+<p>Yellow- haste, hit, crit in that order</p>
+<p>Orange- haste/sp crit/sp hit/sp in that order</p>
+<p>Purple - sp/spirit sp/mp5 in order</p>
+<p>Green - why use a green gem lol</p>
+<h3>Sources</h3>
+<p>https://www.wowhead.com/wotlk/guide/saronite-shuffle-gold-making</p>
+
+
+
+
+
+
+
+
+
+</div>
+<!--nav--><nav class="pager" aria-label="Previous and next guide"><a class="pager-prev" href="inscription.html"><span>Previous</span>Inscription 1 to 450</a><a class="pager-next" href="leatherworking.html"><span>Next</span>Leatherworking 1 to 450</a></nav><!--/nav-->
+</main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <span>Guides by Lost Unison</span>
+    <span><a href="https://www.youtube.com/@lostunison">YouTube</a> · <a href="https://discord.gg/md4a6BgUTs">Discord</a></span>
+  </div>
+</footer>
+<script src="../js/search-index.js"></script>
+<script src="../js/site.js"></script>
+</body>
+</html>

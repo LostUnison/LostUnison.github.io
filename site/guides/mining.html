@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mining 1 to 450 (x3) and Bonuses</title>
+<meta name="description" content="Toughness bonus, addons, smelting and mining routes, trainers.">
+<link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{if(localStorage.getItem('lu-sb')==='mini')document.documentElement.classList.add('sb-mini')}catch(e){}</script>
+</head>
+<body data-root="../">
+<header class="site-header">
+  <div class="bar">
+    <div class="bar-start">
+      <button class="icon-btn" id="sb-toggle" type="button" aria-label="Guide menu" aria-controls="sidebar" aria-expanded="true"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../images/logo.svg" width="32" height="32" alt="">
+        <span class="brand-name">Lost Unison</span>
+      </a>
+    </div>
+    <form class="search" id="search-form" role="search" action="../search.html" method="get" autocomplete="off">
+      <button class="icon-btn search-back" id="search-back" type="button" aria-label="Close search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+      <div class="search-field">
+        <input id="q" name="q" type="text" placeholder="Search guides" aria-label="Search guides" enterkeyhint="search" role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list" spellcheck="false">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        <button class="search-clear" id="q-clear" type="button" aria-label="Clear search" hidden><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <button class="search-btn" type="submit" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <ul class="suggest" id="suggest" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+    <div class="bar-end">
+      <button class="icon-btn search-open" id="search-open" type="button" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <a class="bar-link" href="https://www.youtube.com/@lostunison">YouTube</a>
+      <a class="bar-link" href="https://discord.gg/md4a6BgUTs">Discord</a>
+    </div>
+  </div>
+</header>
+<div class="page">
+<aside class="sidenav" id="sidebar" aria-label="Guides">
+<nav class="sb-full" aria-label="All guides">
+<a class="sb-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<hr>
+<p class="sb-head">Leveling</p>
+<a class="sb-item" href="power-leveling.html" title="Power Leveling 1 to 80 (no boost)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Power Leveling 1 to 80 (no boost)</span></a>
+<a class="sb-item" href="paladin-leveling.html" title="Paladin Leveling 1 to 80"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Paladin Leveling 1 to 80</span></a>
+<hr>
+<p class="sb-head">Professions</p>
+<a class="sb-item" href="alchemy.html" title="Alchemy 1 to 450 (x3), Specializations and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Alchemy 1 to 450</span></a>
+<a class="sb-item" href="blacksmithing.html" title="Blacksmithing 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Blacksmithing 1 to 450</span></a>
+<a class="sb-item" href="engineering.html" title="Engineering 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Engineering 1 to 450</span></a>
+<a class="sb-item" href="enchanting.html" title="Enchanting 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Enchanting 1 to 450</span></a>
+<a class="sb-item" href="inscription.html" title="Inscription 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Inscription 1 to 450</span></a>
+<a class="sb-item" href="jewelcrafting.html" title="Jewelcrafting 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Jewelcrafting 1 to 450</span></a>
+<a class="sb-item" href="leatherworking.html" title="Leatherworking 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Leatherworking 1 to 450</span></a>
+<a class="sb-item" href="tailoring.html" title="Tailoring 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Tailoring 1 to 450</span></a>
+<a class="sb-item" href="skinning.html" title="Skinning 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Skinning 1 to 450</span></a>
+<a class="sb-item" href="mining.html" title="Mining 1 to 450 (x3) and Bonuses" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Mining 1 to 450</span></a>
+<a class="sb-item" href="herbalism.html" title="Herbalism 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Herbalism 1 to 450</span></a>
+<a class="sb-item" href="cooking.html" title="Cooking 1 to 450"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Cooking 1 to 450</span></a>
+<a class="sb-item" href="fishing.html" title="Fishing 1 to 450, Find Fish, Sea Turtle and Heirloom Ring"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Fishing 1 to 450</span></a>
+<a class="sb-item" href="first-aid.html" title="First Aid 1 to 450 (x3)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>First Aid 1 to 450</span></a>
+<hr>
+<p class="sb-head">Addons</p>
+<a class="sb-item" href="tsm-part-1.html" title="TSM (TradeSkill Master) Part 1"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>TSM (TradeSkill Master) Part 1</span></a>
+<hr>
+<p class="sb-head">Gearing</p>
+<a class="sb-item" href="all-264-boe.html" title="All 264 Item Level BoE"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>All 264 Item Level BoE</span></a>
+<a class="sb-item" href="unlock-heroic-dungeons.html" title="Unlock Heroic Dungeons"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Unlock Heroic Dungeons</span></a>
+<hr>
+<p class="sb-head">Reputation</p>
+<a class="sb-item" href="thorium-brotherhood.html" title="Thorium Brotherhood Neutral to Revered"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Thorium Brotherhood Neutral to Revered</span></a>
+<a class="sb-item" href="ashen-verdict.html" title="Ashen Verdict Reputation Farm"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Ashen Verdict Reputation Farm</span></a>
+<hr>
+<p class="sb-head">Gold making</p>
+<a class="sb-item" href="gold-farming.html" title="Best Gold Farming (2,893 gold/h)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Best Gold Farming (2,893 gold/h)</span></a>
+<hr>
+<p class="sb-head">Game client</p>
+<a class="sb-item" href="windowed-mode.html" title="Windowed Mode"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Windowed Mode</span></a>
+<a class="sb-item" href="patch-y.html" title="Patch Y (Raid Visuals)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Patch Y (Raid Visuals)</span></a>
+<a class="sb-item" href="project-reforged-install.html" title="Project Reforged Install"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Project Reforged Install</span></a>
+<hr>
+</nav>
+<nav class="sb-rail" aria-label="Categories">
+<a class="mini-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<a class="mini-item" href="../index.html#leveling"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Leveling</span></a>
+<a class="mini-item" href="../index.html#professions" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Professions</span></a>
+<a class="mini-item" href="../index.html#addons"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>Addons</span></a>
+<a class="mini-item" href="../index.html#gearing"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Gearing</span></a>
+<a class="mini-item" href="../index.html#reputation"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Reputation</span></a>
+<a class="mini-item" href="../index.html#gold-making"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Gold</span></a>
+<a class="mini-item" href="../index.html#game-client"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Client</span></a>
+</nav>
+</aside>
+<div class="sb-scrim" id="sb-scrim"></div>
+<main class="guide">
+<!--nav--><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Guides</a><span aria-hidden="true">/</span><a href="../index.html#professions">Professions</a><span aria-hidden="true">/</span><span>Mining 1 to 450</span></nav><!--/nav-->
+<div class="prose">
+<h1>WotLK Warmane Icecrown - Mining 1 to 450 (x3) and Bonuses</h1>
+<p class="byline">Guide by <strong>Lost Unison</strong></p>
+<p class="lede">Toughness bonus, addons, smelting and mining routes, trainers.</p>
+</div>
+<div class="video-links"><a class="video-btn" href="https://www.youtube.com/watch?v=-lhCVBJ3adA"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>Watch the video: Mining 1 to 450</a></div>
+<nav class="toc" aria-label="On this page"><span class="toc-title">On this page</span><ol><li><a href="#mining-bonus">Mining Bonus</a></li><li><a href="#addons">Addons</a></li><li><a href="#leveling-mining-from-1-to-450">Leveling Mining from 1 to 450</a></li><li><a href="#leveling-1-450-alliance">Leveling 1-450 (Alliance)</a></li><li><a href="#sources">Sources</a></li></ol></nav>
+<div class="doc">
+<h2 id="mining-bonus">Mining Bonus</h2>
+<p><strong>Toughness (Mining Passive Bonus) :</strong> Scales with your
+mining skill.</p>
+<p><img alt="" height="174" loading="lazy" src="../images/mining-01.webp" style="max-width:min(100%, 532px)" width="662"/></p>
+<h2 id="addons">Addons</h2>
+<h3>Gather Mate 2</h3>
+<p>Gather Mate allows you to record your personal route (it records the
+herb locations) and optimize your route around the herbs you personally
+find.</p>
+<p><strong>Link</strong> :
+https://warperia.com/addon-wotlk/gathermate2/</p>
+<h3>Farm Hud</h3>
+<p>Make your gathering life easier with FarmHud. This addon will turn
+your minimap into a hud, which will make tracking your herbs and ores
+easier.</p>
+<p><strong>Link</strong> : https://warperia.com/addon-wotlk/farmhud/</p>
+<h2 id="leveling-mining-from-1-to-450">Leveling Mining from 1 to 450</h2>
+<h3>Required Materials</h3>
+<p>SOME CRAFTS ARE YELLOW.</p>
+<p>YOU <strong>MIGHT</strong> NEED MORE MATERIALS THAN LISTED HERE.</p>
+<p>GET MORE MATERIALS.</p>
+<p>(usually add 3 or 5 for each material)</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Classic Ores</strong></th>
+<th><strong>TBC Ores</strong></th>
+<th><strong>WotLK Ores</strong></th>
+</tr>
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td rowspan="2"><p>40 Copper Ore</p>
+<p>36 Tin Ore</p>
+<p>36 Copper Bar</p>
+<p>36 Tin Bar</p>
+<p>5 Silver Ore</p>
+<p>19 Iron Ore</p>
+<p>8 Gold Ore</p>
+<p>69 Mithril Ore</p>
+<p>33 Truesilver Ore</p></td>
+<td rowspan="2"><p>82 Fel Iron Ore</p>
+<p>16 Adamantite Ore</p></td>
+<td rowspan="2">39 Cobalt Ore</td>
+</tr><tr class="header">
+</tr><tr class="odd">
+<td colspan="3"><strong>TSM Shopping Strings</strong></td>
+</tr><tr class="header">
+<td><p>Copper Ore/exact/x40</p>
+<p>Tin Ore/exact/x36</p>
+<p>Copper Bar/exact/x36</p>
+<p>Tin Bar/exact/x36</p>
+<p>Silver Ore/exact/x5</p>
+<p>Iron Ore/exact/x19</p>
+<p>Gold Ore/exact/x8</p>
+<p>Mithril Ore/exact/x69</p>
+<p>Truesilver Ore/exact/x33</p></td>
+<td><p>Fel Iron Ore/exact/x82</p>
+<p>Adamantite Ore/exact/x16</p></td>
+<td>Cobalt Ore/exact/x39</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="leveling-1-450-alliance">Leveling 1-450 (Alliance)</h2>
+<p>There are 2 methods of leveling <strong>Mining</strong>,</p>
+<ul>
+<li>
+<p>Smelting Ores</p>
+</li>
+<li>
+<p>Mining Deposits</p>
+</li>
+</ul>
+<h3>Smelting Ores</h3>
+<p>For leveling most of 1-375 in this guide you can
+<strong>Smelt</strong> your way to the top instead of actually having to
+go out and mine the ore yourself. It will level you up a lot faster.</p>
+<h4>Classic</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Level</strong></th>
+<th><strong>Craft</strong></th>
+<th><strong>Quantity</strong></th>
+<th><strong>Total Material</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td colspan="4"><strong>Learn Apprentice Mining</strong></td>
+</tr><tr class="header">
+<td><strong>1-67</strong></td>
+<td>Copper Bar</td>
+<td>40</td>
+<td>40 Copper Ore</td>
+</tr><tr class="odd">
+<td><strong>67-76</strong></td>
+<td>Tin Bar</td>
+<td>36</td>
+<td>36 Tin Ore</td>
+</tr><tr class="header">
+<td colspan="4"><strong>Learn Journeyman Mining at 50</strong></td>
+</tr><tr class="odd">
+<td><strong>76-115</strong></td>
+<td>Bronze Bar</td>
+<td>36</td>
+<td>36 Cooper Bar, 36 Tin Bar</td>
+</tr><tr class="header">
+<td><strong>115-127</strong></td>
+<td>Silver Bar</td>
+<td>5</td>
+<td>5 Silver Ore</td>
+</tr><tr class="odd">
+<td colspan="4"><strong>Learn Expert Mining in Duskwood at
+125</strong></td>
+</tr><tr class="header">
+<td><strong>127-157</strong></td>
+<td>Iron Bar</td>
+<td>19</td>
+<td>19 Iron Ore</td>
+</tr><tr class="odd">
+<td><strong>157-175</strong></td>
+<td>Gold Bar</td>
+<td>8</td>
+<td>8 Gold Ore</td>
+</tr><tr class="header">
+<td><strong>175-232</strong></td>
+<td>Mithril Bar</td>
+<td><p>69</p>
+<p>(Learn Artisan Mining at 200)</p></td>
+<td>69 Mithril Ore</td>
+</tr><tr class="odd">
+<td colspan="4"><strong>Learn Artisan Mining at 200</strong></td>
+</tr><tr class="header">
+<td><strong>232-292</strong></td>
+<td>Truesilver Bar</td>
+<td>33</td>
+<td>33 Truesilver Ore</td>
+</tr>
+</tbody>
+</table></div>
+<h4>TBC</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Level</strong></th>
+<th><strong>Craft</strong></th>
+<th><strong>Quantity</strong></th>
+<th><strong>Required Materials</strong></th>
+</tr>
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td colspan="4"><strong>Learn Blacksmithing at 275</strong></td>
+</tr><tr class="header">
+<td><strong>292-301</strong></td>
+<td colspan="2">Mine 3 Fel Iron deposit in Hellfire Peninsula</td>
+<td>Hellfire Peninsula</td>
+</tr><tr class="odd">
+<td><strong>301-325</strong></td>
+<td>Fel Iron Bar</td>
+<td>41</td>
+<td>82 Fel Iron Ore</td>
+</tr><tr class="header">
+<td><strong>325-340</strong></td>
+<td>Adamantite Bar</td>
+<td>8</td>
+<td>16 Adamantite Ore</td>
+</tr><tr class="odd">
+<td><strong>340-352</strong></td>
+<td>Mine Adamantite or Fel Iron deposit in Outland</td>
+<td colspan="2">Zangarmarsh (recommended), Blade's Edge Mountains,
+Nagrand, Netherstorm, Shadowmoon Valley, Terokkar Forest</td>
+</tr>
+</tbody>
+</table></div>
+
+<h4>Wotlk</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Level</strong></th>
+<th><strong>Craft</strong></th>
+<th><strong>Quantity</strong></th>
+<th><strong>Required Materials</strong></th>
+</tr>
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td colspan="4"><strong>Learn Blacksmithing in Dalaran or Valiance Keep
+350</strong></td>
+</tr><tr class="header">
+<td><strong>352-376</strong></td>
+<td>Cobalt Bar</td>
+<td>39</td>
+<td>39 Cobalt Ore</td>
+</tr><tr class="odd">
+<td><strong>376-400</strong></td>
+<td>Mine Cobalt Deposit, Rich Cobalt Deposit</td>
+<td colspan="2">Borean Tundra, Dragonblight (recommended by the shore),
+Howling Fjord, Grizzly Hills, Zul ‘Drak (recommended)</td>
+</tr><tr class="header">
+<td><strong>400-450</strong></td>
+<td>Saronite Deposit (400), Rich Saronite Deposit (425)</td>
+<td colspan="2">Wintergrasp (recommended), Storm Peaks (recommended),
+Icecrown, Sholazar Basin</td>
+</tr>
+</tbody>
+</table></div>
+
+<h3>Mining Deposits</h3>
+<h4>Classic</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Level</strong></th>
+<th><strong>Deposit</strong></th>
+<th><strong>Zone / Required Materials</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td colspan="3"><strong>Learn Apprentice Mining</strong></td>
+</tr><tr class="header">
+<td><strong>1-67</strong></td>
+<td>Copper Vein</td>
+<td>Elwynn Forest</td>
+</tr><tr class="odd">
+<td colspan="3"><strong>Learn Journeyman Mining in Duskwood at
+50</strong></td>
+</tr><tr class="header">
+<td><strong>67-127</strong></td>
+<td>Tin Vein (65), Silver Vein (75)</td>
+<td>Duskwood</td>
+</tr><tr class="odd">
+<td colspan="3"><strong>Learn Expert Mining in Duskwood at
+125</strong></td>
+</tr><tr class="header">
+<td><strong>127-175</strong></td>
+<td>Iron Vein (125), Gold Vein (155)</td>
+<td>Stranglethorn Vale (North)</td>
+</tr><tr class="odd">
+<td><strong>175-223</strong></td>
+<td>Mithril Deposit (175), Truesilver Deposit (205)</td>
+<td>Stranglethorn Vale (South), Searing Gorge</td>
+</tr><tr class="header">
+<td colspan="3"><strong>Learn Artisan Mining at 200</strong></td>
+</tr><tr class="odd">
+<td><strong>223-232</strong></td>
+<td>Mithril Deposit (175), Truesilver Deposit (205)</td>
+<td>Stranglethorn Vale (South), Searing Gorge</td>
+</tr><tr class="header">
+<td><strong>232-277</strong></td>
+<td>Dark Iron Deposit (230), Small Thorium Vein (230), Rich Thorium Vein
+(255)</td>
+<td>Burning Steppes</td>
+</tr>
+</tbody>
+</table></div>
+<h4>TBC</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Level</strong></th>
+<th><strong>Deposit</strong></th>
+<th><strong>Zone / Required Materials</strong></th>
+</tr>
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td colspan="3"><strong>Learn Blacksmithing in Hellfire Peninsula or
+Shattrath 275</strong></td>
+</tr><tr class="header">
+<td><strong>277-325</strong></td>
+<td>Fel Iron Deposit (275)</td>
+<td>Hellfire Peninsula (recommended), Terokkar Forest, Zangarmarsh</td>
+</tr><tr class="odd">
+<td><strong>325-352</strong></td>
+<td>Adamantite Deposit (325)</td>
+<td>Zangarmarsh (recommended), Blade's Edge Mountains, Nagrand,
+Netherstorm, Shadowmoon Valley, Terokkar Forest</td>
+</tr>
+</tbody>
+</table></div>
+<h4>WotLK</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Level</strong></th>
+<th><strong>Deposit</strong></th>
+<th><strong>Zone / Required Materials</strong></th>
+</tr>
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td colspan="3"><strong>Learn Blacksmithing in Dalaran or Valiance Keep
+350</strong></td>
+</tr><tr class="header">
+<td><strong>352-400</strong></td>
+<td>Cobalt Deposit (350), Rich Cobalt Deposit (375)</td>
+<td>Borean Tundra, Dragonblight (recommended by the shore), Howling
+Fjord, Grizzly Hills, Zul ‘Drak (recommended)</td>
+</tr><tr class="odd">
+<td><strong>400-450</strong></td>
+<td>Saronite Deposit (400), Rich Saronite Deposit (425)</td>
+<td>Wintergrasp,(recommended), Storm Peaks (recommended), Icecrown,
+Sholazar Basin</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Mining Trainers</h3>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Horde</strong></th>
+<th><strong>Alliance</strong></th>
+<th><strong>Neutral</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td>Makaru – Orgrimmar</td>
+<td>Geofram Bouldertoe – Ironforge</td>
+<td>Fono – Shattrath City</td>
+</tr><tr class="header">
+<td>Brom Killian – Undercity</td>
+<td>Gelman Stonehand – Stormwind City</td>
+<td>Hanlir – Shattrath City</td>
+</tr><tr class="odd">
+<td>Brek Stonehoof – Thunder Bluff</td>
+<td>Kurdram Stonehammer – Darkshore</td>
+<td>Jedidiah Handers – Dalaran</td>
+</tr><tr class="header">
+<td>Johan Focht – Silverpine Forest</td>
+<td>Matt Johnson – Duskwood</td>
+<td rowspan="7"></td>
+</tr><tr class="odd">
+<td>Krunn – Durotar</td>
+<td>Yarr Hammerstone – Dun Morogh</td>
+</tr><tr class="header">
+<td>Pikkle – Tanaris</td>
+<td>Pikkle – Tanaris</td>
+</tr><tr class="odd">
+<td>Belil – Silvermoon City</td>
+<td>Muaat – The Exodar</td>
+</tr><tr class="header">
+<td>Krugosh – Hellfire Peninsula</td>
+<td>Hurnak Grimmord – Hellfire Peninsula</td>
+</tr><tr class="odd">
+<td>Jonathan Lewis – Howling Fjord</td>
+<td>Grumbol Stoutpick – Howling Fjord</td>
+</tr><tr class="header">
+<td>Brunna Ironaxe – Borean Tundra</td>
+<td>Fendrig Redbeard – Borean Tundra</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="sources">Sources</h2>
+<p><a href="https://warmane-guides-and-updates.blogspot.com/2012/10/mining-guide-1-450.html"><u>https://warmane-guides-and-updates.blogspot.com/2012/10/mining-guide-1-450.html</u></a></p>
+<p><a href="https://www.wow-professions.com/wotlk/mining-leveling-guide-wotlk-classic"><u>https://www.wow-professions.com/wotlk/mining-leveling-guide-wotlk-classic</u></a></p>
+<p>https://legacy-wow.com/wotlk-mining-guide/</p>
+
+
+
+
+
+
+
+
+
+</div>
+<!--nav--><nav class="pager" aria-label="Previous and next guide"><a class="pager-prev" href="skinning.html"><span>Previous</span>Skinning 1 to 450</a><a class="pager-next" href="herbalism.html"><span>Next</span>Herbalism 1 to 450</a></nav><!--/nav-->
+</main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <span>Guides by Lost Unison</span>
+    <span><a href="https://www.youtube.com/@lostunison">YouTube</a> · <a href="https://discord.gg/md4a6BgUTs">Discord</a></span>
+  </div>
+</footer>
+<script src="../js/search-index.js"></script>
+<script src="../js/site.js"></script>
+</body>
+</html>

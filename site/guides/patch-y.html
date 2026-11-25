@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patch Y (Raid Visuals)</title>
+<meta name="description" content="How to install Patch Y 3.1.0 on a 3.3.5a client and what it changes in ICC, Ulduar, Ruby Sanctum and Trial of the Crusader, by Lost Unison.">
+<link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{if(localStorage.getItem('lu-sb')==='mini')document.documentElement.classList.add('sb-mini')}catch(e){}</script>
+</head>
+<body data-root="../">
+<header class="site-header">
+  <div class="bar">
+    <div class="bar-start">
+      <button class="icon-btn" id="sb-toggle" type="button" aria-label="Guide menu" aria-controls="sidebar" aria-expanded="true"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../images/logo.svg" width="32" height="32" alt="">
+        <span class="brand-name">Lost Unison</span>
+      </a>
+    </div>
+    <form class="search" id="search-form" role="search" action="../search.html" method="get" autocomplete="off">
+      <button class="icon-btn search-back" id="search-back" type="button" aria-label="Close search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+      <div class="search-field">
+        <input id="q" name="q" type="text" placeholder="Search guides" aria-label="Search guides" enterkeyhint="search" role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list" spellcheck="false">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        <button class="search-clear" id="q-clear" type="button" aria-label="Clear search" hidden><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <button class="search-btn" type="submit" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <ul class="suggest" id="suggest" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+    <div class="bar-end">
+      <button class="icon-btn search-open" id="search-open" type="button" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <a class="bar-link" href="https://www.youtube.com/@lostunison">YouTube</a>
+      <a class="bar-link" href="https://discord.gg/md4a6BgUTs">Discord</a>
+    </div>
+  </div>
+</header>
+<div class="page">
+<aside class="sidenav" id="sidebar" aria-label="Guides">
+<nav class="sb-full" aria-label="All guides">
+<a class="sb-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<hr>
+<p class="sb-head">Leveling</p>
+<a class="sb-item" href="power-leveling.html" title="Power Leveling 1 to 80 (no boost)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Power Leveling 1 to 80 (no boost)</span></a>
+<a class="sb-item" href="paladin-leveling.html" title="Paladin Leveling 1 to 80"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Paladin Leveling 1 to 80</span></a>
+<hr>
+<p class="sb-head">Professions</p>
+<a class="sb-item" href="alchemy.html" title="Alchemy 1 to 450 (x3), Specializations and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Alchemy 1 to 450</span></a>
+<a class="sb-item" href="blacksmithing.html" title="Blacksmithing 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Blacksmithing 1 to 450</span></a>
+<a class="sb-item" href="engineering.html" title="Engineering 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Engineering 1 to 450</span></a>
+<a class="sb-item" href="enchanting.html" title="Enchanting 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Enchanting 1 to 450</span></a>
+<a class="sb-item" href="inscription.html" title="Inscription 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Inscription 1 to 450</span></a>
+<a class="sb-item" href="jewelcrafting.html" title="Jewelcrafting 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Jewelcrafting 1 to 450</span></a>
+<a class="sb-item" href="leatherworking.html" title="Leatherworking 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Leatherworking 1 to 450</span></a>
+<a class="sb-item" href="tailoring.html" title="Tailoring 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Tailoring 1 to 450</span></a>
+<a class="sb-item" href="skinning.html" title="Skinning 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Skinning 1 to 450</span></a>
+<a class="sb-item" href="mining.html" title="Mining 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Mining 1 to 450</span></a>
+<a class="sb-item" href="herbalism.html" title="Herbalism 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Herbalism 1 to 450</span></a>
+<a class="sb-item" href="cooking.html" title="Cooking 1 to 450"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Cooking 1 to 450</span></a>
+<a class="sb-item" href="fishing.html" title="Fishing 1 to 450, Find Fish, Sea Turtle and Heirloom Ring"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Fishing 1 to 450</span></a>
+<a class="sb-item" href="first-aid.html" title="First Aid 1 to 450 (x3)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>First Aid 1 to 450</span></a>
+<hr>
+<p class="sb-head">Addons</p>
+<a class="sb-item" href="tsm-part-1.html" title="TSM (TradeSkill Master) Part 1"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>TSM (TradeSkill Master) Part 1</span></a>
+<hr>
+<p class="sb-head">Gearing</p>
+<a class="sb-item" href="all-264-boe.html" title="All 264 Item Level BoE"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>All 264 Item Level BoE</span></a>
+<a class="sb-item" href="unlock-heroic-dungeons.html" title="Unlock Heroic Dungeons"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Unlock Heroic Dungeons</span></a>
+<hr>
+<p class="sb-head">Reputation</p>
+<a class="sb-item" href="thorium-brotherhood.html" title="Thorium Brotherhood Neutral to Revered"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Thorium Brotherhood Neutral to Revered</span></a>
+<a class="sb-item" href="ashen-verdict.html" title="Ashen Verdict Reputation Farm"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Ashen Verdict Reputation Farm</span></a>
+<hr>
+<p class="sb-head">Gold making</p>
+<a class="sb-item" href="gold-farming.html" title="Best Gold Farming (2,893 gold/h)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Best Gold Farming (2,893 gold/h)</span></a>
+<hr>
+<p class="sb-head">Game client</p>
+<a class="sb-item" href="windowed-mode.html" title="Windowed Mode"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Windowed Mode</span></a>
+<a class="sb-item" href="patch-y.html" title="Patch Y (Raid Visuals)" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Patch Y (Raid Visuals)</span></a>
+<a class="sb-item" href="project-reforged-install.html" title="Project Reforged Install"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Project Reforged Install</span></a>
+<hr>
+</nav>
+<nav class="sb-rail" aria-label="Categories">
+<a class="mini-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<a class="mini-item" href="../index.html#leveling"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Leveling</span></a>
+<a class="mini-item" href="../index.html#professions"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Professions</span></a>
+<a class="mini-item" href="../index.html#addons"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>Addons</span></a>
+<a class="mini-item" href="../index.html#gearing"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Gearing</span></a>
+<a class="mini-item" href="../index.html#reputation"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Reputation</span></a>
+<a class="mini-item" href="../index.html#gold-making"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Gold</span></a>
+<a class="mini-item" href="../index.html#game-client" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Client</span></a>
+</nav>
+</aside>
+<div class="sb-scrim" id="sb-scrim"></div>
+<main class="guide">
+<!--nav--><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Guides</a><span aria-hidden="true">/</span><a href="../index.html#game-client">Game client</a><span aria-hidden="true">/</span><span>Patch Y (Raid Visuals)</span></nav><!--/nav-->
+<div class="prose">
+    <h1>WotLK Warmane Icecrown - Patch Y (Raid Visuals)</h1>
+    <p class="byline">Guide by <strong>Lost Unison</strong></p>
+    <p class="lede">Patch Y adds clearer visual cues to Icecrown Citadel, Ulduar, Ruby Sanctum and Trial of the Crusader, so it is easier to see what to dodge. Version 3.1.0 is maintained by Lau, and was originally created by Andre.</p>
+  </div>
+
+  <ul class="facts">
+    <li><b>Version</b> 3.1.0 Lau</li>
+    <li><b>Client</b> 3.3.5a, HD or non HD</li>
+    <li><b>File</b> patch-y.mpq in the Data folder</li>
+    <li><b>Optional</b> patch-z.mpq (Lady Deathwisper spirit skins)</li>
+  </ul>
+
+  <nav class="toc" aria-label="On this page">
+    <span class="toc-title">On this page</span>
+    <ol>
+      <li><a href="#install">How to install</a></li>
+      <li><a href="#patch-z">Optional: Patch Z</a></li>
+      <li><a href="#new">New in 3.1.0</a></li>
+      <li><a href="#changes">What changes in each raid</a></li>
+      <li><a href="#credits">Credits and sources</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="install">How to install</h2>
+  <p class="prose">This is the copy and paste method with the raw Patch Y files. Pick the file for your client edition first.</p>
+  <ul>
+    <li><p><strong>HD client:</strong> Models On + New Spells Off, or Models On + New Spells On.</p></li>
+    <li><p><strong>Normal client (non HD):</strong> the non HD edition. An HD client with the HD models turned off is a non HD client.</p></li>
+  </ul>
+  <ol>
+    <li><p>Close World of Warcraft.</p></li>
+    <li><p>Download the raw Patch Y file for your edition from the <a href="https://github.com/CRSD-Lau/Lau-Setup/releases/tag/v1.5.0">GitHub release</a>.</p></li>
+    <li><p>Open your <strong>World of Warcraft 3.3.5a</strong> folder, then the <strong>Data</strong> folder.</p></li>
+    <li><p>Copy and paste the file into <strong>Data</strong>. The name must be exactly <strong>patch-y.mpq</strong>.</p></li>
+    <li><p>If you already have a patch-y.mpq, replace it.</p></li>
+    <li><p>Launch the game and type <strong>/pyversion</strong>. It should show <strong>3.1.0 Lau</strong>.</p></li>
+  </ol>
+  <div class="note warn">
+    <p>The file must NOT be named like patch-y (1).mpq or anything else. A renamed duplicate patch is your own responsibility.</p>
+    <p>If you prefer an installer with automatic backups, use LauSetup from the <a href="https://wrath-multilingual-hd.vercel.app/">Patch Y website</a>.</p>
+  </div>
+
+  <h2 id="patch-z">Optional: Patch Z</h2>
+  <p class="prose">Patch Y has no skin for the Lady Deathwisper spirits. If you want one, download a skin and rename it <strong>patch-z.mpq</strong>, then put it in the same <strong>Data</strong> folder.</p>
+  <ul>
+    <li><p><a href="https://drive.google.com/file/d/1UuS0FrTJM0wy2KvZ52KlZLP-j8Lx3H6o">Lamborghini skin</a></p></li>
+    <li><p><a href="https://drive.google.com/file/d/1odHWrGLfK2oAlIQxG6KLXj8SbnxmbO1u">Bear skin</a></p></li>
+  </ul>
+  <p class="prose">Use only one patch-z.mpq. These two skins are recommended in the Patch Y 2.0 post, so check that they still work with 3.1.0.</p>
+
+  <h2 id="new">New in 3.1.0</h2>
+  <ul>
+    <li><p>White 90 degree cones for supported dragon breaths and Rotface's Slime Spray.</p></li>
+    <li><p>Red outlines for Halion meteor fire and blue outlines for Marrowgar Coldflame.</p></li>
+    <li><p>Optional Flamezone Consecration and new spell visuals for compatible HD clients.</p></li>
+    <li><p>Optional HD world maps, sharper minimaps, and raid and dungeon maps.</p></li>
+    <li><p>Localized spell text for nine game languages.</p></li>
+  </ul>
+
+  <h2 id="changes">What changes in each raid</h2>
+  <p class="prose">Screenshots come from the Patch Y 3.0 manual by Andre. The patch is an All-in-One, so some visuals can differ slightly in 3.1.0.</p>
+  <div class="doc">
+  <h3>Ruby Sanctum</h3>
+  <ul>
+    <li><p><strong>Halion:</strong> Twilight Cutter pre-cutter and guide, dragon egg that shows where portals spawn, new Meteor Strike animation, and a position aid with an aggro indicator for tanks. Models by Dribble.</p></li>
+  </ul>
+<img src="../images/patch-y-01.webp" alt="Halion Twilight Cutter" loading="lazy">
+<p><em>Halion: pre-cutter and guide</em></p>
+<img src="../images/patch-y-02.webp" alt="Halion Meteor Strike" loading="lazy">
+<p><em>Halion: Meteor Strike</em></p>
+
+  <h3>Obsidian Sanctum and Eye of Eternity</h3>
+  <ul>
+    <li><p><strong>Sartharion:</strong> Lava Strike.</p></li>
+    <li><p><strong>Malygos:</strong> Arcane Breath.</p></li>
+  </ul>
+<img src="../images/patch-y-03.webp" alt="Sartharion Lava Strike" loading="lazy">
+<p><em>Sartharion: Lava Strike</em></p>
+<img src="../images/patch-y-04.webp" alt="Malygos Arcane Breath" loading="lazy">
+<p><em>Malygos: Arcane Breath</em></p>
+
+  <h3>Trial of the Crusader</h3>
+  <ul>
+    <li><p><strong>Jaraxxus:</strong> Legion Flame.</p></li>
+    <li><p><strong>Faction Champions:</strong> bigger models for melee, medium for dangerous casters, small for healers.</p></li>
+    <li><p><strong>Twin Val'kyr:</strong> Light and Dark Vortex (pre-cast), Light and Dark Shields (cast).</p></li>
+    <li><p><strong>Anub'arak:</strong> Shadow Strike, Submerge and Pursued.</p></li>
+  </ul>
+<img src="../images/patch-y-05.webp" alt="Jaraxxus Legion Flame" loading="lazy">
+<p><em>Jaraxxus: Legion Flame</em></p>
+<img src="../images/patch-y-06.webp" alt="Twin Valkyr vortex and shields" loading="lazy">
+<p><em>Twin Val'kyr: vortexes and shields</em></p>
+<img src="../images/patch-y-07.webp" alt="Anub'arak Submerge" loading="lazy">
+<p><em>Anub'arak: Submerge</em></p>
+
+  <h3>Ulduar</h3>
+  <ul>
+    <li><p><strong>Flame Leviathan, XT-002:</strong> turrets, Flame Vents, Searing Light and Gravity Bomb.</p></li>
+    <li><p><strong>Assembly of Iron:</strong> Rune of Power reverted, Overload circle fixed at 20 yards, Fusion Punch max size fixed.</p></li>
+    <li><p><strong>Kologarn:</strong> boss size reduced from 100% to 85%.</p></li>
+    <li><p><strong>Mimiron:</strong> Proximity Mines, Frost Bomb, Rocket Strike, size reduced to 80%.</p></li>
+    <li><p><strong>Freya:</strong> Healthy Spore circle, Unstable Energy, Nature's Fury, Nature Bomb, and a Trash Hurricane that no longer looks like a druid's.</p></li>
+    <li><p><strong>Thorim:</strong> Charge Orb, Lightning Charge, and snow on the ground for Blizzard.</p></li>
+    <li><p><strong>Hodir:</strong> golden Flash Freeze pre-cast with a new platform model, Toasty Fire, Storm Power and Starlight.</p></li>
+    <li><p><strong>Vezax:</strong> Mark of the Faceless, boss and big adds reduced to 85%.</p></li>
+    <li><p><strong>Yogg-Saron:</strong> portal numbers, Cloud and Summon Guardian (green and circled when untouchable, red when active), Malady of the Mind.</p></li>
+    <li><p><strong>Algalon:</strong> Cosmic Smash and Big Bang.</p></li>
+  </ul>
+<img src="../images/patch-y-08.webp" alt="Mimiron Rocket Strike" loading="lazy">
+<p><em>Mimiron: Rocket Strike</em></p>
+<img src="../images/patch-y-09.webp" alt="Freya Healthy Spore" loading="lazy">
+<p><em>Freya: Healthy Spore</em></p>
+<img src="../images/patch-y-10.webp" alt="Hodir Flash Freeze" loading="lazy">
+<p><em>Hodir: Flash Freeze</em></p>
+<img src="../images/patch-y-11.webp" alt="Yogg-Saron portal numbers" loading="lazy">
+<p><em>Yogg-Saron: portal numbers</em></p>
+<img src="../images/patch-y-12.webp" alt="Algalon Cosmic Smash" loading="lazy">
+<p><em>Algalon: Cosmic Smash</em></p>
+
+  <h3>Icecrown Citadel</h3>
+  <ul>
+    <li><p><strong>Lady Deathwisper:</strong> Summon Spirits redesign, Necrotic Strike (the player is no longer green).</p></li>
+    <li><p><strong>Trash mobs:</strong> Blighted Abomination spell fix, Blood Prince Council trash chains, more visible Frozen Orb from the Ymirjar Frostbinder.</p></li>
+    <li><p><strong>Festergut:</strong> Gas Spore range. You do not need to stack, just be inside the green circle to get Inoculated.</p></li>
+    <li><p><strong>Professor Putricide:</strong> cleaner Malleable Goo animation.</p></li>
+    <li><p><strong>Blood-Queen Lana'thel:</strong> Swarming Shadows, brighter for players using low settings.</p></li>
+    <li><p><strong>Sindragosa:</strong> more visible Frost Bomb.</p></li>
+    <li><p><strong>Lich King:</strong> Ice Pulse final version. Do not stand near other players, and respect the red circle.</p></li>
+    <li><p><strong>NPCs:</strong> bigger Jeeves, Scrapbot and Darkfallen Commander, Darnavan no longer fails the quest, and a bonfire twice as big (needed for Hodir's Toasty Fire).</p></li>
+  </ul>
+<img src="../images/patch-y-13.webp" alt="Festergut Gas Spore range" loading="lazy">
+<p><em>Festergut: stay inside the green circle</em></p>
+<img src="../images/patch-y-14.webp" alt="Blood-Queen Swarming Shadows" loading="lazy">
+<p><em>Blood-Queen: Swarming Shadows</em></p>
+<img src="../images/patch-y-15.webp" alt="Sindragosa Frost Bomb" loading="lazy">
+<p><em>Sindragosa: Frost Bomb</em></p>
+<img src="../images/patch-y-16.webp" alt="Lich King Ice Pulse" loading="lazy">
+<p><em>Lich King: Ice Pulse</em></p>
+
+  <h3>Other changes</h3>
+  <ul>
+    <li><p>Mana Tide has a new form while active, Divine Hymn and Hymn of Hope are bigger so they are visible everywhere in a boss fight.</p></li>
+    <li><p>Deterrence and Shield Block show a gold shield in front of the player.</p></li>
+    <li><p>Frost Trap and Explosive Trap have a new active texture.</p></li>
+  </ul>
+<img src="../images/patch-y-17.webp" alt="Divine Hymn" loading="lazy">
+<p><em>Divine Hymn: bigger</em></p>
+<img src="../images/patch-y-18.webp" alt="Deterrence gold shield" loading="lazy">
+<p><em>Deterrence: gold shield</em></p>
+
+  </div>
+
+  <h2 id="credits">Credits and sources</h2>
+  <p class="prose">Patch Y was created by Andre and is now maintained by Lau. Halion models by Dribble. Manual screenshots by Andre.</p>
+  <h3>Sources</h3>
+  <ul>
+    <li><p><a href="https://discord.gg/Gyb9Z252vt">Patch Y Discord</a></p></li>
+    <li><p><a href="https://wrath-multilingual-hd.vercel.app/">Download, guides and full changelog</a></p></li>
+    <li><p><a href="https://github.com/CRSD-Lau/Lau-Setup">GitHub and feedback</a></p></li>
+    <li><p><a href="https://github.com/CRSD-Lau/Lau-Setup/releases/tag/v1.5.0">Raw Patch Y files</a></p></li>
+    <li><p><a href="https://drive.google.com/file/d/1_8sahptlwJ40sZIPfwtpAsa0BWsFc-jP/view?usp=drive_link">Old manuals</a></p></li>
+  </ul>
+<!--nav--><nav class="pager" aria-label="Previous and next guide"><a class="pager-prev" href="windowed-mode.html"><span>Previous</span>Windowed Mode</a><a class="pager-next" href="project-reforged-install.html"><span>Next</span>Project Reforged Install</a></nav><!--/nav-->
+</main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <span>Guides by Lost Unison</span>
+    <span><a href="https://www.youtube.com/@lostunison">YouTube</a> · <a href="https://discord.gg/md4a6BgUTs">Discord</a></span>
+  </div>
+</footer>
+<script src="../js/search-index.js"></script>
+<script src="../js/site.js"></script>
+</body>
+</html>

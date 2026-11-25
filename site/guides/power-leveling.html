@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Power Leveling 1 to 80 (no boost)</title>
+<meta name="description" content="Level a new character from 1 to 80 with dungeon runs and an alt, step by step.">
+<link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{if(localStorage.getItem('lu-sb')==='mini')document.documentElement.classList.add('sb-mini')}catch(e){}</script>
+</head>
+<body data-root="../">
+<header class="site-header">
+  <div class="bar">
+    <div class="bar-start">
+      <button class="icon-btn" id="sb-toggle" type="button" aria-label="Guide menu" aria-controls="sidebar" aria-expanded="true"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../images/logo.svg" width="32" height="32" alt="">
+        <span class="brand-name">Lost Unison</span>
+      </a>
+    </div>
+    <form class="search" id="search-form" role="search" action="../search.html" method="get" autocomplete="off">
+      <button class="icon-btn search-back" id="search-back" type="button" aria-label="Close search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+      <div class="search-field">
+        <input id="q" name="q" type="text" placeholder="Search guides" aria-label="Search guides" enterkeyhint="search" role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list" spellcheck="false">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        <button class="search-clear" id="q-clear" type="button" aria-label="Clear search" hidden><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <button class="search-btn" type="submit" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <ul class="suggest" id="suggest" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+    <div class="bar-end">
+      <button class="icon-btn search-open" id="search-open" type="button" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <a class="bar-link" href="https://www.youtube.com/@lostunison">YouTube</a>
+      <a class="bar-link" href="https://discord.gg/md4a6BgUTs">Discord</a>
+    </div>
+  </div>
+</header>
+<div class="page">
+<aside class="sidenav" id="sidebar" aria-label="Guides">
+<nav class="sb-full" aria-label="All guides">
+<a class="sb-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<hr>
+<p class="sb-head">Leveling</p>
+<a class="sb-item" href="power-leveling.html" title="Power Leveling 1 to 80 (no boost)" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Power Leveling 1 to 80 (no boost)</span></a>
+<a class="sb-item" href="paladin-leveling.html" title="Paladin Leveling 1 to 80"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Paladin Leveling 1 to 80</span></a>
+<hr>
+<p class="sb-head">Professions</p>
+<a class="sb-item" href="alchemy.html" title="Alchemy 1 to 450 (x3), Specializations and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Alchemy 1 to 450</span></a>
+<a class="sb-item" href="blacksmithing.html" title="Blacksmithing 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Blacksmithing 1 to 450</span></a>
+<a class="sb-item" href="engineering.html" title="Engineering 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Engineering 1 to 450</span></a>
+<a class="sb-item" href="enchanting.html" title="Enchanting 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Enchanting 1 to 450</span></a>
+<a class="sb-item" href="inscription.html" title="Inscription 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Inscription 1 to 450</span></a>
+<a class="sb-item" href="jewelcrafting.html" title="Jewelcrafting 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Jewelcrafting 1 to 450</span></a>
+<a class="sb-item" href="leatherworking.html" title="Leatherworking 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Leatherworking 1 to 450</span></a>
+<a class="sb-item" href="tailoring.html" title="Tailoring 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Tailoring 1 to 450</span></a>
+<a class="sb-item" href="skinning.html" title="Skinning 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Skinning 1 to 450</span></a>
+<a class="sb-item" href="mining.html" title="Mining 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Mining 1 to 450</span></a>
+<a class="sb-item" href="herbalism.html" title="Herbalism 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Herbalism 1 to 450</span></a>
+<a class="sb-item" href="cooking.html" title="Cooking 1 to 450"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Cooking 1 to 450</span></a>
+<a class="sb-item" href="fishing.html" title="Fishing 1 to 450, Find Fish, Sea Turtle and Heirloom Ring"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Fishing 1 to 450</span></a>
+<a class="sb-item" href="first-aid.html" title="First Aid 1 to 450 (x3)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>First Aid 1 to 450</span></a>
+<hr>
+<p class="sb-head">Addons</p>
+<a class="sb-item" href="tsm-part-1.html" title="TSM (TradeSkill Master) Part 1"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>TSM (TradeSkill Master) Part 1</span></a>
+<hr>
+<p class="sb-head">Gearing</p>
+<a class="sb-item" href="all-264-boe.html" title="All 264 Item Level BoE"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>All 264 Item Level BoE</span></a>
+<a class="sb-item" href="unlock-heroic-dungeons.html" title="Unlock Heroic Dungeons"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Unlock Heroic Dungeons</span></a>
+<hr>
+<p class="sb-head">Reputation</p>
+<a class="sb-item" href="thorium-brotherhood.html" title="Thorium Brotherhood Neutral to Revered"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Thorium Brotherhood Neutral to Revered</span></a>
+<a class="sb-item" href="ashen-verdict.html" title="Ashen Verdict Reputation Farm"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Ashen Verdict Reputation Farm</span></a>
+<hr>
+<p class="sb-head">Gold making</p>
+<a class="sb-item" href="gold-farming.html" title="Best Gold Farming (2,893 gold/h)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Best Gold Farming (2,893 gold/h)</span></a>
+<hr>
+<p class="sb-head">Game client</p>
+<a class="sb-item" href="windowed-mode.html" title="Windowed Mode"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Windowed Mode</span></a>
+<a class="sb-item" href="patch-y.html" title="Patch Y (Raid Visuals)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Patch Y (Raid Visuals)</span></a>
+<a class="sb-item" href="project-reforged-install.html" title="Project Reforged Install"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Project Reforged Install</span></a>
+<hr>
+</nav>
+<nav class="sb-rail" aria-label="Categories">
+<a class="mini-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<a class="mini-item" href="../index.html#leveling" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Leveling</span></a>
+<a class="mini-item" href="../index.html#professions"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Professions</span></a>
+<a class="mini-item" href="../index.html#addons"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>Addons</span></a>
+<a class="mini-item" href="../index.html#gearing"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Gearing</span></a>
+<a class="mini-item" href="../index.html#reputation"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Reputation</span></a>
+<a class="mini-item" href="../index.html#gold-making"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Gold</span></a>
+<a class="mini-item" href="../index.html#game-client"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Client</span></a>
+</nav>
+</aside>
+<div class="sb-scrim" id="sb-scrim"></div>
+<main class="guide">
+<!--nav--><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Guides</a><span aria-hidden="true">/</span><a href="../index.html#leveling">Leveling</a><span aria-hidden="true">/</span><span>Power Leveling 1 to 80 (no boost)</span></nav><!--/nav-->
+<div class="prose">
+<h1>WotLK Warmane Icecrown - Power Leveling 1 to 80 (no boost)</h1>
+<p class="byline">Guide by <strong>Lost Unison</strong></p>
+<p class="lede">Level a new character from 1 to 80 with dungeon runs and an alt, step by step.</p>
+</div>
+<div class="video-links"><a class="video-btn" href="https://www.youtube.com/watch?v=NwkLeox0IJ0"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>Watch the video: How to Reach 80 with no Boost</a></div>
+<nav class="toc" aria-label="On this page"><span class="toc-title">On this page</span><ol><li><a href="#requirements">Requirements</a></li><li><a href="#how-to-power-level-from-1-to-80">How to Power Level from 1 to 80</a></li><li><a href="#source-and-useful-links">Source and Useful Links</a></li></ol></nav>
+<div class="doc">
+<h2 id="requirements">Requirements</h2>
+<h3>Reset Timer</h3>
+<h2 id="how-to-power-level-from-1-to-80">How to Power Level from 1 to 80</h2>
+<h3>Alliance Start</h3>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Level</strong></th>
+<th><strong>Method</strong></th>
+</tr>
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><strong>1-15</strong></td>
+<td><p>Get a high level <strong>Thorns</strong> buff from a level
+<strong>80 Druid</strong> and level through quests in your starting
+zone.</p>
+<p><img alt="" height="302" loading="lazy" src="../images/power-leveling-01.webp" style="max-width:min(100%, 338px)" width="769"/></p></td>
+</tr><tr class="header">
+<td><strong>15-28</strong></td>
+<td><p><strong>Stormwind - The Stockades :</strong> Once you hit level
+15 go to <strong>Stormwind - The Stockades</strong> or ask for a
+summon.</p>
+<p><img alt="" height="232" loading="lazy" src="../images/power-leveling-02.webp" style="max-width:min(100%, 206px)" width="354"/></p>
+<p>Bring your <strong>alt</strong> and your <strong>main
+character</strong>, enter the dungeon, leave your <strong>alt</strong>
+at the entrance and clean the dungeons until you reach <strong>level
+22.</strong> Then go out and take the quest <a href="https://www.wowhead.com/wotlk/quest=387/quell-the-uprising"><strong><u>Quell
+The Uprising</u></strong></a> outside the dungeon.</p>
+<p>Repeat a few runs, <strong>don’t forget to return the
+quests.</strong> Until you reach <strong>level 28</strong>.</p></td>
+</tr><tr class="odd">
+<td><strong>28-40</strong></td>
+<td><p><strong>Tirisfal Glades - Scarlet Monastery :</strong> Take the
+quest <strong><a href="https://www.wowhead.com/wotlk/quest=1050/mythology-of-the-titans"><u>Mythology
+of the Titans</u></a> or share it with your alt in Ironforge - Hall of
+Explorers at level 28 (optional)</strong> then go to <strong>Tirisfal
+Glades</strong> located north of <strong>Eastern Kingdom</strong>.</p>
+<p>It will be a long walk from <strong>Ironforge. Death Knights</strong>
+can return to <strong>Acherus: The Ebon Hold</strong> and travel from
+<strong>Eastern Plaguelands</strong> to <strong>Tirisfal
+Glades,</strong> this route is much faster than starting in
+<strong>Ironforge.</strong></p>
+<p>While traveling there, you can pick up a <strong>fly path</strong> in
+<strong>Western Plaguelands.</strong></p>
+<p>You will need another person to summon your <strong>alt</strong>
+using the <strong>Summon Stone</strong> located outside the dungeon. If
+you are lucky, you can find some people to help you summon once you
+arrive, otherwise you’ll have to bring another <strong>alt</strong> with
+<strong>100% mount or ask a friend to come along.</strong></p>
+<p>To start your power leveling, enter inside the castle, you will find
+4 entrances. Take the right one, it will lead you to <strong>The
+Library.</strong> Start clearing the dungeon and make sure your
+<strong>alt is close enough to receive the xp but not too close to get
+it diminished.</strong> After you kill the boss, make sure to grab the
+<strong>key in the box behind him,</strong> it will be our ticket to
+enter the <strong>second dungeon</strong>.</p>
+<p>Now leave the dungeon and go back to the <strong>entrance
+room</strong>, you will find <strong>2 doors</strong> that require a key
+to open, choose the <strong>left door</strong> and enter the dungeon
+<strong>first with your main</strong>, kill the enemy that’s in front
+when you arrive, then bring your <strong>alt.</strong> If you have done
+it correctly, you should be at the <strong>Cathedral
+dungeon.</strong></p>
+<p>Same process as before, you can aggro the boss to instantly aggro the
+whole room after you open the <strong>cathedral’s door</strong> just be
+careful, <strong>pull too much and these adds can kill you.</strong></p>
+<p>Repeat until you reach level 40. <strong>Don’t forget to return the
+quest if you decided to take it.</strong></p>
+<p><img alt="" height="278" loading="lazy" src="../images/power-leveling-03.webp" style="max-width:min(100%, 236px)" width="344"/><img alt="" height="656" loading="lazy" src="../images/power-leveling-04.webp" style="max-width:min(100%, 284px)" width="998"/></p></td>
+</tr><tr class="header">
+<td><strong>40-58</strong></td>
+<td><p><strong>Tarnaris - Zul'Farrak :</strong> Make sure you have at
+least <strong>64 gold</strong> (or more if you plan to leave a tip when
+you ask for a <strong>Dalaran</strong> portal) on your alt. Now go to
+your <strong>respective race capital</strong>, learn <strong>Apprentice
+and Journeyman Riding,</strong> get <strong>yourself a mount.</strong>
+Then ask for a portal to <strong>Dalaran</strong>.</p>
+<p>When you arrive there, set your <strong>Hearthstone</strong> in your
+favorite inn and head to the big mage tower called <strong>“The Violet
+Citadel”</strong> in the west. Climb up the stairs and take the
+<strong>portal on your left</strong>, it will take you to the
+<strong>“Cavern of Time”</strong> in <strong>Tarnaris</strong>.</p>
+<p><img alt="" height="655" loading="lazy" src="../images/power-leveling-05.webp" style="max-width:min(100%, 288px)" width="989"/></p>
+<p>From there, <strong>both of your main and alt</strong> should be at
+the entrance of the cavern, set your <strong>main to follow</strong>
+your <strong>alt</strong> while on his <strong>new mount</strong> and
+head to <strong>Gadgetzan</strong> and take these
+<strong>quests</strong> : <strong><a href="https://www.wowhead.com/wotlk/quest=2768/divino-matic-rod"><u>Divino-matic
+Rod</u></a>, <a href="https://www.wowhead.com/wotlk/quest=3042/troll-temper"><u>Troll
+Temper</u></a> and <a href="https://www.wowhead.com/wotlk/quest=2865/scarab-shells"><u>Scarab
+Shells</u></a> or share it with your alt at level 40</strong> then enter
+<strong>Zul'Farrak (in Tanaris north-west)</strong>.</p>
+<p><img alt="" height="662" loading="lazy" src="../images/power-leveling-06.webp" style="max-width:min(100%, 288px)" width="983"/></p>
+<p>In this dungeon, you can <strong>mount up inside</strong>, but be
+careful, <strong>“Sandfury Shadowhunter”</strong> can
+<strong>dismount</strong> you if you get too close to them.</p>
+<p>If you have a <strong>Druid</strong> as your main, you can use
+<strong>Travel Form</strong> inside this dungeon and aggro the adds.</p>
+<p>Take your time on this one, leave you <strong>alt</strong> in the
+entrance then to the <strong>center of the dungeon as shown
+below.</strong></p>
+<p><img alt="" height="770" loading="lazy" src="../images/power-leveling-07.webp" style="max-width:min(100%, 288px)" width="1163"/></p>
+<p>The <strong>red circle</strong> is where your alt will be standing,
+make sure you clear all the adds around and <strong>check for
+patrols</strong>. The <strong>blue line</strong> is the recommended path
+for your main. In most cases if you kill adds past the <strong>orange
+line,</strong> your alt <strong>won’t</strong> receive the
+experience.</p>
+<p>If you know this is your last run before you hit <strong>“You've
+entered too many instances recently”</strong>, take the time to do the
+event (the long stairs north-west in <strong>Zul'Farrak</strong> where
+people are caged, kill the executioner, take the key and free them, talk
+to Sergeant Bly and it will start the event. It takes a really long time
+to finish) <strong>then get Divino-matic Rod from Sergeant Bly</strong>
+and <strong>complete the other quests</strong> you took.</p>
+<p>When you are close to <strong>level 58,</strong> return the quests,
+you should hit <strong>level 58.</strong></p></td>
+</tr><tr class="odd">
+<td><p><strong>58-65</strong></p>
+<p><strong>(57-65) if you get summoned</strong></p></td>
+<td><p><strong>Hellfire Peninsula : Hellfire Ramparts</strong></p>
+<p>Now it’s time to head to the <strong>Outland</strong>. The easiest
+way to get there is to ask someone to help you summon your
+<strong>alt</strong> using the <strong>Summon Stone</strong> beside
+<strong>Hellfire Ramparts.</strong></p>
+<p>Otherwise, use your <strong>Hearthstone</strong> and go to any major
+city and take the <strong>portal to Blasted Lands,</strong> it will
+teleport you near <strong>The Dark Portal.<br/>
+<br/>
+</strong>Once you enter, take the quests in front of you and take the
+<strong>fly path to your respective faction town</strong> (Horde :
+<strong>Thrallmar</strong>, Alliance : <strong>Honor Hold</strong>)</p>
+<p>Now you need to travel to <strong>Hellfire Ramparts</strong> located
+in <strong>Hellfire Citadel,</strong> the middle of <strong>Hellfire
+Peninsula.</strong></p>
+<p><img alt="" height="927" loading="lazy" src="../images/power-leveling-08.webp" style="max-width:min(100%, 288px)" width="1387"/></p>
+<p>Once you enter, you’re going to leave your <strong>alt</strong> at
+the entrance and start clearing the adds along the <strong>blue
+line</strong>, you will find a <strong>boss</strong> along the way, try
+to <strong>skip it</strong>. Then you will <strong>climb up the stairs
+and continue on the green line</strong>, you will find an open space
+where one of the walls is open up and can lead you to the entrance by
+jumping down. Clear the adds in this area <strong>then jump down and
+reset.</strong></p>
+<p><img alt="" height="655" loading="lazy" src="../images/power-leveling-09.webp" style="max-width:min(100%, 288px)" width="986"/></p></td>
+</tr><tr class="header">
+<td><strong>65-72</strong></td>
+<td><p><strong>Howling Fjord : Utgarde Keep</strong></p>
+<p>Now it’s time to head to Northrend, just like in Outland. The easiest
+way to get there is to ask someone to help you summon your
+<strong>alt</strong> using the <strong>Summon Stone</strong> beside
+<strong>The Utgarde Keep.</strong></p>
+<p><strong>Or</strong> take the boat in <strong>Menethil Harbor</strong>
+to <strong>Howling Fjord</strong> and walk up to the entrance</p>
+<p><img alt="" height="668" loading="lazy" src="../images/power-leveling-10.webp" style="max-width:min(100%, 288px)" width="1002"/></p>
+<p>Here you’re going to leave your alt at the entrance and run this path
+with your main :</p>
+<p><img alt="" height="802" loading="lazy" src="../images/power-leveling-11.webp" style="max-width:min(100%, 288px)" width="1196"/></p>
+<p>These adds are all melees, so if you can kite them, try so.</p>
+<p><strong>At level 68</strong>, you can leave the instance and take
+these quest from <strong>Defender Mordun (Alliance) or Dark Ranger
+Marrah (Horde) : <a href="https://www.wowhead.com/wotlk/quest=13205/disarmament"><u>Disarmament</u></a></strong>
+and <a href="https://www.wowhead.com/wotlk/quest=11252/into-utgarde"><strong><u>Into
+Utgarde!</u></strong></a></p>
+<p><strong>Optional Horde only : <a href="https://www.wowhead.com/wotlk/quest=11272/a-score-to-settle"><u>A
+Score to Settle</u></a></strong> (located in <strong>Vengeance
+Landing</strong>)</p>
+<p>If you know this is your last run before you hit <strong>“You've
+entered too many instances recently”</strong>, then complete all the
+dungeon and get <strong>Ingvar's Head</strong> (last boss)</p>
+<p>Once you’re close to hit <strong>level 72</strong>, return the
+quests.</p></td>
+</tr><tr class="odd">
+<td><strong>72-80</strong></td>
+<td><p><strong>The Storm Peaks : Halls of Stone</strong></p>
+<p>Now for the final stretch… Although things got more complicated. The
+easiest way to get there is to ask someone to help you summon your
+<strong>alt</strong> using the <strong>Summon Stone</strong> beside
+<strong>Ulduar.</strong></p>
+<p><strong>Or</strong> learn <strong>Cold Weather Flying</strong>
+through <strong>Tome of</strong> <strong>Cold Weather Flying</strong>
+from another <strong>level 80 alt of the same account</strong> then
+<strong>learn flying</strong> and <strong>buy a flying
+mount.</strong></p>
+<p>If none of these options are available to you, then you have to level
+up until you reach <strong>level 77</strong>. Only then you can go to
+<strong>K3</strong> in <strong>The Storm Peaks</strong> and get
+<strong>Loaned Gryphon Reins</strong> from <strong>Honest
+Max.</strong></p>
+<p><img alt="" height="865" loading="lazy" src="../images/power-leveling-12.webp" style="max-width:min(100%, 288px)" width="1291"/></p>
+<p>Once you enter the instance, leave your <strong>alt</strong> at the
+entrance and follow the <strong>blue line</strong> until you reach the
+<strong>Stone Boss.</strong> After you clear all the adds <strong>before
+the boss</strong>, aggro the boss <strong>then jump down from the crack
+behind him</strong> (<strong>green line</strong>). Let him follow you
+while you’re leaving the dungeon.</p>
+<p><img alt="" height="814" loading="lazy" src="../images/power-leveling-13.webp" style="max-width:min(100%, 288px)" width="1218"/></p></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="source-and-useful-links">Source and Useful Links</h2>
+<p><a href="https://static.icy-veins.com/images/wotlk/dungeons/utgarde-keep-entrance.jpg"><u>https://static.icy-veins.com/images/wotlk/dungeons/utgarde-keep-entrance.jpg</u></a></p>
+<p>https://wowwiki-archive.fandom.com/wiki/Mob_difficulty_colors</p>
+
+</div>
+<!--nav--><nav class="pager" aria-label="Previous and next guide"><span></span><a class="pager-next" href="paladin-leveling.html"><span>Next</span>Paladin Leveling 1 to 80</a></nav><!--/nav-->
+</main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <span>Guides by Lost Unison</span>
+    <span><a href="https://www.youtube.com/@lostunison">YouTube</a> · <a href="https://discord.gg/md4a6BgUTs">Discord</a></span>
+  </div>
+</footer>
+<script src="../js/search-index.js"></script>
+<script src="../js/site.js"></script>
+</body>
+</html>

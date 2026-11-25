@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Best Gold Farming (2,893 gold/h)</title>
+<meta name="description" content="Fishing and gathering routes with gold per hour, plus Stoneguard Band disenchanting.">
+<link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{if(localStorage.getItem('lu-sb')==='mini')document.documentElement.classList.add('sb-mini')}catch(e){}</script>
+</head>
+<body data-root="../">
+<header class="site-header">
+  <div class="bar">
+    <div class="bar-start">
+      <button class="icon-btn" id="sb-toggle" type="button" aria-label="Guide menu" aria-controls="sidebar" aria-expanded="true"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../images/logo.svg" width="32" height="32" alt="">
+        <span class="brand-name">Lost Unison</span>
+      </a>
+    </div>
+    <form class="search" id="search-form" role="search" action="../search.html" method="get" autocomplete="off">
+      <button class="icon-btn search-back" id="search-back" type="button" aria-label="Close search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+      <div class="search-field">
+        <input id="q" name="q" type="text" placeholder="Search guides" aria-label="Search guides" enterkeyhint="search" role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list" spellcheck="false">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        <button class="search-clear" id="q-clear" type="button" aria-label="Clear search" hidden><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <button class="search-btn" type="submit" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <ul class="suggest" id="suggest" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+    <div class="bar-end">
+      <button class="icon-btn search-open" id="search-open" type="button" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <a class="bar-link" href="https://www.youtube.com/@lostunison">YouTube</a>
+      <a class="bar-link" href="https://discord.gg/md4a6BgUTs">Discord</a>
+    </div>
+  </div>
+</header>
+<div class="page">
+<aside class="sidenav" id="sidebar" aria-label="Guides">
+<nav class="sb-full" aria-label="All guides">
+<a class="sb-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<hr>
+<p class="sb-head">Leveling</p>
+<a class="sb-item" href="power-leveling.html" title="Power Leveling 1 to 80 (no boost)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Power Leveling 1 to 80 (no boost)</span></a>
+<a class="sb-item" href="paladin-leveling.html" title="Paladin Leveling 1 to 80"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Paladin Leveling 1 to 80</span></a>
+<hr>
+<p class="sb-head">Professions</p>
+<a class="sb-item" href="alchemy.html" title="Alchemy 1 to 450 (x3), Specializations and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Alchemy 1 to 450</span></a>
+<a class="sb-item" href="blacksmithing.html" title="Blacksmithing 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Blacksmithing 1 to 450</span></a>
+<a class="sb-item" href="engineering.html" title="Engineering 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Engineering 1 to 450</span></a>
+<a class="sb-item" href="enchanting.html" title="Enchanting 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Enchanting 1 to 450</span></a>
+<a class="sb-item" href="inscription.html" title="Inscription 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Inscription 1 to 450</span></a>
+<a class="sb-item" href="jewelcrafting.html" title="Jewelcrafting 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Jewelcrafting 1 to 450</span></a>
+<a class="sb-item" href="leatherworking.html" title="Leatherworking 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Leatherworking 1 to 450</span></a>
+<a class="sb-item" href="tailoring.html" title="Tailoring 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Tailoring 1 to 450</span></a>
+<a class="sb-item" href="skinning.html" title="Skinning 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Skinning 1 to 450</span></a>
+<a class="sb-item" href="mining.html" title="Mining 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Mining 1 to 450</span></a>
+<a class="sb-item" href="herbalism.html" title="Herbalism 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Herbalism 1 to 450</span></a>
+<a class="sb-item" href="cooking.html" title="Cooking 1 to 450"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Cooking 1 to 450</span></a>
+<a class="sb-item" href="fishing.html" title="Fishing 1 to 450, Find Fish, Sea Turtle and Heirloom Ring"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Fishing 1 to 450</span></a>
+<a class="sb-item" href="first-aid.html" title="First Aid 1 to 450 (x3)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>First Aid 1 to 450</span></a>
+<hr>
+<p class="sb-head">Addons</p>
+<a class="sb-item" href="tsm-part-1.html" title="TSM (TradeSkill Master) Part 1"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>TSM (TradeSkill Master) Part 1</span></a>
+<hr>
+<p class="sb-head">Gearing</p>
+<a class="sb-item" href="all-264-boe.html" title="All 264 Item Level BoE"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>All 264 Item Level BoE</span></a>
+<a class="sb-item" href="unlock-heroic-dungeons.html" title="Unlock Heroic Dungeons"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Unlock Heroic Dungeons</span></a>
+<hr>
+<p class="sb-head">Reputation</p>
+<a class="sb-item" href="thorium-brotherhood.html" title="Thorium Brotherhood Neutral to Revered"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Thorium Brotherhood Neutral to Revered</span></a>
+<a class="sb-item" href="ashen-verdict.html" title="Ashen Verdict Reputation Farm"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Ashen Verdict Reputation Farm</span></a>
+<hr>
+<p class="sb-head">Gold making</p>
+<a class="sb-item" href="gold-farming.html" title="Best Gold Farming (2,893 gold/h)" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Best Gold Farming (2,893 gold/h)</span></a>
+<hr>
+<p class="sb-head">Game client</p>
+<a class="sb-item" href="windowed-mode.html" title="Windowed Mode"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Windowed Mode</span></a>
+<a class="sb-item" href="patch-y.html" title="Patch Y (Raid Visuals)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Patch Y (Raid Visuals)</span></a>
+<a class="sb-item" href="project-reforged-install.html" title="Project Reforged Install"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Project Reforged Install</span></a>
+<hr>
+</nav>
+<nav class="sb-rail" aria-label="Categories">
+<a class="mini-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<a class="mini-item" href="../index.html#leveling"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Leveling</span></a>
+<a class="mini-item" href="../index.html#professions"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Professions</span></a>
+<a class="mini-item" href="../index.html#addons"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>Addons</span></a>
+<a class="mini-item" href="../index.html#gearing"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Gearing</span></a>
+<a class="mini-item" href="../index.html#reputation"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Reputation</span></a>
+<a class="mini-item" href="../index.html#gold-making" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Gold</span></a>
+<a class="mini-item" href="../index.html#game-client"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Client</span></a>
+</nav>
+</aside>
+<div class="sb-scrim" id="sb-scrim"></div>
+<main class="guide">
+<!--nav--><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Guides</a><span aria-hidden="true">/</span><a href="../index.html#gold-making">Gold making</a><span aria-hidden="true">/</span><span>Best Gold Farming (2,893 gold/h)</span></nav><!--/nav-->
+<div class="prose">
+<h1>WotLK Warmane Icecrown - Best Gold Farming (2,893 gold/h)</h1>
+<p class="byline">Guide by <strong>Lost Unison</strong></p>
+<p class="lede">Fishing and gathering routes with gold per hour, plus Stoneguard Band disenchanting.</p>
+</div>
+<div class="video-links"><a class="video-btn" href="https://www.youtube.com/watch?v=_bGr2ygqGQ8"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>Watch the video: Best Gold Farming</a></div>
+<nav class="toc" aria-label="On this page"><span class="toc-title">On this page</span><ol><li><a href="#wintergrasp-fishing-875-gold-h-1186-gold-h-with-cooking">Wintergrasp Fishing (875 gold/h) (1186 gold/h with cooking)</a></li><li><a href="#mining-and-herbalism-in-storm-peaks-2268-gold-h">Mining and Herbalism in Storm Peaks (2268 gold/h)</a></li><li><a href="#mining-and-herbalism-in-icecrown-1938-gold-h">Mining and Herbalism in Icecrown (1938 gold/h)</a></li><li><a href="#mining-and-herbalism-in-wintergrasp-2893-gold-h">Mining and Herbalism in Wintergrasp (2893 gold/h)</a></li><li><a href="#mining-and-herbalism-in-sholazar-basin-2445-gold-h">Mining and Herbalism in Sholazar Basin (2445 gold/h)</a></li><li><a href="#mining-and-herbalism-in-burning-steppes-1640-gold-h">Mining and Herbalism in Burning Steppes (1640 gold/h)</a></li><li><a href="#stoneguard-band-disenchanting">Stoneguard Band Disenchanting</a></li></ol></nav>
+<div class="doc">
+
+<p>These methods are calculated within an hour of farming.</p>
+<h2 id="wintergrasp-fishing-875-gold-h-1186-gold-h-with-cooking">Wintergrasp Fishing (875 gold/h) (1186 gold/h with cooking)</h2>
+<p>28/04/2025 8.30 PM -&gt; 9.30 PM</p>
+<ul>
+<li>
+<p>127 Glacial Saumon</p>
+</li>
+<li>
+<p>124 Nettlefish</p>
+</li>
+<li>
+<p>23 Giant Darkwater Clam (94 Succulent Clam Meat, 6 Northsea Pearl, 2
+Siren's Tear)</p>
+</li>
+<li>
+<p>124 Musselback Sculpin</p>
+</li>
+</ul>
+<p>Total gold: 127 * 3.70 + 124 * 1.50 + 94 * 0.47 + 6 * 1.64 + 2 *
+20.86 + 124 * 1 =</p>
+<p><strong>875.64 Gold</strong></p>
+<p>63.5 Fish Feast + 23 Giant Darkwater Clam</p>
+<p>127 * 20 /2 - 2.22 * 63 + ( 94 * 0.47 + 6 * 1.64 + 2 ) =</p>
+<p><strong>1186.14 Gold</strong></p>
+<h2 id="mining-and-herbalism-in-storm-peaks-2268-gold-h">Mining and Herbalism in Storm Peaks (2268 gold/h)</h2>
+<p>28/04/2025 9.50 PM -&gt; 10.20 PM (30 minutes)</p>
+<ul>
+<li>
+<p>16 Lichbloom</p>
+</li>
+<li>
+<p>1 Eternal Life</p>
+</li>
+<li>
+<p>55 Saronite Ore</p>
+</li>
+<li>
+<p>2 Eternal Earth</p>
+</li>
+<li>
+<p>2 Eternal Shadow</p>
+</li>
+<li>
+<p>32 Icethorn</p>
+</li>
+<li>
+<p>1 Shadow Crystal</p>
+</li>
+<li>
+<p>1 Frost Lotus</p>
+</li>
+<li>
+<p>8 Crystallized Life</p>
+</li>
+<li>
+<p>2 Crystallized Shadow</p>
+</li>
+<li>
+<p>6 Crystallized Earth</p>
+</li>
+</ul>
+<p>(Quantity * Min Buyout)</p>
+<p>16 * 32 + 1 * 32 + 55 * 4.88 + 2 * 12 + 2 * 45 + 4 * 32 + 1 * 4.31 +
+1 * 37 + 8 * 2.8 + 6 * 1.32 + 2 * 4.16 =<br/>
+1134.35 Gold per 30 minutes</p>
+<p><strong>1134.35 × 2 = 2268.7 Gold per hour</strong></p>
+<h2 id="mining-and-herbalism-in-icecrown-1938-gold-h">Mining and Herbalism in Icecrown (1938 gold/h)</h2>
+<p>28/04/2025 10.30 PM -&gt; 11.00 PM (30 minutes)</p>
+<ul>
+<li>
+<p>11 Lichbloom</p>
+</li>
+<li>
+<p>1 Eternal Life</p>
+</li>
+<li>
+<p>45 Saronite Ore</p>
+</li>
+<li>
+<p>1 Eternal Earth</p>
+</li>
+<li>
+<p>1 Eternal Shadow</p>
+</li>
+<li>
+<p>26 Icethorn</p>
+</li>
+<li>
+<p>4 Frost Lotus</p>
+</li>
+<li>
+<p>5 Crystallized Life</p>
+</li>
+<li>
+<p>9 Crystallized Shadow</p>
+</li>
+<li>
+<p>4 Crystallized Earth</p>
+</li>
+</ul>
+<p>(Quantity * Min Buyout)</p>
+<p>45 * 4.88 + 1 * 12 + 45 * 1 + 11 * 32 + 37 * 4 + 26 * 4 + 1 * 32 + 4
+* 1.32 + 9 * 4.16 + 5 * 2.8 =<br/>
+969.32 Gold per 30 minutes</p>
+<p><strong>969.32 × 2 = 1938.64 Gold per hour</strong></p>
+<h2 id="mining-and-herbalism-in-wintergrasp-2893-gold-h">Mining and Herbalism in Wintergrasp (2893 gold/h)</h2>
+<p>28/04/2025 11.20 PM -&gt; 11.50 PM (30 minutes)</p>
+<ul>
+<li>
+<p>9 Lichbloom</p>
+</li>
+<li>
+<p>2 Eternal Life</p>
+</li>
+<li>
+<p>53 Saronite Ore</p>
+</li>
+<li>
+<p>3 Eternal Earth</p>
+</li>
+<li>
+<p>2 Eternal Shadow</p>
+</li>
+<li>
+<p>25 Icethorn</p>
+</li>
+<li>
+<p>7 Goldclover</p>
+</li>
+<li>
+<p>5 Frost Lotus</p>
+</li>
+<li>
+<p>6 Crystallized Life</p>
+</li>
+<li>
+<p>9 Crystallized Shadow</p>
+</li>
+<li>
+<p>4 Crystallized Earth</p>
+</li>
+<li>
+<p>1 Chalcedony</p>
+</li>
+<li>
+<p>1 Huge Citrine</p>
+</li>
+<li>
+<p>1 Eternal Air</p>
+</li>
+<li>
+<p>1 Eternal Fire</p>
+</li>
+<li>
+<p>1 Eternal Water</p>
+</li>
+<li>
+<p>2 Deadnettle</p>
+</li>
+<li>
+<p>7 Talandra’s Rose</p>
+</li>
+<li>
+<p>7 Titanium Ore</p>
+</li>
+<li>
+<p>2 Crystallized Air</p>
+</li>
+<li>
+<p>8 Crystallized Earth</p>
+</li>
+<li>
+<p>2 Tiger Lily</p>
+</li>
+</ul>
+<p>(Quantity * Min Buyout)</p>
+<p>53 * 4.88 + 3 * 12 + 2 * 45 + 9 * 32 + 25 * 4 + 7 * 3.15 + 2 * 32 + 1
+* 21 + 7 * 25.7 + 1 * 35 + 1 * 36 + 1 * 9.34 + 4 * 3.13 + 5 * 37.29 + 7
+* 3.14 + 6 * 0.64 + 8 * 1.32 + 9 * 4.16 + 2 * 3.19 + 1 * 5.54 + 2 * 2.76
++ 6 * 2.8 =<br/>
+1446.96 Gold per 30 minutes</p>
+<p><strong>1446.96 × 2 = 2893.92 Gold per hour</strong></p>
+<h2 id="mining-and-herbalism-in-sholazar-basin-2445-gold-h">Mining and Herbalism in Sholazar Basin (2445 gold/h)</h2>
+<p>28/04/2025 11.20 PM -&gt; 11.50 PM (30 minutes)</p>
+<ul>
+<li>
+<p>19 Adder’s Tongue</p>
+</li>
+<li>
+<p>2 Eternal Life</p>
+</li>
+<li>
+<p>32 Saronite Ore</p>
+</li>
+<li>
+<p>2 Eternal Earth</p>
+</li>
+<li>
+<p>1 Eternal Shadow</p>
+</li>
+<li>
+<p>12 Goldclover</p>
+</li>
+<li>
+<p>4 Crystallized Life</p>
+</li>
+<li>
+<p>4 Crystallized Shadow</p>
+</li>
+<li>
+<p>5 Crystallized Earth</p>
+</li>
+<li>
+<p>1 Sun Crystal</p>
+</li>
+<li>
+<p>1 Shadow Crystal</p>
+</li>
+<li>
+<p>1 Eternal Water</p>
+</li>
+<li>
+<p>12 Deadnettle</p>
+</li>
+<li>
+<p>7 Titanium Ore</p>
+</li>
+<li>
+<p>7 Crystallized Air</p>
+</li>
+<li>
+<p>7 Crystallized Fire</p>
+</li>
+<li>
+<p>9 Tiger Lily</p>
+</li>
+</ul>
+<p>(Quantity * Min Buyout)</p>
+<p>19 * 28 + 2 * 32 + 32 * 4.88 + 2 * 12 + 1 * 45 + 12 * 5.15 + 12 *
+3.13 + 9 * 3.19 + 1 * 9.34 + 1 * 5.50 + 7 * 25.70 + 7 * 2.76 + 7 * 2.96
++ 4 * 4.16 + 5 * 1.32 + 4 * 2.80 + 1 * 4.31 =<br/>
+1222.76 Gold per 30 minutes</p>
+<p><strong>1222.76 × 2 = 2445.52 Gold per hour</strong></p>
+<h2 id="mining-and-herbalism-in-burning-steppes-1640-gold-h">Mining and Herbalism in Burning Steppes (1640 gold/h)</h2>
+<p>28/04/2025 11.20 PM -&gt; 11.50 PM (30 minutes)</p>
+<ul>
+<li>
+<p>19 Mountain Silversage</p>
+</li>
+<li>
+<p>13 Golden Sansam</p>
+</li>
+<li>
+<p>9 Sungrass</p>
+</li>
+<li>
+<p>19 Dreamfoil</p>
+</li>
+<li>
+<p>12 Truesilver Ore</p>
+</li>
+<li>
+<p>2 Citrine</p>
+</li>
+<li>
+<p>4 Mithril Ore]</p>
+</li>
+<li>
+<p>10 Solid Stone</p>
+</li>
+<li>
+<p>1 Blue Sapphire</p>
+</li>
+<li>
+<p>30 Thorium Ore</p>
+</li>
+<li>
+<p>37 Dense Stone</p>
+</li>
+<li>
+<p>17 Dark Iron Ore</p>
+</li>
+<li>
+<p>1 Arcane Crystal</p>
+</li>
+<li>
+<p>1 Huge Emerald</p>
+</li>
+<li>
+<p>1 Black Lotus</p>
+</li>
+</ul>
+<p>(Quantity * Min Buyout)</p>
+<p>19 * 2.43 + 13 * 0.97 + 9 * 1.09 + 19 * 4.3 + 12 * 0.68 + 2 * 1.35 +
+4 * 4.06 + 10 * 0.08 + 1 * 2.96 + 30 * 4.22 + 37 * 0.25 + 12 * 0.79 + 1
+* 48.99 + 1 * 24.66 + 1 * 10 =<br/>
+410.13 Gold per 15 minutes</p>
+<p><strong>410.13 × 4 = 1640.52 Gold per hour</strong></p>
+<h2 id="stoneguard-band-disenchanting">Stoneguard Band Disenchanting</h2>
+<h3>Step 1: Get 390 Jewelcrafting and 375+ Enchanting</h3>
+<h3>Step 2: Buy Eternal Earth and Crystallized Earth from AH</h3>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th>Buy this item</th>
+<th>For this price in AH (single item)</th>
+</tr>
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td>Eternal Earth</td>
+<td>125 maximum</td>
+</tr><tr class="header">
+<td>Crystallized Earth (turn 10 into Eternal Earth)</td>
+<td>1.5g maximum</td>
+</tr><tr class="odd">
+<td>Stoneguard Band</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Price may differ depending on the market, usually don’t go over 125%
+of the disenchant value of Stoneguard Band.</p>
+<p>Exemple:</p>
+<p>Disenchant value = 30g, Max Eternal Earth price to buy = (30 *
+125%)/2 = 37.5 / 2 = 18.5g</p>
+<h3>Step 3: Craft Stoneguard Band with Jewelcrafting and disenchant them</h3>
+<h3>Step 4: Read the Enchanting guide and make enchant scrolls</h3>
+<h3>Step 5: Sell enchant scrolls in AH</h3>
+<h3>Step 6: Repeat</h3>
+
+</div>
+<!--nav--><nav class="pager" aria-label="Previous and next guide"><a class="pager-prev" href="ashen-verdict.html"><span>Previous</span>Ashen Verdict Reputation Farm</a><a class="pager-next" href="windowed-mode.html"><span>Next</span>Windowed Mode</a></nav><!--/nav-->
+</main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <span>Guides by Lost Unison</span>
+    <span><a href="https://www.youtube.com/@lostunison">YouTube</a> · <a href="https://discord.gg/md4a6BgUTs">Discord</a></span>
+  </div>
+</footer>
+<script src="../js/search-index.js"></script>
+<script src="../js/site.js"></script>
+</body>
+</html>

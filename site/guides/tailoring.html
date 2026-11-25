@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tailoring 1 to 450 (x3), Bonuses and Gold Making</title>
+<meta name="description" content="Cloak embroideries, leveling route, bags, leg enchants and gear for gold.">
+<link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{if(localStorage.getItem('lu-sb')==='mini')document.documentElement.classList.add('sb-mini')}catch(e){}</script>
+</head>
+<body data-root="../">
+<header class="site-header">
+  <div class="bar">
+    <div class="bar-start">
+      <button class="icon-btn" id="sb-toggle" type="button" aria-label="Guide menu" aria-controls="sidebar" aria-expanded="true"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../images/logo.svg" width="32" height="32" alt="">
+        <span class="brand-name">Lost Unison</span>
+      </a>
+    </div>
+    <form class="search" id="search-form" role="search" action="../search.html" method="get" autocomplete="off">
+      <button class="icon-btn search-back" id="search-back" type="button" aria-label="Close search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+      <div class="search-field">
+        <input id="q" name="q" type="text" placeholder="Search guides" aria-label="Search guides" enterkeyhint="search" role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list" spellcheck="false">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        <button class="search-clear" id="q-clear" type="button" aria-label="Clear search" hidden><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <button class="search-btn" type="submit" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <ul class="suggest" id="suggest" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+    <div class="bar-end">
+      <button class="icon-btn search-open" id="search-open" type="button" aria-label="Search"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+      <a class="bar-link" href="https://www.youtube.com/@lostunison">YouTube</a>
+      <a class="bar-link" href="https://discord.gg/md4a6BgUTs">Discord</a>
+    </div>
+  </div>
+</header>
+<div class="page">
+<aside class="sidenav" id="sidebar" aria-label="Guides">
+<nav class="sb-full" aria-label="All guides">
+<a class="sb-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<hr>
+<p class="sb-head">Leveling</p>
+<a class="sb-item" href="power-leveling.html" title="Power Leveling 1 to 80 (no boost)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Power Leveling 1 to 80 (no boost)</span></a>
+<a class="sb-item" href="paladin-leveling.html" title="Paladin Leveling 1 to 80"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Paladin Leveling 1 to 80</span></a>
+<hr>
+<p class="sb-head">Professions</p>
+<a class="sb-item" href="alchemy.html" title="Alchemy 1 to 450 (x3), Specializations and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Alchemy 1 to 450</span></a>
+<a class="sb-item" href="blacksmithing.html" title="Blacksmithing 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Blacksmithing 1 to 450</span></a>
+<a class="sb-item" href="engineering.html" title="Engineering 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Engineering 1 to 450</span></a>
+<a class="sb-item" href="enchanting.html" title="Enchanting 1 to 450 (x3), Bonuses and Gold Making"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Enchanting 1 to 450</span></a>
+<a class="sb-item" href="inscription.html" title="Inscription 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Inscription 1 to 450</span></a>
+<a class="sb-item" href="jewelcrafting.html" title="Jewelcrafting 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Jewelcrafting 1 to 450</span></a>
+<a class="sb-item" href="leatherworking.html" title="Leatherworking 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Leatherworking 1 to 450</span></a>
+<a class="sb-item" href="tailoring.html" title="Tailoring 1 to 450 (x3), Bonuses and Gold Making" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Tailoring 1 to 450</span></a>
+<a class="sb-item" href="skinning.html" title="Skinning 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Skinning 1 to 450</span></a>
+<a class="sb-item" href="mining.html" title="Mining 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Mining 1 to 450</span></a>
+<a class="sb-item" href="herbalism.html" title="Herbalism 1 to 450 (x3) and Bonuses"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Herbalism 1 to 450</span></a>
+<a class="sb-item" href="cooking.html" title="Cooking 1 to 450"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Cooking 1 to 450</span></a>
+<a class="sb-item" href="fishing.html" title="Fishing 1 to 450, Find Fish, Sea Turtle and Heirloom Ring"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Fishing 1 to 450</span></a>
+<a class="sb-item" href="first-aid.html" title="First Aid 1 to 450 (x3)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>First Aid 1 to 450</span></a>
+<hr>
+<p class="sb-head">Addons</p>
+<a class="sb-item" href="tsm-part-1.html" title="TSM (TradeSkill Master) Part 1"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>TSM (TradeSkill Master) Part 1</span></a>
+<hr>
+<p class="sb-head">Gearing</p>
+<a class="sb-item" href="all-264-boe.html" title="All 264 Item Level BoE"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>All 264 Item Level BoE</span></a>
+<a class="sb-item" href="unlock-heroic-dungeons.html" title="Unlock Heroic Dungeons"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Unlock Heroic Dungeons</span></a>
+<hr>
+<p class="sb-head">Reputation</p>
+<a class="sb-item" href="thorium-brotherhood.html" title="Thorium Brotherhood Neutral to Revered"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Thorium Brotherhood Neutral to Revered</span></a>
+<a class="sb-item" href="ashen-verdict.html" title="Ashen Verdict Reputation Farm"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Ashen Verdict Reputation Farm</span></a>
+<hr>
+<p class="sb-head">Gold making</p>
+<a class="sb-item" href="gold-farming.html" title="Best Gold Farming (2,893 gold/h)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Best Gold Farming (2,893 gold/h)</span></a>
+<hr>
+<p class="sb-head">Game client</p>
+<a class="sb-item" href="windowed-mode.html" title="Windowed Mode"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Windowed Mode</span></a>
+<a class="sb-item" href="patch-y.html" title="Patch Y (Raid Visuals)"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Patch Y (Raid Visuals)</span></a>
+<a class="sb-item" href="project-reforged-install.html" title="Project Reforged Install"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Project Reforged Install</span></a>
+<hr>
+</nav>
+<nav class="sb-rail" aria-label="Categories">
+<a class="mini-item" href="../index.html"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8.5a.5.5 0 0 1-.5.5H14v-5.5h-4V20H4.5a.5.5 0 0 1-.5-.5z"/></svg><span>Home</span></a>
+<a class="mini-item" href="../index.html#leveling"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span>Leveling</span></a>
+<a class="mini-item" href="../index.html#professions" aria-current="page"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>Professions</span></a>
+<a class="mini-item" href="../index.html#addons"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg><span>Addons</span></a>
+<a class="mini-item" href="../index.html#gearing"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 7.7-7 9.5-4-1.8-7-5.2-7-9.5V6z"/></svg><span>Gearing</span></a>
+<a class="mini-item" href="../index.html#reputation"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Reputation</span></a>
+<a class="mini-item" href="../index.html#gold-making"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5"/></svg><span>Gold</span></a>
+<a class="mini-item" href="../index.html#game-client"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg><span>Client</span></a>
+</nav>
+</aside>
+<div class="sb-scrim" id="sb-scrim"></div>
+<main class="guide">
+<!--nav--><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Guides</a><span aria-hidden="true">/</span><a href="../index.html#professions">Professions</a><span aria-hidden="true">/</span><span>Tailoring 1 to 450</span></nav><!--/nav-->
+<div class="prose">
+<h1>WotLK Warmane Icecrown - Tailoring 1 to 450 (x3), Bonuses and Gold Making</h1>
+<p class="byline">Guide by <strong>Lost Unison</strong></p>
+<p class="lede">Cloak embroideries, leveling route, bags, leg enchants and gear for gold.</p>
+</div>
+<div class="video-links"><a class="video-btn" href="https://www.youtube.com/watch?v=N75EOPEzFv0"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>Watch the video: Tailoring 1 to 450</a></div>
+<nav class="toc" aria-label="On this page"><span class="toc-title">On this page</span><ol><li><a href="#tailoring-bonuses">Tailoring Bonuses</a></li><li><a href="#leveling-from-1-to-450">Leveling from 1 to 450</a></li><li><a href="#how-to-make-gold-with-tailoring">How to make gold with Tailoring</a></li><li><a href="#source">Source</a></li></ol></nav>
+<div class="doc">
+<h2 id="tailoring-bonuses">Tailoring Bonuses</h2>
+<p>Tailors get access to <strong>exclusive cloak enchants</strong>,
+called <strong>“Embroidery”</strong> effects.<br/>
+You can only have <strong>one</strong> at a time, and they
+<strong>replace regular cloak enchants</strong> like +23 haste or +22
+agility.</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Embroidery</strong></th>
+<th><strong>Effect</strong></th>
+<th><strong>Avg. Bonus (vs regular enchants)</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><strong>Lightweave Embroidery</strong></td>
+<td>295 Spell Power for 15 sec (proc, 45 sec ICD)</td>
+<td>≈ +73 Spell Power average</td>
+<td>BiS for casters/healers</td>
+</tr><tr class="header">
+<td><strong>Swordguard Embroidery</strong></td>
+<td>400 Attack Power for 15 sec (proc, 45 sec ICD)</td>
+<td>≈ +100 Attack Power average</td>
+<td>Excellent for physical DPS</td>
+</tr><tr class="odd">
+<td><strong>Darkglow Embroidery</strong></td>
+<td>400 Mana restored (proc, 60 sec ICD)</td>
+<td>≈ +15–20 MP5 average</td>
+<td>Useful early for healers with mana issues</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="leveling-from-1-to-450">Leveling from 1 to 450</h2>
+<h3>Materials Cost</h3>
+<p><strong>Cost: ± 1500-2000 Gold</strong> (from Auction House)</p>
+<h3>Required Materials</h3>
+<h4>Classic 1-300</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Cloths</strong></th>
+<th><strong>Vendor</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td rowspan="10"><p>60 Linen Cloth</p>
+<p>90 Wool Cloth</p>
+<p>260 Silk Cloth</p>
+<p>112 Mageweave Cloth</p>
+<p>260 Runecloth</p></td>
+<td rowspan="10"><p>10 Coarse Thread</p>
+<p>37 Fine Thread</p>
+<p>13 Silken Thread</p>
+<p>20 Heavy Silken Thread</p>
+<p>24 Rune Thread</p>
+<p>13 Gray Dye</p>
+<p>10 Blue Dye</p>
+<p>20 Red Dye</p>
+<p>2 Bleach</p></td>
+</tr><tr class="header">
+</tr><tr class="odd">
+</tr><tr class="header">
+</tr><tr class="odd">
+</tr><tr class="header">
+</tr><tr class="odd">
+</tr><tr class="header">
+</tr><tr class="odd">
+</tr><tr class="header">
+</tr><tr class="odd">
+<td colspan="2">TSM String</td>
+</tr><tr class="header">
+<td><p>Linen Cloth/exact/x60</p>
+<p>Wool Cloth/exact/x90</p>
+<p>Silk Cloth/exact/x260</p>
+<p>Mageweave Cloth/exact/x112</p>
+<p>Runecloth/exact/x260</p></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+
+<h4>TBC 300 - 375</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Cloths</strong></th>
+<th><strong>Misc</strong></th>
+<th><strong>Vendor</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td rowspan="10">245 Netherweave Cloth</td>
+<td rowspan="10"><p>10 Arcane Dust</p>
+<p>6 Knothide Leather</p>
+<p><a href="https://www.wowhead.com/wotlk/item=21892/pattern-bolt-of-imbued-netherweave"><u>Pattern:
+Bolt of Imbued Netherweave</u></a> (Shattrath)</p>
+<p><a href="https://www.wowhead.com/wotlk/item=21897/pattern-netherweave-tunic"><u>Pattern:
+Netherweave Tunic</u></a> (Shattrath)</p></td>
+<td rowspan="10">7 Rune Thread</td>
+</tr><tr class="header">
+</tr><tr class="odd">
+</tr><tr class="header">
+</tr><tr class="odd">
+</tr><tr class="header">
+</tr><tr class="odd">
+</tr><tr class="header">
+</tr><tr class="odd">
+</tr><tr class="header">
+</tr><tr class="odd">
+<td colspan="3">TSM String</td>
+</tr><tr class="header">
+<td>Netherweave Cloth/exact/x245</td>
+<td><p>Arcane Dust/exact/x10</p>
+<p>Knothide Leather/exact/x6</p></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h4>WotLK 375 - 421 (for cloak enchant)</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Cloths</strong></th>
+<th><strong>Misc</strong></th>
+<th><strong>Vendor</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td rowspan="10">550 Frostweave Cloth</td>
+<td rowspan="10"><p>14 Infinite Dust</p>
+<p>For cloak enchant, get one of these depending on the enchant your
+want :</p>
+<ul>
+<li>
+<p>Mana : <strong>Ebonweave</strong></p>
+</li>
+<li>
+<p>Spell power (SP) : <strong>Moonshroud</strong></p>
+</li>
+<li>
+<p>Attack power (AP) : <strong>Spellweave</strong></p>
+</li>
+</ul></td>
+<td rowspan="10">17 Eternium Thread (Dalaran vendor)</td>
+</tr><tr class="header">
+</tr><tr class="odd">
+</tr><tr class="header">
+</tr><tr class="odd">
+</tr><tr class="header">
+</tr><tr class="odd">
+</tr><tr class="header">
+</tr><tr class="odd">
+</tr><tr class="header">
+</tr><tr class="odd">
+<td colspan="3">TSM String</td>
+</tr><tr class="header">
+<td>Frostweave Cloth/exact/x550</td>
+<td><p>Infinite Dust/exact/x14</p>
+<ul>
+<li>
+<p><strong>Ebonweave</strong>/exact/x1</p>
+</li>
+<li>
+<p><strong>Moonshroud</strong>/exact/x1</p>
+</li>
+<li>
+<p><strong>Spellweave</strong>/exact/x1</p>
+</li>
+</ul></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+
+<h4>WotLK 421 - 450</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Cloths</strong></th>
+<th><strong>Misc</strong></th>
+<th><strong>Vendor</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td rowspan="10"><p>20 Bolt of Frostweave</p>
+<p>60 Bolt of Imbued Frostweave</p></td>
+<td rowspan="10"><p>90 Infinite Dust</p>
+<p>12 Ebonweave</p>
+<p>3 Frozen Orb</p></td>
+<td rowspan="10">21 Eternium Thread (Dalaran vendor)</td>
+</tr><tr class="header">
+</tr><tr class="odd">
+</tr><tr class="header">
+</tr><tr class="odd">
+</tr><tr class="header">
+</tr><tr class="odd">
+</tr><tr class="header">
+</tr><tr class="odd">
+</tr><tr class="header">
+</tr><tr class="odd">
+<td colspan="3">TSM String</td>
+</tr><tr class="header">
+<td><p>Bolt of Frostweave/exact/x20</p>
+<p>Bolt of Imbued Frostweave/exact/x60</p></td>
+<td><p>Infinite Dust/exact/x90</p>
+<p>Ebonweave/exact/x12</p>
+<p>Frozen Orb/exact/x3</p></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h3>Leveling 1-450</h3>
+<h4>Tailoring Trainer</h4>
+<p>For <strong>Tailoring,</strong> you can level up from <strong>1 to
+450</strong> with only 1 trainer : <strong>Dalaran - <a href="https://www.wowhead.com/wotlk/npc=28699/charles-worth"><u>Charles
+Worth</u></a></strong></p>
+<h4>Classic</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Level</strong></th>
+<th><strong>Craft</strong></th>
+<th><strong>Quantity</strong></th>
+<th><strong>Total Material</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td colspan="4"><strong>Learn Apprentice Tailoring</strong></td>
+</tr><tr class="header">
+<td><strong>1-52</strong></td>
+<td>Bolt of Linen Cloth</td>
+<td>21-30</td>
+<td>60 Linen Cloth</td>
+</tr><tr class="odd">
+<td colspan="4"><strong>Learn Journeyman Tailoring at 50</strong></td>
+</tr><tr class="header">
+<td><strong>52-76</strong></td>
+<td>Heavy Linen Gloves</td>
+<td>9-10</td>
+<td>10 Bolt of Linen Cloth, 10 Corse Thread</td>
+</tr><tr class="odd">
+<td><strong>76-106</strong></td>
+<td>Bolt of Woolen</td>
+<td>26-30</td>
+<td>90 Wool Cloth</td>
+</tr><tr class="header">
+<td colspan="4"><strong>Learn Expert Tailoring at 125</strong></td>
+</tr><tr class="odd">
+<td><strong>106-127</strong></td>
+<td>Gray Woolen Shirt</td>
+<td>11-13</td>
+<td>26 Bolt of Woolen Cloth, 13 Fine Thread, 13 Gray Dye</td>
+</tr><tr class="header">
+<td><strong>127-145</strong></td>
+<td>Bolt of Silk Cloth</td>
+<td>Need 65 for future crafts</td>
+<td>260 Silk Cloth</td>
+</tr><tr class="odd">
+<td><strong>145-160</strong></td>
+<td>Azure Silk Hood</td>
+<td>5</td>
+<td>10 Bolt of Silk Cloth, 10 Blue Dye, 5 Fine Thread</td>
+</tr><tr class="header">
+<td><strong>160-172</strong></td>
+<td>Silk Headband</td>
+<td>4</td>
+<td>12 Bolt of Silk Cloth, 8 Fine Thread</td>
+</tr><tr class="odd">
+<td><strong>172-175</strong></td>
+<td>Formal White Shirt</td>
+<td>1</td>
+<td>3 Bolt of Silk Cloth, Fine Thread, Beach</td>
+</tr><tr class="header">
+<td><strong>175-187</strong></td>
+<td>Bolt of Mageweave</td>
+<td>Need 28 for future crafts</td>
+<td>112 Mageweave Cloth</td>
+</tr><tr class="odd">
+<td><strong>187-202</strong></td>
+<td>Crimson Silk Vest</td>
+<td>5</td>
+<td>20 Bolt of Silk Cloth, 10 Red Dye, 10 Fine Thread</td>
+</tr><tr class="header">
+<td colspan="4"><strong>Learn Artisan Tailoring at 200</strong></td>
+</tr><tr class="odd">
+<td><strong>202-217</strong></td>
+<td>Crimson Silk Pantaloons</td>
+<td>5</td>
+<td>20 Bolt of Silk Cloth, 10 Red Dye, 10 Fine Thread</td>
+</tr><tr class="header">
+<td><strong>217-220</strong></td>
+<td>Black Mageweave Leggings</td>
+<td>1</td>
+<td>2 Bolt of Mageweave, 3 Silken Thread</td>
+</tr><tr class="odd">
+<td><strong>220-232</strong></td>
+<td>Black Mageweave Gloves</td>
+<td>4</td>
+<td>8 Bolt of Mageweave, 8 Heavy Silken Thread</td>
+</tr><tr class="header">
+<td><strong>232-250</strong></td>
+<td>Black Mageweave Headband</td>
+<td>6</td>
+<td>18 Bolt of Mageweave, 12 Heavy Silken Thread</td>
+</tr><tr class="odd">
+<td><strong>250-262</strong></td>
+<td>Bolt of Runecloth</td>
+<td>65</td>
+<td>260 Runecloth</td>
+</tr><tr class="header">
+<td><strong>262-277</strong></td>
+<td>Runecloth Belt</td>
+<td>5-6</td>
+<td>18 Bolt of Runecloth, 6 Rune Thread</td>
+</tr><tr class="odd">
+<td colspan="4"><strong>Learn Master Tailoring at 275</strong></td>
+</tr><tr class="header">
+<td><strong>277-295</strong></td>
+<td>Runecloth Gloves</td>
+<td>6-7</td>
+<td>35 Bolt of Runecloth, 14 Rune Thread</td>
+</tr><tr class="odd">
+<td><strong>295-301</strong></td>
+<td>Runecloth Headband</td>
+<td>2</td>
+<td>12 Bolt of Runecloth, 4 Rune Thread</td>
+</tr>
+</tbody>
+</table></div>
+
+<h4>TBC</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Level</strong></th>
+<th><strong>Craft</strong></th>
+<th><strong>Quantity</strong></th>
+<th><strong>Total Material</strong></th>
+</tr>
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td><strong>301-325</strong></td>
+<td>Bolt of Netherweave</td>
+<td>49</td>
+<td>245 Netherweave Cloth</td>
+</tr><tr class="header">
+<td><strong>325-337</strong></td>
+<td><p>Bolt of Imbued Netherweave</p>
+<p>(Recipe)</p></td>
+<td>5</td>
+<td>15 Bolt of Netherweave, 10 Arcane Dust</td>
+</tr><tr class="odd">
+<td><strong>337-346</strong></td>
+<td>Netherweave Boots</td>
+<td>3</td>
+<td>18 Bolt of Netherweave, 6 Knothide Leather, 3 Rune Thread</td>
+</tr><tr class="header">
+<td><strong>346-352</strong></td>
+<td><p>Netherweave Tunic</p>
+<p>(Recipe)</p></td>
+<td>2</td>
+<td>16 Bolt of Netherweave, 4 Rune Thread</td>
+</tr>
+</tbody>
+</table></div>
+
+<h4>WotLK</h4>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Level</strong></th>
+<th><strong>Craft</strong></th>
+<th><strong>Quantity</strong></th>
+<th><strong>Total Material</strong></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</thead>
+<tbody><tr class="odd">
+<td colspan="4"><strong>Learn Grand Tailoring at 350 In
+Northrend</strong></td>
+</tr><tr class="header">
+<td><strong>352-376</strong></td>
+<td>Bolt of Frostweave</td>
+<td>Need 110 for future crafts</td>
+<td>550 Frostweave Cloth</td>
+</tr><tr class="odd">
+<td><strong>376-382</strong></td>
+<td>Frostwoven Belt</td>
+<td>2</td>
+<td>6 Bolt of Frostweave, 2 Eternium Thread</td>
+</tr><tr class="header">
+<td><strong>382-388</strong></td>
+<td>Frostwoven Boots</td>
+<td>2</td>
+<td>8 Bolt of Frostweave, 2 Eternium Thread</td>
+</tr><tr class="odd">
+<td><strong>388-397</strong></td>
+<td>Frostwoven Cowl</td>
+<td>5-6</td>
+<td>30 Bolt of Frostweave, 6 Eternium Thread</td>
+</tr><tr class="header">
+<td><strong>397-400</strong></td>
+<td>Duskweave Belt</td>
+<td>1</td>
+<td>7 Bolt of Frostweave, Eternium Thread</td>
+</tr><tr class="odd">
+<td><strong>400-406</strong></td>
+<td>Bolt of Imbued Frostweave Cloth</td>
+<td>3-7</td>
+<td>14 Bolt of Frostweave, 14 Infinite Dust</td>
+</tr><tr class="header">
+<td><strong>406-412</strong></td>
+<td>Duskweave Wristwraps</td>
+<td>2</td>
+<td>16 Bolt of Frostweave, 2 Eternium Thread</td>
+</tr><tr class="odd">
+<td><strong>412-415</strong></td>
+<td>Duskweave Gloves</td>
+<td>1</td>
+<td>9 Bolt of Frostweave, Eternium Thread</td>
+</tr><tr class="header">
+<td><strong>415-421</strong></td>
+<td>Duskweave Boots</td>
+<td>2</td>
+<td>20 Bolt of Frostweave, 2 Eternium Thread</td>
+</tr><tr class="odd">
+<td colspan="4"><strong>You can enchant your cloak with:</strong></td>
+</tr><tr class="header">
+<td rowspan="3"><strong>421-421</strong></td>
+<td><strong>Darkglow Embroidery (Mana)</strong></td>
+<td>-</td>
+<td>Ebonweave, Eternium Thread</td>
+</tr><tr class="odd">
+<td><strong>Lightweave Embroidery (SP)</strong></td>
+<td>-</td>
+<td>Moonshroud, Eternium Thread</td>
+</tr><tr class="header">
+<td><strong>Swordguard Embroidery (AP)</strong></td>
+<td>-</td>
+<td>Spellweave, Eternium Thread</td>
+</tr><tr class="odd">
+<td><strong>421-427</strong></td>
+<td>Duskweave Boots</td>
+<td>2</td>
+<td>20 Bolt of Frostweave, 2 Eternium Thread</td>
+</tr><tr class="header">
+<td><strong>427-442</strong></td>
+<td>Frostweave Bag</td>
+<td>6-8</td>
+<td>48 Bolt of Imbued Frostweave, 16 Eternium Thread</td>
+</tr><tr class="odd">
+<td><strong>442-450</strong></td>
+<td>Ebonweave Gloves</td>
+<td>3</td>
+<td>12 Ebonweave 12 Bolt of Imbued Frostweave, 3 Eternium Thread, 3
+Frozen Orb</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="how-to-make-gold-with-tailoring">How to make gold with Tailoring</h2>
+<h3>Leg Enchants</h3>
+<p><img alt="" height="126" loading="lazy" src="../images/tailoring-01.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+<p><img alt="" height="131" loading="lazy" src="../images/tailoring-02.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+<p><img alt="" height="696" loading="lazy" src="../images/tailoring-03.webp" style="max-width:min(100%, 288px)" width="659"/><img alt="" height="699" loading="lazy" src="../images/tailoring-04.webp" style="max-width:min(100%, 288px)" width="661"/></p>
+<h3>Bags</h3>
+<p><img alt="" height="321" loading="lazy" src="../images/tailoring-05.webp" style="max-width:min(100%, 624px)" width="1400"/><img alt="" height="464" loading="lazy" src="../images/tailoring-06.webp" style="max-width:min(100%, 288px)" width="629"/><img alt="" height="520" loading="lazy" src="../images/tailoring-07.webp" style="max-width:min(100%, 288px)" width="661"/><img alt="" height="551" loading="lazy" src="../images/tailoring-08.webp" style="max-width:min(100%, 288px)" width="661"/><img alt="" height="494" loading="lazy" src="../images/tailoring-09.webp" style="max-width:min(100%, 288px)" width="658"/></p>
+<h3>Gear</h3>
+<p>264 Item Level</p>
+<p><img alt="" height="298" loading="lazy" src="../images/tailoring-10.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+<p>Recipe vendor: <a href="https://www.wowhead.com/wotlk/npc=37687/alchemist-finklestein"><u>Alchemist
+Finklestein</u></a> in Icecrown Citadel (raid).</p>
+<p>Requires to be <strong>Revered</strong> with the <strong>Ashen
+Verdict</strong> to get all the recipes (some of them only require
+<strong>Honored</strong>).</p>
+<h4>245 Item Level<img alt="" height="535" loading="lazy" src="../images/tailoring-11.webp" style="max-width:min(100%, 624px)" width="1400"/></h4>
+<p>Recipes drop in <strong>Trial of the Crusader</strong> (ToC raid) or
+you can buy them in the <strong>Auction House</strong>.</p>
+<p>Each item has a <strong>Horde</strong> and <strong>Alliance</strong>
+version.</p>
+<h4>232 Item Level</h4>
+<p><img alt="" height="261" loading="lazy" src="../images/tailoring-12.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+<p>Recipes drop in <strong>Ulduar</strong> (raid) or you can buy them in
+the <strong>Auction House</strong>.</p>
+<h4>213 Item Level</h4>
+<p><img alt="" height="187" loading="lazy" src="../images/tailoring-13.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+<h4>200 Item Level</h4>
+<p><img alt="" height="183" loading="lazy" src="../images/tailoring-14.webp" style="max-width:min(100%, 624px)" width="1400"/><img alt="" height="186" loading="lazy" src="../images/tailoring-15.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+<p><img alt="" height="60" loading="lazy" src="../images/tailoring-16.webp" style="max-width:min(100%, 624px)" width="1400"/><img alt="" height="60" loading="lazy" src="../images/tailoring-17.webp" style="max-width:min(100%, 624px)" width="1400"/></p>
+<h4>Rare and uncommon WotLK gear</h4>
+<h2 id="source">Source</h2>
+<p>https://forum.warmane.com/showthread.php?t=384147</p>
+
+
+
+
+
+
+
+</div>
+<!--nav--><nav class="pager" aria-label="Previous and next guide"><a class="pager-prev" href="leatherworking.html"><span>Previous</span>Leatherworking 1 to 450</a><a class="pager-next" href="skinning.html"><span>Next</span>Skinning 1 to 450</a></nav><!--/nav-->
+</main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <span>Guides by Lost Unison</span>
+    <span><a href="https://www.youtube.com/@lostunison">YouTube</a> · <a href="https://discord.gg/md4a6BgUTs">Discord</a></span>
+  </div>
+</footer>
+<script src="../js/search-index.js"></script>
+<script src="../js/site.js"></script>
+</body>
+</html>
