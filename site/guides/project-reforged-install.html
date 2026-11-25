@@ -115,7 +115,7 @@
 <p>Each item has a <span class="dl-btn dl-demo">file name</span> button: it downloads the file directly. A <a class="src-link" href="#part-1">Source page</a> link opens the project page only.</p>
 <h3 id="dl-required">Required</h3>
 <ul>
-<li><p><strong>St0ny's AIO WoW EXE Patcher</strong> (ZIP): open the <a class="src-link" href="https://github.com/Raz0r1337/St0nys-AIO-WoW-EXE-Patcher/releases/latest" target="_blank" rel="noopener noreferrer">latest release page</a> and download the ZIP named <strong>St0nys-AIO-WoW-EXE-Patcher-&lt;version&gt;.zip</strong> (under Assets). The file name has the version number, so this link cannot point to the file directly.</p></li>
+<li><p><strong>St0ny's AIO WoW EXE Patcher</strong> (ZIP): open the <a class="src-link" href="https://github.com/Raz0r1337/St0nys-AIO-WoW-EXE-Patcher/releases/latest" target="_blank" rel="noopener noreferrer">latest release page</a> and download the ZIP named <strong>St0nys-AIO-WoW-EXE-Patcher-&lt;version&gt;.zip</strong> (under Assets).</p></li>
 <li><p><strong>Project Reforged Preset</strong>: <a class="dl-btn" href="https://pub-0f05631d243e4046993fc02ca7be9542.r2.dev/Wrath%20of%20the%20Lich%20King/mods/presets/patcher_selection.ini" target="_blank" rel="noopener noreferrer">patcher_selection.ini</a> <a class="src-link" href="https://projectreforged.github.io/wotlk/downloads/" target="_blank" rel="noopener noreferrer">Source page</a> This is the official patch selection of the project. The "Download Preset" button of the Dependencies block gives the same file. It can differ from the preset inside the patcher: in the version we compared, the built-in preset also turned on the patch that stops the random look in character creation.</p></li>
 </ul>
 <h3 id="dl-recommended">Recommended</h3>
@@ -140,7 +140,7 @@
 </ul>
 
 <h2 id="part-2">Part 2: Installation</h2>
-<p>Close the game and the launcher before you start. Make a backup copy of your WoW folder [VERIFY]. Move the mouse over a <strong>?</strong> (or click it) to see the details of a line.</p>
+<p>Close the game and the launcher before you start. Make a backup copy of your WoW folder. Move the mouse over a <strong>?</strong> (or click it) to see the details of a line.</p>
 
 <h3 id="step-1">Step 1: Patch Wow.exe with St0ny's patcher (required)</h3>
 <p>You need an <strong>original, unmodified</strong> Wow.exe (3.3.5a, build 12340) and Windows PowerShell 5.1 or later (included in Windows 10 and later). The first start checks the file with SHA256.</p>
@@ -155,11 +155,11 @@
 <h3 id="step-2">Step 2: Install DXVK</h3>
 <ul>
 <li><p>Extract <strong>DXVK-WoW-x86.zip</strong>. Copy <strong>d3d9.dll</strong> (32-bit) next to Wow.exe.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">You need a graphics card and driver with Vulkan support.</span><span class="tl">Some anti-virus programs flag the 32-bit DLL. Add an exception if the file is removed.</span><span class="tl">To uninstall, delete d3d9.dll from the WoW folder.</span></span></span></p></li>
-<li><p>Make a <strong>dxvk.conf</strong> file to set the cursor size.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">DXVK does not include this file. Make it yourself.</span><span class="tl">1. Open your WoW folder, then the <strong>WTF</strong> folder.</span><span class="tl">2. Right-click an empty space. Choose <strong>New</strong>, then <strong>Text Document</strong>. Name it <strong>dxvk.conf</strong>. Remove the <strong>.txt</strong> ending. If you cannot see file endings, turn on <strong>File name extensions</strong> in the File Explorer View menu.</span><span class="tl">3. Open the file with Notepad. Write this line: <strong>d3d9.enlargeHardwareCursor = 1</strong>. This gives the original cursor size. The default value is 2.</span><span class="tl">4. Save the file and start the game again.</span><span class="tl">[VERIFY] The folder for this file is not confirmed. If the cursor does not change, move <strong>dxvk.conf</strong> next to <strong>Wow.exe</strong>. Standard DXVK reads the file from there.</span></span></span></p></li>
+<li><p>Make a <strong>dxvk.conf</strong> file to set the cursor size. Open the file with Notepad. Write this line: <strong>d3d9.enlargeHardwareCursor = 1</strong>. This gives the original cursor size. The default value is 2.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">DXVK does not include this file. Make it yourself.</span><span class="tl">1. Open your WoW folder, then the <strong>WTF</strong> folder.</span><span class="tl">2. Right-click an empty space. Choose <strong>New</strong>, then <strong>Text Document</strong>. Name it <strong>dxvk.conf</strong>. Remove the <strong>.txt</strong> ending. If you cannot see file endings, turn on <strong>File name extensions</strong> in the File Explorer View menu.</span><span class="tl">3. Open the file with Notepad. Write this line: <strong>d3d9.enlargeHardwareCursor = 1</strong>. This gives the original cursor size. The default value is 2.</span><span class="tl">4. Save the file and start the game again.</span><span class="tl">The folder for this file is not confirmed. If the cursor does not change, move <strong>dxvk.conf</strong> next to <strong>Wow.exe</strong>. Standard DXVK reads the file from there.</span></span></span></p></li>
 </ul>
 <h3 id="step-3">Step 3: Copy the patch files into Data</h3>
 <ul>
-<li><p>Open the <strong>Data</strong> folder inside your WoW folder. Copy the Project Reforged patch files into it.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">[VERIFY file names and install order].</span><span class="tl">Do not rename the files [VERIFY].</span></span></span></p></li>
+<li><p>Open the <strong>Data</strong> folder inside your WoW folder. Copy the Project Reforged patch files into it.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">Do not rename the files.</span></span></span></p></li>
 </ul>
 
 <h3 id="step-4">Step 4: Install LuxVelum</h3>
@@ -174,21 +174,21 @@
 <h3 id="step-6">Step 6: Install the lights shader</h3>
 <ul>
 <li><p><strong>Copy.</strong> Extract <strong>patch-5.MPQ.zip</strong> into your WoW <strong>Data</strong> folder. Check that <strong>Data</strong> has one folder named <strong>patch-5.MPQ</strong>, with <strong>Shaders</strong> inside.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">The ZIP does not contain an MPQ file. It contains a folder named <strong>patch-5.MPQ</strong>, with shader files inside. You must copy this folder into <strong>Data</strong>.</span><span class="tl">Right-click <strong>patch-5.MPQ.zip</strong> and choose <strong>Extract All</strong>. Choose your WoW <strong>Data</strong> folder as the destination. Do not make a second folder with the name of the ZIP.</span><span class="tl">Check that this file exists: <strong>Data\patch-5.MPQ\Shaders\Vertex\vs_3_0\Diffuse_T1.bls</strong>. The game loads this folder like an MPQ file.</span><span class="tl">These shaders need the patch <strong>More lights</strong> (No. 68) in Wow.exe. Without it, they give the same image as the original (4 lights).</span></span></span></p></li>
-<li><p><strong>Check the config.</strong> Open <strong>WTF\Config.wtf</strong>. Usually you change nothing.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">Open the file with Notepad. If there is no <strong>gxApi</strong> line, do nothing. The game then uses Direct3D 9, which is the default.</span><span class="tl">If the file has <strong>SET gxApi "opengl"</strong>, change it to <strong>SET gxApi "d3d9"</strong>.</span><span class="tl">If the file has <strong>SET fixedFunction "1"</strong>, change the value to <strong>0</strong>. If there is no fixedFunction line, do nothing [VERIFY].</span></span></span></p></li>
+<li><p><strong>Check the config.</strong> Open <strong>WTF\Config.wtf</strong>. Usually you change nothing.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">Open the file with Notepad. If there is no <strong>gxApi</strong> line, do nothing. The game then uses Direct3D 9, which is the default.</span><span class="tl">If the file has <strong>SET gxApi "opengl"</strong>, change it to <strong>SET gxApi "d3d9"</strong>.</span><span class="tl">If the file has <strong>SET fixedFunction "1"</strong>, change the value to <strong>0</strong>. If there is no fixedFunction line, do nothing.</span></span></span></p></li>
 </ul>
 <h3 id="step-7">Step 7: Clear the cache and launch</h3>
 <ul>
-<li><p>Delete the <strong>Cache</strong> folder at the game root. Launch the game with <strong>Wow.exe</strong>.<span class="tip" tabindex="0" role="button" aria-label="Show details"><span class="tip-q">?</span><span class="tip-box"><span class="tl">[VERIFY that deleting the Cache folder is needed].</span></span></span></p></li>
+<li><p>Delete the <strong>Cache</strong> folder at the game root. Launch the game with <strong>Wow.exe</strong>.</p></li>
 </ul>
 <h2 id="part-3">Part 3: Check your versions</h2>
 <p>Patches and tools change often. This script compares what you have with the official page and with the latest GitHub releases. It does not download or change any patch or tool file.</p>
 <ul>
 <li><p>Download the 2 files: <a class="dl-btn" href="../files/check-versions.bat" download>check-versions.bat</a> <a class="dl-btn" href="../files/check-versions.ps1" download>check-versions.ps1</a></p></li>
 <li><p>Put them in the folder that holds your <strong>patch-A.mpq</strong> to <strong>patch-U.mpq</strong> files.</p></li>
-<li><p>Double-click <strong>check-versions.bat</strong>. On the first run it creates a <strong>README.md</strong> table in the same folder.</p></li>
-<li><p>Open README.md and write the version you have for each patch and tool. Empty versions show as NOT RECORDED.</p></li>
+<li><p>Double-click <strong>check-versions.bat</strong>. On the first run it creates the file <strong>installed-versions.md</strong> in the same folder.</p></li>
+<li><p>Open installed-versions.md and write the version you have for each patch and tool. Empty versions show as NOT RECORDED.</p></li>
 <li><p>Run check-versions.bat again. Each line shows <strong>OK</strong>, <strong>UPDATE</strong>, <strong>MISSING FILE</strong> or <strong>NOT RECORDED</strong>. The script also compares the size of each file with the file on the server.</p></li>
-<li><p>After you update, run <strong>check-versions.bat -UpdateReadme</strong> to save the new versions in README.md.</p></li>
+<li><p>After you replace files, run <strong>check-versions.bat</strong> again. At the end, it asks if you want to save the new versions in installed-versions.md. Type <strong>Y</strong> and press Enter.</p></li>
 </ul>
 <p>The script needs Windows PowerShell 5.1 or later and an internet connection.</p>
 <details class="script-box"><summary>Show the script (check-versions.ps1)</summary>
@@ -197,18 +197,22 @@
   Compare the Project Reforged patches in this folder with the official Downloads page.
 
 .DESCRIPTION
-  1. Read the versions you have now from the table in README.md (same folder).
+  1. Read the versions you have now from the table in installed-versions.md (same folder).
   2. Read the current versions from https://projectreforged.github.io/wotlk/downloads/
   3. Show one line per patch: OK, UPDATE, MISSING FILE or NEW ON SITE.
   4. Compare the size of each local .mpq file with the size of the file on the server.
      The patch files are searched in all subfolders (for example the folder &quot;HD patches&quot;).
-  5. Compare the tools in the &quot;Tools&quot; table of README.md with the latest GitHub release:
+  5. Compare the tools in the &quot;Tools&quot; table of installed-versions.md with the latest GitHub release:
      St0ny AIO EXE Patcher, DXVK, LuxVelum, Lexara and the lights shader patch.
   6. Check that the tool files exist in your subfolders (Required, Recommended and so on).
   The script does not download or change any patch or tool file.
 
-.PARAMETER UpdateReadme
-  After you updated, write the latest versions (patches and tools) into the README.md tables.
+.PARAMETER SaveVersions
+  Write the latest versions (patches and tools) into the installed-versions.md tables without asking.
+  Without this option, the script asks you at the end if it finds older versions in the installed-versions.md.
+
+.PARAMETER NoPrompt
+  Do not ask the question at the end.
 
 .PARAMETER NoToolCheck
   Skip the check of the tools (St0ny patcher, DXVK, LuxVelum, Lexara, lights shader) on GitHub.
@@ -218,10 +222,11 @@
 
 .EXAMPLE
   .\check-versions.ps1
-  .\check-versions.ps1 -UpdateReadme
+  .\check-versions.ps1 -SaveVersions
 #&gt;
 param(
-    [switch]$UpdateReadme,
+    [Alias(&#x27;UpdateReadme&#x27;)][switch]$SaveVersions,
+    [switch]$NoPrompt,
     [switch]$NoSizeCheck,
     [switch]$NoToolCheck
 )
@@ -232,7 +237,7 @@ $ErrorActionPreference = &#x27;Stop&#x27;
 $Url      = &#x27;https://projectreforged.github.io/wotlk/downloads/&#x27;
 $Folder   = $PSScriptRoot
 if (-not $Folder) { $Folder = Split-Path -Parent $MyInvocation.MyCommand.Path }
-$Readme   = Join-Path $Folder &#x27;README.md&#x27;
+$Readme   = Join-Path $Folder &#x27;installed-versions.md&#x27;
 
 # Index of every file and folder under this folder, subfolders included (one scan).
 $All = @(Get-ChildItem -Path $Folder -Recurse -Force -ErrorAction SilentlyContinue)
@@ -275,28 +280,28 @@ function Format-Size([int64]$Bytes) {
     return (&#x27;{0:N0} KB&#x27; -f ($Bytes / 1KB))
 }
 
-# ---------- 1. Local versions (README.md) ----------
+# ---------- 1. Local versions (installed-versions.md) ----------
 if (-not (Test-Path $Readme)) {
     $template = @&#x27;
-# Patch HD - Project Reforged (WoW 3.3.5a)
+# Installed versions - Patch HD Project Reforged
 
-Write the version of each file you have in the Version column. Leave it empty if you do not know.
-Run check-versions.bat again after you edit this file.
+Write the version of each file you have. Leave it empty if you do not know.
+check-versions.bat reads this file and can update it at the end.
 
-| File | Content | Version | Type | Size |
-|---|---|---|---|---|
-| patch-A.mpq | Player characters and NPCs (HD) | | Core | |
-| patch-B.mpq | Buildings | | B + D + E set | |
-| patch-C.mpq | Creatures | | Core | |
-| patch-D.mpq | Doodads | | B + D + E set | |
-| patch-E.mpq | Environment | | B + D + E set | |
-| patch-G.mpq | Gear and weapons | | Core | |
-| patch-I.mpq | Interface | | Core | |
-| patch-M.mpq | Maps and loading screens | | Optional | |
-| patch-N.mpq | Darker nights | | Optional | |
-| patch-P.mpq | Spell particle effects | | Optional | |
-| patch-S.mpq | Sounds and music | | Optional | |
-| patch-U.mpq | Upright orcs | | Optional | |
+| File | Version |
+|---|---|
+| patch-A.mpq | |
+| patch-B.mpq | |
+| patch-C.mpq | |
+| patch-D.mpq | |
+| patch-E.mpq | |
+| patch-G.mpq | |
+| patch-I.mpq | |
+| patch-M.mpq | |
+| patch-N.mpq | |
+| patch-P.mpq | |
+| patch-S.mpq | |
+| patch-U.mpq | |
 
 ## Tools
 
@@ -309,7 +314,7 @@ Run check-versions.bat again after you edit this file.
 | Lights shader | | https://github.com/Raz0r1337/WoW-lights-patch-shader/releases |
 &#x27;@
     Set-Content -Path $Readme -Value $template -Encoding UTF8
-    Write-Host &#x27;README.md was not found. A new README.md was created in this folder.&#x27; -ForegroundColor Yellow
+    Write-Host &#x27;installed-versions.md was not found. A new installed-versions.md was created in this folder.&#x27; -ForegroundColor Yellow
     Write-Host &#x27;Open it and write the versions you have. Empty versions show as NOT RECORDED.&#x27; -ForegroundColor Yellow
 }
 $readmeLines = Get-Content -Path $Readme -Encoding UTF8
@@ -317,7 +322,7 @@ $local = @{}
 foreach ($line in $readmeLines) {
     if ($line -match &#x27;^\|\s*patch-([A-Z])\.mpq\s*\|&#x27;) {
         $cells = $line.Split(&#x27;|&#x27;)
-        $local[$Matches[1].ToUpper()] = $cells[3].Trim()
+        $local[$Matches[1].ToUpper()] = $cells[2].Trim()
     }
 }
 $localTools = @{}
@@ -328,7 +333,7 @@ foreach ($line in $readmeLines) {
     }
 }
 if ($local.Count -eq 0) {
-    Write-Host &#x27;No patch rows found in the README.md table.&#x27; -ForegroundColor Red
+    Write-Host &#x27;No patch rows found in the installed-versions.md table.&#x27; -ForegroundColor Red
     exit 2
 }
 
@@ -418,6 +423,8 @@ foreach ($l in $letters) {
         $matched = $null
         $known = $false
         foreach ($lk in $site[$l].Links) {
+            # Patch-A: always the HD variant (the main file). Skip the SD file in the extras folder.
+            if ($l -eq &#x27;A&#x27; -and $lk -match &#x27;/extras/&#x27;) { continue }
             $rs = Get-RemoteSize $lk
             if ($null -eq $rs) { continue }
             $known = $true
@@ -504,18 +511,34 @@ if ($todo.Count -eq 0) {
 } else {
     Write-Host (&quot;{0} patch(es) to check: {1}&quot; -f $todo.Count, (($todo | ForEach-Object { $_.Patch }) -join &#x27;, &#x27;)) -ForegroundColor Red
     Write-Host &quot;Download: $Url&quot;
-    Write-Host &#x27;Keep the same file names. Back up the old file first. Then run: .\check-versions.ps1 -UpdateReadme&#x27;
+    Write-Host &#x27;Keep the same file names. Back up the old file first. Then run this script again and answer Y at the end.&#x27;
 }
-Write-Host &#x27;Patch-A and Patch-S have 2 variants (HD or SD, Standard or Standalone). The size check tells which one you have.&#x27;
+Write-Host &#x27;Patch-A is always the HD variant (the main file). Patch-S has 2 variants (Standard or Standalone): the size check tells which one you have.&#x27;
 
-# ---------- 5. Update the README table ----------
-if ($UpdateReadme) {
+# ---------- 4c. Ask to record the versions ----------
+$needsRecord = (@($rows | Where-Object { $_.Status -in @(&#x27;UPDATE&#x27;, &#x27;NOT RECORDED&#x27;) }).Count -gt 0) -or (@($toolRows | Where-Object { $_.Status -in @(&#x27;UPDATE&#x27;, &#x27;NOT RECORDED&#x27;) }).Count -gt 0)
+if (-not $SaveVersions -and -not $NoPrompt -and $needsRecord -and [Environment]::UserInteractive) {
+    Write-Host &#x27;&#x27;
+    Write-Host &#x27;The installed-versions.md shows older or missing versions.&#x27;
+    try {
+        $ans = Read-Host &#x27;Did you already replace the files? Save the site versions in installed-versions.md now? (Y/N)&#x27;
+        if ($ans -match &#x27;^[Yy]&#x27;) { $SaveVersions = $true }
+    } catch { }
+}
+
+# ---------- 5. Update the versions file ----------
+if ($SaveVersions) {
+    # Do not record a version for a patch whose file is missing or has a different size than the server.
+    $skip = @{}
+    foreach ($r in $rows) {
+        if ($r.Status -eq &#x27;MISSING FILE&#x27; -or $r.Size -like &#x27;size differs*&#x27;) { $skip[$r.Patch.Substring(6).ToUpper()] = $true }
+    }
     $out = foreach ($line in $readmeLines) {
         if ($line -match &#x27;^\|\s*patch-([A-Z])\.mpq\s*\|&#x27;) {
             $l = $Matches[1].ToUpper()
-            if ($site.Contains($l) -and $site[$l].Version) {
+            if ($site.Contains($l) -and $site[$l].Version -and -not $skip.ContainsKey($l)) {
                 $cells = $line.Split(&#x27;|&#x27;)
-                $cells[3] = &#x27; &#x27; + $site[$l].Version + &#x27; &#x27;
+                $cells[2] = &#x27; &#x27; + $site[$l].Version + &#x27; &#x27;
                 $line = $cells -join &#x27;|&#x27;
             }
         }
@@ -535,14 +558,15 @@ if ($UpdateReadme) {
     }
     Set-Content -Path $Readme -Value $out -Encoding UTF8
     Write-Host &#x27;&#x27;
-    Write-Host &#x27;README.md updated with the versions from the site.&#x27; -ForegroundColor Green
+    Write-Host &#x27;installed-versions.md updated with the versions from the site.&#x27; -ForegroundColor Green
+    if ($skip.Count -gt 0) { Write-Host (&#x27;Not recorded (file missing or different size): &#x27; + (($skip.Keys | Sort-Object) -join &#x27;, &#x27;)) -ForegroundColor Yellow }
 }
 
 if ($todo.Count -gt 0 -or $toolTodo.Count -gt 0 -or $fileTodo.Count -gt 0) { exit 1 } else { exit 0 }
 </code></pre>
 </details>
 <h2 id="result">Result in game</h2>
-<p>Check a city, a dungeon and a raid. Look for new textures and models, fog and light effects, and sharp fonts [VERIFY in game].</p>
+<p>Check a city, a dungeon and a raid. Look for new textures and models, fog and light effects, and sharp fonts.</p>
 
 <h2 id="troubleshooting">Troubleshooting</h2>
 <ul>
